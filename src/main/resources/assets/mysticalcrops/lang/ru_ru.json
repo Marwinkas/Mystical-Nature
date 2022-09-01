@@ -1,0 +1,16 @@
+{
+
+  "item.mysticalcrops.diamond_essence": "Алмазная Эссенсия",
+  "item.mysticalcrops.diamond_seed": "Алмазное Семечко",
+  "item.mysticalcrops.diamond_fruit": "Алмазный Фрукт",
+  "item.mysticalcrops.iron_essence": "Железная Эссенсия",
+  "item.mysticalcrops.iron_seed": "Железное Семечко",
+  "item.mysticalcrops.iron_fruit": "Железный Фрукт",
+  "item.mysticalcrops.knife": "Нож",
+  "item.mysticalcrops.basic_essence": "Базовая Эссенсия",
+  "itemGroup.mysticalcrops.mysticalcrops": "Мистические Растения",
+  "block.mysticalcrops.botanical_table": "Ботанический Стол",
+  "block.mysticalcrops.diamond_crop": "Алмазное Растение",
+  "block.mysticalcrops.iron_crop": "Железное Растение",
+  "block.mysticalcrops.green_planks": "Эссенсовые Доски"
+}

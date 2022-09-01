@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "mysticalcrops",
+  "version": "${version}",
+
+  "name": "Mystical Crops",
+  "description": "Very Many Mystical Crops",
+  "authors": [
+    "Marwinka"
+  ],
+  "contact": {
+  },
+
+  "license": "MIT",
+  "icon": "assets/mysticalcrops/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.marwinka.mysticalcrops.MysticalCrops"
+    ],
+    "client": [
+      "net.marwinka.mysticalcrops.MysticalCropsClient"
+    ]
+  },
+  "mixins": [
+    "mysticalcrops.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

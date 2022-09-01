@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "bonus_rolls": 50.0,
+      "conditions": [
+        {
+          "chance": 1,
+          "condition": "minecraft:random_chance_with_looting",
+          "looting_multiplier": 0.01
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "mysticalcrops:basic_essence"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

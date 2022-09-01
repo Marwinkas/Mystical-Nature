@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:basic_essence"
+    },
+    "$": {
+      "item": "minecraft:iron_ingot"
+    },
+    "@": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "$@$",
+    "#$#"
+  ],
+  "result": {
+    "item": "mysticalcrops:crystal"
+  }
+}

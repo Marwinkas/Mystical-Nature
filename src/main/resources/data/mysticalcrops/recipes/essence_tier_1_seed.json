@@ -1,0 +1,35 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:crystal"
+    },
+    {
+      "item": "mysticalcrops:basic_essence_block"
+    },
+    {
+      "item": "mysticalcrops:basic_essence"
+    },
+    {
+      "item": "mysticalcrops:basic_essence_block"
+    },
+    {
+      "item": "mysticalcrops:basic_essence"
+    },
+    {
+      "item": "minecraft:wheat_seeds"
+    },
+    {
+      "item": "mysticalcrops:basic_essence_block"
+    },
+    {
+      "item": "mysticalcrops:basic_essence"
+    },
+    {
+      "item": "mysticalcrops:basic_essence_block"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:essence_tier_1_seed"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "mysticalcrops:block/diamondplant_stage1"
+  }
+}

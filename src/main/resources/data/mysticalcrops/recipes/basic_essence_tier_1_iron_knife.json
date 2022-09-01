@@ -1,0 +1,14 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:iron_knife"
+    },
+    {
+      "item": "mysticalcrops:essence_tier_1_fruit"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:basic_essence"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:crystal"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "mysticalcrops:ultra_essence"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "mysticalcrops:ultra_essence"
+    },
+    {
+      "item": "mysticalcrops:essence_tier_1_seed"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "mysticalcrops:ultra_essence"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:iron_seed"
+  }
+}

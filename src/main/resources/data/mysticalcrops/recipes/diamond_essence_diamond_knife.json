@@ -1,0 +1,14 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:diamond_knife"
+    },
+    {
+      "item": "mysticalcrops:diamond_fruit"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:diamond_essence"
+  }
+}

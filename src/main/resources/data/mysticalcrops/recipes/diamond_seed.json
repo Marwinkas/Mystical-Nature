@@ -1,0 +1,35 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:crystal"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    {
+      "item": "mysticalcrops:iron_seed"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:diamond_seed"
+  }
+}

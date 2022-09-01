@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:basic_essence_block"
+    },
+    "%": {
+      "item": "minecraft:iron_ingot"
+    },
+    "@": {
+      "item": "mysticalcrops:botanical_table"
+    }
+  },
+  "pattern": [
+    "#%#",
+    "%@%",
+    "#%#"
+  ],
+  "result": {
+    "item": "mysticalcrops:botanical_ritual_table"
+  }
+}

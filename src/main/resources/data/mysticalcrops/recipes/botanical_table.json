@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:essence_planks"
+    },
+    "$": {
+      "item": "mysticalcrops:crystal"
+    },
+    "@": {
+      "item": "minecraft:crafting_table"
+    },
+    "%": {
+      "item": "minecraft:poppy"
+    },
+    "^": {
+      "item": "minecraft:dandelion"
+    }
+  },
+  "pattern": [
+    "###",
+    "%@^",
+    "#$#"
+  ],
+  "result": {
+    "item": "mysticalcrops:botanical_table"
+  }
+}

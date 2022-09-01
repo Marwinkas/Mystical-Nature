@@ -1,0 +1,49 @@
+{
+
+  "item.mysticalcrops.diamond_essence": "Diamond Essence",
+  "item.mysticalcrops.diamond_seed": "Diamond Seeds",
+  "item.mysticalcrops.diamond_fruit": "Diamond Fruit",
+  "item.mysticalcrops.iron_essence": "Iron Essence",
+  "item.mysticalcrops.iron_seed": "Iron Seeds",
+  "item.mysticalcrops.iron_fruit": "Iron Fruit",
+  "item.mysticalcrops.essence_tier_1_fruit": "Essence Fruit",
+  "item.mysticalcrops.iron_knife": "Iron Knife",
+  "item.mysticalcrops.diamond_knife": "Diamond Knife",
+  "item.mysticalcrops.netherite_knife": "Netherite Knife",
+  "item.mysticalcrops.crystal": "Crystal",
+  "item.mysticalcrops.basic_essence": "Basic Essence",
+  "item.mysticalcrops.uncommon_essence": "Uncommon Essence",
+  "item.mysticalcrops.advance_essence": "Advance Essence",
+  "item.mysticalcrops.ultra_essence": "Ultra Essence",
+  "item.mysticalcrops.ultimate_essence": "Ultimate Essence",
+  "item.mysticalcrops.essence_tier_1_seed": "Essence Seeds",
+
+
+  "item.mysticalcrops.essence_tier_1_seeds.tooltip.shift": "§2Tier 1",
+  "item.mysticalcrops.essence_tier_1_seeds.tooltip": "Press §eSHIFT§r for more Information",
+  "item.mysticalcrops.essence_tier_1_fruit.tooltip.shift": "§2Tier 1",
+  "item.mysticalcrops.essence_tier_1_fruit.tooltip": "Press §eSHIFT§r for more Information",
+  "item.mysticalcrops.iron_knife.tooltip.shift": "§4Sharpy!",
+  "item.mysticalcrops.iron_knife.tooltip": "Press §eSHIFT§r for more Information",
+  "item.mysticalcrops.diamond_knife.tooltip.shift": "§4Sharpy!",
+  "item.mysticalcrops.diamond_knife.tooltip": "Press §eSHIFT§r for more Information",
+  "item.mysticalcrops.netherite_knife.tooltip.shift": "§4Sharpy!",
+  "item.mysticalcrops.netherite_knife.tooltip": "Press §eSHIFT§r for more Information",
+  "item.mysticalcrops.crystal.tooltip.shift": "§bGlows with energy!",
+  "item.mysticalcrops.crystal.tooltip": "Press §eSHIFT§r for more Information",
+
+  "itemGroup.mysticalcrops.mysticalcrops": "Mystical Crops",
+
+
+  "block.mysticalcrops.botanical_table": "Botanical Table",
+  "block.mysticalcrops.botanical_ritual_table": "Botanical Ritual Table",
+  "block.mysticalcrops.basic_essence_block": "Basic Essence Block",
+  "block.mysticalcrops.uncommon_essence_block": "Uncommon Essence Block",
+  "block.mysticalcrops.advance_essence_block": "Advance Essence Block",
+  "block.mysticalcrops.ultra_essence_block": "Ultra Essence Block",
+  "block.mysticalcrops.ultimate_essence_block": "Ultimate Essence Block",
+  "block.mysticalcrops.diamond_crop": "Diamond Crop",
+  "block.mysticalcrops.iron_crop": "Iron Crop",
+  "block.mysticalcrops.essence_tier_1_crop": "Essence Crop",
+  "block.mysticalcrops.essence_planks": "Essence Planks"
+}
