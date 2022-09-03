@@ -8,28 +8,28 @@
       "item": "minecraft:iron_ingot"
     },
     {
-      "item": "mysticalcrops:ultra_essence"
+      "item": "mysticalcrops:advance_essence"
     },
     {
       "item": "minecraft:iron_ingot"
     },
     {
-      "item": "mysticalcrops:ultra_essence"
+      "item": "mysticalcrops:advance_essence"
     },
     {
-      "item": "mysticalcrops:essence_tier_1_seed"
+      "item": "mysticalcrops:essence_seeds_tier_1"
     },
     {
       "item": "minecraft:iron_ingot"
     },
     {
-      "item": "mysticalcrops:ultra_essence"
+      "item": "mysticalcrops:advance_essence"
     },
     {
       "item": "minecraft:iron_ingot"
     }
   ],
   "output": {
-    "item": "mysticalcrops:iron_seed"
+    "item": "mysticalcrops:iron_seeds"
   }
 }

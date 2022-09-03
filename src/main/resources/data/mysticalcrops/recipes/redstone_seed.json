@@ -1,0 +1,35 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:crystal"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "mysticalcrops:ultra_essence"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "mysticalcrops:ultra_essence"
+    },
+    {
+      "item": "mysticalcrops:iron_seeds"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "mysticalcrops:ultra_essence"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:redstone_seeds"
+  }
+}

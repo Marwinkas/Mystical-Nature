@@ -17,7 +17,7 @@
       "item": "mysticalcrops:ultimate_essence"
     },
     {
-      "item": "mysticalcrops:iron_seed"
+      "item": "mysticalcrops:gold_seeds"
     },
     {
       "item": "minecraft:diamond"
@@ -30,6 +30,6 @@
     }
   ],
   "output": {
-    "item": "mysticalcrops:diamond_seed"
+    "item": "mysticalcrops:diamond_seeds"
   }
 }

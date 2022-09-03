@@ -12,7 +12,6 @@ import net.minecraft.util.Identifier;
 public class BotanicalRitualTableScreen extends HandledScreen<BotanicalRitualTableScreenHandler> {
     private static final Identifier TEXTURE =
             new Identifier(MysticalCrops.MOD_ID, "textures/gui/botanical_ritual_table_gui.png");
-
     public BotanicalRitualTableScreen(BotanicalRitualTableScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }

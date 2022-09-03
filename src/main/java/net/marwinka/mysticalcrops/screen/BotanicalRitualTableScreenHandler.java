@@ -1,6 +1,6 @@
 package net.marwinka.mysticalcrops.screen;
 
-import net.marwinka.mysticalcrops.util.ResultSlot;
+import net.marwinka.mysticalcrops.util.inventory.ResultSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;

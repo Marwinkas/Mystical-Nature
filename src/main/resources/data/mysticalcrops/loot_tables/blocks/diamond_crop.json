@@ -23,7 +23,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "mysticalcrops:diamond_seed"
+              "name": "mysticalcrops:diamond_seeds"
             }
           ]
         }
@@ -46,7 +46,7 @@
               }
             }
           ],
-          "name": "mysticalcrops:diamond_seed"
+          "name": "mysticalcrops:diamond_seeds"
         }
       ],
       "conditions": [

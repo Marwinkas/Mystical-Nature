@@ -1,0 +1,35 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:crystal"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    {
+      "item": "mysticalcrops:gold_seeds"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:emerald_seeds"
+  }
+}
