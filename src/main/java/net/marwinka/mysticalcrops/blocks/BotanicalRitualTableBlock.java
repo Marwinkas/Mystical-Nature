@@ -2,8 +2,9 @@ package net.marwinka.mysticalcrops.blocks;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.marwinka.mysticalcrops.blockentities.BotanicalRitualTableEntity;
-import net.marwinka.mysticalcrops.init.BlockEntity;
+import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
@@ -62,10 +63,11 @@ public class BotanicalRitualTableBlock extends BlockWithEntity implements BlockE
         return BlockRenderType.MODEL;
     }
 
+
     @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
-            net.minecraft.block.entity.BlockEntity blockEntity = world.getBlockEntity(pos);
+            BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BotanicalRitualTableEntity) {
                 ItemScatterer.spawn(world, pos, (BotanicalRitualTableEntity)blockEntity);
                 world.updateComparators(pos,this);
@@ -90,13 +92,13 @@ public class BotanicalRitualTableBlock extends BlockWithEntity implements BlockE
 
     @Nullable
     @Override
-    public net.minecraft.block.entity.BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new BotanicalRitualTableEntity(pos, state);
     }
 
     @Nullable
     @Override
-    public <T extends net.minecraft.block.entity.BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, BlockEntity.BOTANICAL_RITUAL_TABLE, BotanicalRitualTableEntity::tick);
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return checkType(type, BlockEntities.BOTANICAL_RITUAL_TABLE, BotanicalRitualTableEntity::tick);
     }
 }

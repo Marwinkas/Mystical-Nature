@@ -1,7 +1,7 @@
 package net.marwinka.mysticalcrops.blockentities;
 
 import net.marwinka.mysticalcrops.blocks.BotanicalRitualTableBlock;
-import net.marwinka.mysticalcrops.init.BlockEntity;
+import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.marwinka.mysticalcrops.recipe.BotanicalRitualTableRecipe;
 import net.marwinka.mysticalcrops.screen.BotanicalRitualTableScreenHandler;
 import net.minecraft.block.BlockState;
@@ -9,12 +9,12 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -32,7 +32,7 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
     private int maxProgress = 90;
 
     public BotanicalRitualTableEntity(BlockPos pos, BlockState state) {
-        super(BlockEntity.BOTANICAL_RITUAL_TABLE, pos, state);
+        super(BlockEntities.BOTANICAL_RITUAL_TABLE, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
@@ -62,7 +62,7 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Botanical Ritual Table");
+        return new LiteralText("Botanical Ritual Table");
     }
 
     @Nullable
@@ -173,13 +173,14 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
     }
 
     private static void craftItem(BotanicalRitualTableEntity entity) {
+        World world = entity.world;
         SimpleInventory inventory = new SimpleInventory(entity.size());
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<BotanicalRitualTableRecipe> recipe = entity.getWorld().getRecipeManager()
-                .getFirstMatch(BotanicalRitualTableRecipe.Type.INSTANCE, inventory, entity.getWorld());
+        Optional<BotanicalRitualTableRecipe> recipe = world.getRecipeManager()
+                .getFirstMatch(BotanicalRitualTableRecipe.Type.INSTANCE, inventory, world);
 
         if(recipe.isPresent()) {
             entity.getStack(0).setDamage(entity.getStack(0).getDamage() + 1);
@@ -204,22 +205,23 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
     }
 
     private static boolean hasRecipe(BotanicalRitualTableEntity entity) {
+        World world = entity.world;
         SimpleInventory inventory = new SimpleInventory(entity.size());
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<BotanicalRitualTableRecipe> match = entity.getWorld().getRecipeManager()
-                .getFirstMatch(BotanicalRitualTableRecipe.Type.INSTANCE, inventory, entity.getWorld());
+        Optional<BotanicalRitualTableRecipe> match = world.getRecipeManager()
+                .getFirstMatch(BotanicalRitualTableRecipe.Type.INSTANCE, inventory, world);
 
 
             return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                    && canInsertItemIntoOutputSlot(inventory,match.get().getOutput().getItem());
+                    && canInsertItemIntoOutputSlot(inventory,match.get().getOutput());
 
     }
 
-    private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
-        return inventory.getStack(9).getItem() == output || inventory.getStack(9).isEmpty();
+    private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, ItemStack output) {
+        return inventory.getStack(9).getItem() == output.getItem() || inventory.getStack(9).isEmpty();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory) {

@@ -1,7 +1,8 @@
 package net.marwinka.mysticalcrops.blockentities;
 
 import net.marwinka.mysticalcrops.blocks.BotanicalTableBlock;
-import net.marwinka.mysticalcrops.init.BlockEntity;
+import net.marwinka.mysticalcrops.init.BlockEntities;
+import net.marwinka.mysticalcrops.recipe.BotanicalRitualTableRecipe;
 import net.marwinka.mysticalcrops.recipe.BotanicalTableRecipe;
 import net.marwinka.mysticalcrops.screen.BotanicalTableScreenHandler;
 import net.minecraft.block.BlockState;
@@ -15,6 +16,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -32,7 +34,7 @@ public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity
     private int maxProgress = 40;
 
     public BotanicalTableEntity(BlockPos pos, BlockState state) {
-        super(BlockEntity.BOTANICAL_TABLE, pos, state);
+        super(BlockEntities.BOTANICAL_TABLE, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
@@ -62,7 +64,7 @@ public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Botanical Table");
+        return new LiteralText("Botanical Table");
     }
 
     @Nullable
@@ -173,13 +175,14 @@ public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity
     }
 
     private static void craftItem(BotanicalTableEntity entity) {
+        World world = entity.world;
         SimpleInventory inventory = new SimpleInventory(entity.size());
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<BotanicalTableRecipe> recipe = entity.getWorld().getRecipeManager()
-                .getFirstMatch(BotanicalTableRecipe.Type.INSTANCE, inventory, entity.getWorld());
+        Optional<BotanicalTableRecipe> recipe = world.getRecipeManager()
+                .getFirstMatch(BotanicalTableRecipe.Type.INSTANCE, inventory, world);
 
         if(recipe.isPresent()) {
             entity.getStack(0).setDamage(entity.getStack(0).getDamage() + 1);
@@ -197,22 +200,23 @@ public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity
     }
 
     private static boolean hasRecipe(BotanicalTableEntity entity) {
+        World world = entity.world;
         SimpleInventory inventory = new SimpleInventory(entity.size());
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<BotanicalTableRecipe> match = entity.getWorld().getRecipeManager()
-                .getFirstMatch(BotanicalTableRecipe.Type.INSTANCE, inventory, entity.getWorld());
+        Optional<BotanicalTableRecipe> match = world.getRecipeManager()
+                .getFirstMatch(BotanicalTableRecipe.Type.INSTANCE, inventory, world);
 
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory,match.get().getOutput().getItem());
+                && canInsertItemIntoOutputSlot(inventory,match.get().getOutput());
 
     }
 
-    private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
-        return inventory.getStack(2).getItem() == output || inventory.getStack(2).isEmpty();
+    private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, ItemStack output) {
+        return inventory.getStack(2).getItem() == output.getItem() || inventory.getStack(9).isEmpty();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory) {

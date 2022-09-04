@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -18,9 +19,9 @@ public class Knife extends SwordItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("item.mysticalcrops.knife.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.mysticalcrops.knife.tooltip.shift"));
         } else {
-            tooltip.add(Text.translatable("item.mysticalcrops.knife.tooltip") );
+            tooltip.add(new TranslatableText("item.mysticalcrops.knife.tooltip"));
         }
 
         super.appendTooltip(stack, world, tooltip, context);

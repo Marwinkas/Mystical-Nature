@@ -2,7 +2,7 @@ package net.marwinka.mysticalcrops;
 
 import net.fabricmc.api.ModInitializer;
 import net.marwinka.mysticalcrops.init.Blocks;
-import net.marwinka.mysticalcrops.init.BlockEntity;
+import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.marwinka.mysticalcrops.init.Crops;
 import net.marwinka.mysticalcrops.init.Items;
 import net.marwinka.mysticalcrops.recipe.ModRecipes;
@@ -16,7 +16,7 @@ public class MysticalCrops implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		BlockEntity.registerBlockEntities();
+		BlockEntities.registerBlockEntities();
 		Blocks.registerBlocks();
 		Crops.registerCrops();
 		Items.registerItems();

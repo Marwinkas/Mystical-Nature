@@ -18,13 +18,6 @@ import java.util.Map;
 public class Items {
     public static final Map<Item, Identifier> ITEMS = new LinkedHashMap<>();
 
-
-    public static final Item BASIC_ESSENCE = register("basic_essence");
-    public static final Item UNCOMMON_ESSENCE = register("uncommon_essence");
-    public static final Item ADVANCE_ESSENCE = register("advance_essence");
-    public static final Item ULTRA_ESSENCE = register("ultra_essence");
-    public static final Item ULTIMATE_ESSENCE = register("ultimate_essence");
-
     public static final Item ESSENCE_SEEDS_TIER_1 = register(new EssenceSeedsTier1(Crops.ESSENCE_CROP_TIER_1, new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "essence_seeds_tier_1");
     public static final Item DIAMOND_SEEDS = register(new AliasedBlockItem(Crops.DIAMOND_CROP, new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "diamond_seeds");
     public static final Item EMERALD_SEEDS = register(new AliasedBlockItem(Crops.EMERALD_CROP, new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "emerald_seeds");
@@ -40,6 +33,12 @@ public class Items {
     public static final Item LAPIS_FRUIT = register(new Item(new FabricItemSettings().group(ModItemGroup.ITEMGROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(3).build())), "lapis_fruit");
     public static final Item REDSTONE_FRUIT = register(new Item(new FabricItemSettings().group(ModItemGroup.ITEMGROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(3).build())), "redstone_fruit");
     public static final Item IRON_FRUIT = register(new Item(new FabricItemSettings().group(ModItemGroup.ITEMGROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(3).build())), "iron_fruit");
+
+    public static final Item BASIC_ESSENCE = register("basic_essence");
+    public static final Item UNCOMMON_ESSENCE = register("uncommon_essence");
+    public static final Item ADVANCE_ESSENCE = register("advance_essence");
+    public static final Item ULTRA_ESSENCE = register("ultra_essence");
+    public static final Item ULTIMATE_ESSENCE = register("ultimate_essence");
 
     public static final Item DIAMOND_ESSENCE = register("diamond_essence");
     public static final Item EMERALD_ESSENCE = register("emerald_essence");

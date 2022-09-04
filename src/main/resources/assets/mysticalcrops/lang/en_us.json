@@ -29,10 +29,7 @@
   "item.mysticalcrops.ultimate_essence": "§cUltimate Essence",
   "item.mysticalcrops.essence_seeds_tier_1": "§aEssence Seeds",
 
-  "item.mysticalcrops.essence_seeds_tier_1.tooltip.shift": "§2Tier 1",
-  "item.mysticalcrops.essence_seeds_tier_1.tooltip": "Press §eSHIFT§r for more Information",
-  "item.mysticalcrops.essence_fruit_tier_1.tooltip.shift": "§2Tier 1",
-  "item.mysticalcrops.essence_fruit_tier_1.tooltip": "Press §eSHIFT§r for more Information",
+  "item.mysticalcrops.essence_tier_1.tooltip": "§aTier 1",
   "item.mysticalcrops.knife.tooltip.shift": "§4Sharpy!",
   "item.mysticalcrops.knife.tooltip": "Press §eSHIFT§r for more Information",
   "item.mysticalcrops.crystal.tooltip.shift": "§bGlows with energy!",
