@@ -5,6 +5,8 @@ import net.marwinka.mysticalcrops.init.Blocks;
 import net.marwinka.mysticalcrops.init.BlockEntity;
 import net.marwinka.mysticalcrops.init.Crops;
 import net.marwinka.mysticalcrops.init.Items;
+import net.marwinka.mysticalcrops.init.itemfromothermods.OtherCrops;
+import net.marwinka.mysticalcrops.init.itemfromothermods.OtherItems;
 import net.marwinka.mysticalcrops.recipe.ModRecipes;
 import net.marwinka.mysticalcrops.screen.ModScreenHandler;
 import org.slf4j.Logger;
@@ -20,6 +22,8 @@ public class MysticalCrops implements ModInitializer {
 		Blocks.registerBlocks();
 		Crops.registerCrops();
 		Items.registerItems();
+		OtherCrops.registerCrops();
+		OtherItems.registerItems();
 		ModScreenHandler.registerAllScreenHandlers();
 		ModRecipes.registerRecipes();
 	}

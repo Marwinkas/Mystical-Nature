@@ -27,7 +27,7 @@ public class BotanicalRitualTableBlock extends BlockWithEntity implements BlockE
     public BotanicalRitualTableBlock(Material material, BlockSoundGroup sound, float hardness, float resistance) {
         super(FabricBlockSettings.of(material).sounds(sound).strength(hardness, resistance).requiresTool().nonOpaque());
     }
-    private static VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 9, 16);
+        private static VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 16, 16);
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

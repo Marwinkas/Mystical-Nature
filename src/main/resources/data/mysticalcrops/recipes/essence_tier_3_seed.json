@@ -1,0 +1,35 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:crystal"
+    },
+    {
+      "item": "mysticalcrops:advance_essence"
+    },
+    {
+      "item": "mysticalcrops:advance_essence"
+    },
+    {
+      "item": "mysticalcrops:advance_essence"
+    },
+    {
+      "item": "mysticalcrops:advance_essence"
+    },
+    {
+      "item": "mysticalcrops:essence_seeds_tier_2"
+    },
+    {
+      "item": "mysticalcrops:advance_essence"
+    },
+    {
+      "item": "mysticalcrops:advance_essence"
+    },
+    {
+      "item": "mysticalcrops:advance_essence"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:essence_seeds_tier_3"
+  }
+}

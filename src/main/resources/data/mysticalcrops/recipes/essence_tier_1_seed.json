@@ -5,28 +5,28 @@
       "item": "mysticalcrops:crystal"
     },
     {
-      "item": "mysticalcrops:basic_essence_block"
+      "item": "mysticalcrops:basic_essence"
     },
     {
       "item": "mysticalcrops:basic_essence"
     },
     {
-      "item": "mysticalcrops:basic_essence_block"
+      "item": "mysticalcrops:basic_essence"
     },
     {
       "item": "mysticalcrops:basic_essence"
     },
     {
-      "item": "minecraft:wheat_seeds"
-    },
-    {
-      "item": "mysticalcrops:basic_essence_block"
+      "tag": "minecraft:seeds"
     },
     {
       "item": "mysticalcrops:basic_essence"
     },
     {
-      "item": "mysticalcrops:basic_essence_block"
+      "item": "mysticalcrops:basic_essence"
+    },
+    {
+      "item": "mysticalcrops:basic_essence"
     }
   ],
   "output": {

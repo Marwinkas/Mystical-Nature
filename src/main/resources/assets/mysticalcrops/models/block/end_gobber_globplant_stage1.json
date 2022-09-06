@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "mysticalcrops:block/end_gobber_globetteplant_stage1"
+  }
+}
