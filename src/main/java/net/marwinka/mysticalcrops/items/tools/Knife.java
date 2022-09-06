@@ -21,7 +21,7 @@ public class Knife extends SwordItem {
         if (Screen.hasShiftDown()) {
             tooltip.add(new TranslatableText("item.mysticalcrops.knife.tooltip.shift"));
         } else {
-            tooltip.add(new TranslatableText("item.mysticalcrops.knife.tooltip"));
+            tooltip.add(new TranslatableText("item.mysticalcrops.knife.tooltip") );
         }
 
         super.appendTooltip(stack, world, tooltip, context);

@@ -1,0 +1,35 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:crystal"
+    },
+    {
+      "item": "gobber2:gobber2_glob_end"
+    },
+    {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    {
+      "item": "gobber2:gobber2_glob_end"
+    },
+    {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    {
+      "item": "mysticalcrops:essence_seeds_tier_5"
+    },
+    {
+      "item": "gobber2:gobber2_glob_end"
+    },
+    {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    {
+      "item": "gobber2:gobber2_glob_end"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:end_gobber_glob_seeds"
+  }
+}

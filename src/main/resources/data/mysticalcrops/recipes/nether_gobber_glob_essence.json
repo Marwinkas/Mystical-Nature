@@ -1,0 +1,14 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+      "tag": "mysticalcrops:knifes"
+    },
+    {
+      "item": "mysticalcrops:nether_gobber_glob_fruit"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:nether_gobber_glob_essence"
+  }
+}

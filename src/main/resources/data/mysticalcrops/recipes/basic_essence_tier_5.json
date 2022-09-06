@@ -1,0 +1,15 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+      "tag": "mysticalcrops:knifes"
+    },
+    {
+      "item": "mysticalcrops:essence_fruit_tier_5"
+    }
+  ],
+  "output": {
+    "count": 5,
+    "item": "mysticalcrops:basic_essence"
+  }
+}

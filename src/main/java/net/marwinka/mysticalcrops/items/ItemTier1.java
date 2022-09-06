@@ -1,6 +1,5 @@
 package net.marwinka.mysticalcrops.items;
 
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,8 +10,8 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class EssenceFruitTier1 extends Item {
-    public EssenceFruitTier1(Settings settings) {
+public class ItemTier1 extends Item {
+    public ItemTier1(Settings settings) {
         super(settings);
     }
 

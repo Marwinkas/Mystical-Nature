@@ -15,13 +15,22 @@ public class Crops {
     public static final Map<Block, Identifier> BLOCKS = new LinkedHashMap<>();
     public static final Map<BlockItem, Identifier> BLOCK_ITEMS = new LinkedHashMap<>();
 
+    public static final Block ESSENCE_CROP_TIER_1 = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "essence_crop_tier_1");
+    public static final Block ESSENCE_CROP_TIER_2 = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "essence_crop_tier_2");
+    public static final Block ESSENCE_CROP_TIER_3 = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "essence_crop_tier_3");
+    public static final Block ESSENCE_CROP_TIER_4 = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "essence_crop_tier_4");
+    public static final Block ESSENCE_CROP_TIER_5 = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "essence_crop_tier_5");
     public static final Block DIAMOND_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "diamond_crop");
     public static final Block EMERALD_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "emerald_crop");
     public static final Block GOLD_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "gold_crop");
     public static final Block IRON_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "iron_crop");
     public static final Block LAPIS_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "lapis_crop");
     public static final Block REDSTONE_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "redstone_crop");
-    public static final Block ESSENCE_CROP_TIER_1 = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "essence_crop_tier_1");
+    public static final Block COAL_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "coal_crop");
+    public static final Block COPPER_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "copper_crop");
+    public static final Block QUARTZ_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "quartz_crop");
+    public static final Block OBSIDIAN_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "obsidian_crop");
+    public static final Block NETHERITE_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "netherite_crop");
 
     private static Block register(Block block, String name) {
         Identifier id = new Identifier(MysticalCrops.MOD_ID, name);
