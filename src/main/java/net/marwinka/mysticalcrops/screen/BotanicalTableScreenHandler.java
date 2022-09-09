@@ -1,5 +1,7 @@
 package net.marwinka.mysticalcrops.screen;
 
+import net.marwinka.mysticalcrops.util.inventory.FruitSlot;
+import net.marwinka.mysticalcrops.util.inventory.KnifeSlot;
 import net.marwinka.mysticalcrops.util.inventory.ResultSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -26,8 +28,8 @@ public class BotanicalTableScreenHandler  extends ScreenHandler {
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
 
-        this.addSlot(new Slot(inventory, 0, 56, 56));
-        this.addSlot(new Slot(inventory, 1, 56, 20));
+        this.addSlot(new KnifeSlot(inventory, 0, 56, 56));
+        this.addSlot(new FruitSlot(inventory, 1, 56, 20));
         this.addSlot(new ResultSlot(inventory, 2, 116, 38));
 
         addPlayerInventory(playerInventory);

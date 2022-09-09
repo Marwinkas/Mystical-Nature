@@ -1,7 +1,7 @@
 package net.marwinka.mysticalcrops.blockentities;
 
 import net.marwinka.mysticalcrops.blocks.BotanicalTableBlock;
-import net.marwinka.mysticalcrops.init.BlockEntity;
+import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.marwinka.mysticalcrops.recipe.BotanicalTableRecipe;
 import net.marwinka.mysticalcrops.screen.BotanicalTableScreenHandler;
 import net.minecraft.block.BlockState;
@@ -32,7 +32,7 @@ public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity
     private int maxProgress = 40;
 
     public BotanicalTableEntity(BlockPos pos, BlockState state) {
-        super(BlockEntity.BOTANICAL_TABLE, pos, state);
+        super(BlockEntities.BOTANICAL_TABLE, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {

@@ -2,9 +2,12 @@ package net.marwinka.mysticalcrops;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.marwinka.mysticalcrops.init.Blocks;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
+import net.marwinka.mysticalcrops.blockentities.BotanicalRitualTableEntityRenderer;
+import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.marwinka.mysticalcrops.init.Crops;
 import net.marwinka.mysticalcrops.init.itemfromothermods.OtherCrops;
+import net.marwinka.mysticalcrops.networking.ModMessages;
 import net.marwinka.mysticalcrops.screen.BotanicalRitualTableScreen;
 import net.marwinka.mysticalcrops.screen.BotanicalTableScreen;
 import net.marwinka.mysticalcrops.screen.ModScreenHandler;
@@ -30,11 +33,18 @@ public class MysticalCropsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(Crops.QUARTZ_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Crops.OBSIDIAN_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Crops.NETHERITE_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Crops.DIRT_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Crops.STONE_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Crops.GLOWSTONE_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Crops.FIRE_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Crops.ECHO_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.GOBBER_GLOB_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.END_GOBBER_GLOB_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.NETHER_GOBBER_GLOB_CROP, RenderLayer.getCutout());
 
         HandledScreens.register(ModScreenHandler.BOTANICAL_TABLE_SCREEN_HANDLER, BotanicalTableScreen::new);
         HandledScreens.register(ModScreenHandler.BOTANICAL_RITUAL_TABLE_SCREEN_HANDLER, BotanicalRitualTableScreen::new);
+        ModMessages.registerS2CPackets();
+        BlockEntityRendererRegistry.register(BlockEntities.BOTANICAL_RITUAL_TABLE, BotanicalRitualTableEntityRenderer::new);
     }
-}
+    }

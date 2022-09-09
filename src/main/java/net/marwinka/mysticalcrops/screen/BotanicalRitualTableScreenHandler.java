@@ -1,6 +1,6 @@
 package net.marwinka.mysticalcrops.screen;
 
-import net.marwinka.mysticalcrops.util.inventory.ResultSlot;
+import net.marwinka.mysticalcrops.util.inventory.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -26,16 +26,16 @@ public class BotanicalRitualTableScreenHandler extends ScreenHandler {
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
 
-        this.addSlot(new Slot(inventory, 0, 13, 44));
-        this.addSlot(new Slot(inventory, 1, 54, 18));
-        this.addSlot(new Slot(inventory, 2, 53, 44));
-        this.addSlot(new Slot(inventory, 3, 54, 70));
-        this.addSlot(new Slot(inventory, 4, 80, 17));
-        this.addSlot(new Slot(inventory, 5, 80, 71));
-        this.addSlot(new Slot(inventory, 6, 106, 18));
-        this.addSlot(new Slot(inventory, 7, 107, 44));
-        this.addSlot(new Slot(inventory, 8, 106, 70));
-        this.addSlot(new ResultSlot(inventory, 9, 80, 44));
+        this.addSlot(new CristalSlot(inventory, 0, 13, 42));
+        this.addSlot(new NoSeedSlot(inventory, 1, 54, 16));
+        this.addSlot(new EssenceSlot(inventory, 2, 53, 42));
+        this.addSlot(new NoSeedSlot(inventory, 3, 54, 68));
+        this.addSlot(new EssenceSlot(inventory, 4, 80, 15));
+        this.addSlot(new EssenceandSeedSlot(inventory, 5, 80, 69));
+        this.addSlot(new NoSeedSlot(inventory, 6, 106, 16));
+        this.addSlot(new EssenceSlot(inventory, 7, 107, 42));
+        this.addSlot(new NoSeedSlot(inventory, 8, 106, 68));
+        this.addSlot(new ResultSlot(inventory, 9, 80, 42));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
@@ -89,14 +89,14 @@ public class BotanicalRitualTableScreenHandler extends ScreenHandler {
     private void addPlayerInventory(PlayerInventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 94 + i * 18));
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 91 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(PlayerInventory playerInventory) {
         for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 152));
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 149));
         }
     }
 }

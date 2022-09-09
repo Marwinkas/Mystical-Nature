@@ -8,7 +8,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class BlockEntity {
+public class BlockEntities {
     public static BlockEntityType<BotanicalTableEntity> BOTANICAL_TABLE;
     public static BlockEntityType<BotanicalRitualTableEntity> BOTANICAL_RITUAL_TABLE;
 

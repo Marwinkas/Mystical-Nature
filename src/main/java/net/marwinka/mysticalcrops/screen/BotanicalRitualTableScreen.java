@@ -36,7 +36,7 @@ public class BotanicalRitualTableScreen extends HandledScreen<BotanicalRitualTab
 
     private void renderProgressArrow(MatrixStack matrices, int x, int y) {
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 48, y + 24, 176, 0, handler.getScaledProgress(), 81);
+            drawTexture(matrices, x + 48, y + 22, 176, 0, handler.getScaledProgress(), 81);
         }
     }
 

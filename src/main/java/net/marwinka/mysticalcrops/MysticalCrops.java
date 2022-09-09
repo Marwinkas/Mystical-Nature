@@ -1,12 +1,10 @@
 package net.marwinka.mysticalcrops;
 
 import net.fabricmc.api.ModInitializer;
-import net.marwinka.mysticalcrops.init.Blocks;
-import net.marwinka.mysticalcrops.init.BlockEntity;
-import net.marwinka.mysticalcrops.init.Crops;
-import net.marwinka.mysticalcrops.init.Items;
+import net.marwinka.mysticalcrops.init.*;
 import net.marwinka.mysticalcrops.init.itemfromothermods.OtherCrops;
 import net.marwinka.mysticalcrops.init.itemfromothermods.OtherItems;
+import net.marwinka.mysticalcrops.networking.ModMessages;
 import net.marwinka.mysticalcrops.recipe.ModRecipes;
 import net.marwinka.mysticalcrops.screen.ModScreenHandler;
 import org.slf4j.Logger;
@@ -18,7 +16,7 @@ public class MysticalCrops implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		BlockEntity.registerBlockEntities();
+		BlockEntities.registerBlockEntities();
 		Blocks.registerBlocks();
 		Crops.registerCrops();
 		Items.registerItems();
@@ -26,5 +24,7 @@ public class MysticalCrops implements ModInitializer {
 		OtherItems.registerItems();
 		ModScreenHandler.registerAllScreenHandlers();
 		ModRecipes.registerRecipes();
+		ModMessages.registerC2SPackets();
+		Fuels.registerModStuffs();
 	}
 }

@@ -1,7 +1,11 @@
 package net.marwinka.mysticalcrops.blockentities;
 
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.marwinka.mysticalcrops.blocks.BotanicalRitualTableBlock;
-import net.marwinka.mysticalcrops.init.BlockEntity;
+import net.marwinka.mysticalcrops.init.BlockEntities;
+import net.marwinka.mysticalcrops.networking.ModMessages;
 import net.marwinka.mysticalcrops.recipe.BotanicalRitualTableRecipe;
 import net.marwinka.mysticalcrops.screen.BotanicalRitualTableScreenHandler;
 import net.minecraft.block.BlockState;
@@ -12,9 +16,12 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -32,7 +39,7 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
     private int maxProgress = 90;
 
     public BotanicalRitualTableEntity(BlockPos pos, BlockState state) {
-        super(BlockEntity.BOTANICAL_RITUAL_TABLE, pos, state);
+        super(BlockEntities.BOTANICAL_RITUAL_TABLE, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
@@ -197,7 +204,7 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
             entity.removeStack(8, 1);
 
             entity.setStack(9, new ItemStack(recipe.get().getOutput().getItem(),
-                    entity.getStack(9).getCount() + 1));
+                    entity.getStack(9).getCount() + recipe.get().getOutput().getCount()));
 
             entity.resetProgress();
         }
@@ -224,5 +231,55 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory) {
         return inventory.getStack(9).getMaxCount() > inventory.getStack(9).getCount();
+    }
+    public void setInventory(DefaultedList<ItemStack> inventory) {
+        for (int i = 0; i < inventory.size(); i++) {
+            this.inventory.set(i, inventory.get(i));
+        }
+    }
+
+    @Override
+    public void markDirty() {
+        if(!world.isClient()) {
+            PacketByteBuf data = PacketByteBufs.create();
+            data.writeInt(inventory.size());
+            for(int i = 0; i < inventory.size(); i++) {
+                data.writeItemStack(inventory.get(i));
+            }
+            data.writeBlockPos(getPos());
+
+            for (ServerPlayerEntity player : PlayerLookup.tracking((ServerWorld) world, getPos())) {
+                ServerPlayNetworking.send(player, ModMessages.ITEM_SYNC, data);
+            }
+        }
+
+        super.markDirty();
+    }
+    public ItemStack getRenderStack() {
+        return this.getStack(1);
+    }
+    public ItemStack getRenderStack1() {
+        return this.getStack(2);
+    }
+    public ItemStack getRenderStack2() {
+        return this.getStack(3);
+    }
+    public ItemStack getRenderStack3() {
+        return this.getStack(4);
+    }
+    public ItemStack getRenderStack4() {
+        return this.getStack(5);
+    }
+    public ItemStack getRenderStack5() {
+        return this.getStack(6);
+    }
+    public ItemStack getRenderStack6() {
+        return this.getStack(7);
+    }
+    public ItemStack getRenderStack7() {
+        return this.getStack(8);
+    }
+    public ItemStack getRenderStack8() {
+        return this.getStack(9);
     }
 }

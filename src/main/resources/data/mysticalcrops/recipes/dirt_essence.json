@@ -1,0 +1,14 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+      "tag": "mysticalcrops:knifes"
+    },
+    {
+      "item": "mysticalcrops:dirt_fruit"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:dirt_essence"
+  }
+}

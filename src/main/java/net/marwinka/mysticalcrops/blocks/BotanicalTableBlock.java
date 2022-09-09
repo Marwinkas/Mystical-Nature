@@ -1,7 +1,7 @@
 package net.marwinka.mysticalcrops.blocks;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.marwinka.mysticalcrops.init.BlockEntity;
+import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.marwinka.mysticalcrops.blockentities.BotanicalTableEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -98,6 +98,6 @@ public class BotanicalTableBlock extends BlockWithEntity implements BlockEntityP
         @Nullable
         @Override
         public <T extends net.minecraft.block.entity.BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-            return checkType(type, BlockEntity.BOTANICAL_TABLE, BotanicalTableEntity::tick);
+            return checkType(type, BlockEntities.BOTANICAL_TABLE, BotanicalTableEntity::tick);
         }
     }

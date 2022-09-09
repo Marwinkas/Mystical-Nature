@@ -4,6 +4,11 @@
     "mysticalcrops:uncommon_essence_block",
     "mysticalcrops:advance_essence_block",
     "mysticalcrops:ultra_essence_block",
-    "mysticalcrops:ultimate_essence_block"
+    "mysticalcrops:ultimate_essence_block",
+    "mysticalcrops:basic_coal_block",
+    "mysticalcrops:uncommon_coal_block",
+    "mysticalcrops:advance_coal_block",
+    "mysticalcrops:ultra_coal_block",
+    "mysticalcrops:ultimate_coal_block"
   ]
 }
