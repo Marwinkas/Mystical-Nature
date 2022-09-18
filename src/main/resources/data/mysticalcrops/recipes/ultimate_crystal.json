@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:ultra_crystal"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "item": "mysticalcrops:ultimate_crystal"
+  }
+}

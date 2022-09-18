@@ -2,7 +2,7 @@
   "type": "mysticalcrops:botanical_ritual_table_craft",
   "ingredients": [
     {
-      "item": "mysticalcrops:crystal"
+      "tag": "c:crystals"
     },
     {
       "item": "minecraft:glowstone"
@@ -18,6 +18,9 @@
     },
     {
       "item": "mysticalcrops:essence_seeds_tier_4"
+    },
+    {
+      "item": "mysticalcrops:ultra_essence"
     },
     {
       "item": "minecraft:glowstone"

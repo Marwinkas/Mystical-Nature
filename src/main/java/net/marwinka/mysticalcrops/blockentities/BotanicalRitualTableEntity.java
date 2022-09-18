@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.marwinka.mysticalcrops.blocks.BotanicalRitualTableBlock;
 import net.marwinka.mysticalcrops.init.BlockEntities;
+import net.marwinka.mysticalcrops.init.Items;
 import net.marwinka.mysticalcrops.networking.ModMessages;
 import net.marwinka.mysticalcrops.recipe.BotanicalRitualTableRecipe;
 import net.marwinka.mysticalcrops.screen.BotanicalRitualTableScreenHandler;
@@ -15,6 +16,7 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.MinecartItem;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.NamedScreenHandlerFactory;
@@ -27,16 +29,17 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
 public class BotanicalRitualTableEntity extends net.minecraft.block.entity.BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(10, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(11, ItemStack.EMPTY);
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 90;
+    private int maxProgress = 100;
 
     public BotanicalRitualTableEntity(BlockPos pos, BlockState state) {
         super(BlockEntities.BOTANICAL_RITUAL_TABLE, pos, state);
@@ -69,7 +72,7 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Botanical Ritual Table");
+        return Text.literal("Ritual Table");
     }
 
     @Nullable
@@ -161,7 +164,7 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
         };
     }
 
-
+    public static boolean noseed;
     public static void tick(World world, BlockPos blockPos, BlockState state, BotanicalRitualTableEntity entity) {
         if(world.isClient()) {
             return;
@@ -188,12 +191,41 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
         Optional<BotanicalRitualTableRecipe> recipe = entity.getWorld().getRecipeManager()
                 .getFirstMatch(BotanicalRitualTableRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
+        if(noseed) {
+
+                if (entity.getStack(2).getItem() == Items.ADVANCE_ESSENCE) {
+                    entity.setStack(10, new ItemStack(Items.ULTRA_ESSENCE,
+                            entity.getStack(10).getCount() + 1));
+                }
+                if (entity.getStack(2).getItem() == Items.ULTRA_ESSENCE) {
+                    entity.setStack(10, new ItemStack(Items.ULTIMATE_ESSENCE,
+                            entity.getStack(10).getCount() + 1));
+                }
+                if (entity.getStack(2).getItem() == Items.UNCOMMON_ESSENCE) {
+                    entity.setStack(10, new ItemStack(Items.ADVANCE_ESSENCE,
+                            entity.getStack(10).getCount() + 1));
+                }
+                if (entity.getStack(2).getItem() == Items.BASIC_ESSENCE) {
+                    entity.setStack(10, new ItemStack(Items.UNCOMMON_ESSENCE,
+                            entity.getStack(10).getCount() + 1));
+                }
+            entity.getStack(0).setDamage(entity.getStack(0).getDamage() + 1);
+            if (entity.getStack(0).getDamage() >= 1000) {
+                entity.removeStack(0, 1);
+            }
+            entity.removeStack(2, 1);
+            entity.removeStack(4, 1);
+            entity.removeStack(6, 1);
+            entity.removeStack(8, 1);
+                entity.resetProgress();
+            }
         if(recipe.isPresent()) {
             entity.getStack(0).setDamage(entity.getStack(0).getDamage() + 1);
             if(entity.getStack(0).getDamage() >= 250)
             {
                 entity.removeStack(0, 1);
             }
+
             entity.removeStack(1, 1);
             entity.removeStack(2, 1);
             entity.removeStack(3, 1);
@@ -202,9 +234,9 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
             entity.removeStack(6, 1);
             entity.removeStack(7, 1);
             entity.removeStack(8, 1);
-
-            entity.setStack(9, new ItemStack(recipe.get().getOutput().getItem(),
-                    entity.getStack(9).getCount() + recipe.get().getOutput().getCount()));
+            entity.removeStack(9, 1);
+            entity.setStack(10, new ItemStack(recipe.get().getOutput().getItem(),
+                    entity.getStack(10).getCount() + recipe.get().getOutput().getCount()));
 
             entity.resetProgress();
         }
@@ -215,22 +247,147 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
+        if (entity.getStack(0).getItem() == Items.BASIC_CRYSTAL || entity.getStack(0).getItem() == Items.ADVANCE_CRYSTAL || entity.getStack(0).getItem() == Items.UNCOMMON_CRYSTAL || entity.getStack(0).getItem() == Items.ULTRA_CRYSTAL || entity.getStack(0).getItem() == Items.ULTIMATE_CRYSTAL || entity.getStack(0).getItem() == Items.INFINITY_CRYSTAL) {
+            if (entity.getStack(2).getItem() == Items.UNCOMMON_ESSENCE) {
+                if (entity.getStack(4).getItem() == Items.UNCOMMON_ESSENCE) {
+                    if (entity.getStack(6).getItem() == Items.UNCOMMON_ESSENCE) {
+                        if (entity.getStack(8).getItem() == Items.UNCOMMON_ESSENCE) {
+                            if (entity.getStack(1).getItem() == net.minecraft.item.Items.AIR) {
+                                if (entity.getStack(3).getItem() == net.minecraft.item.Items.AIR) {
+                                    if (entity.getStack(5).getItem() == net.minecraft.item.Items.AIR) {
+                                        if (entity.getStack(7).getItem() == net.minecraft.item.Items.AIR) {
+                                            if (entity.getStack(9).getItem() == net.minecraft.item.Items.AIR) {
+                                                noseed = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            if (entity.getStack(1).getItem() == null) {
+                                if (entity.getStack(3).getItem() == null) {
+                                    if (entity.getStack(5).getItem() == null) {
+                                        if (entity.getStack(7).getItem() == null) {
+                                            if (entity.getStack(9).getItem() == null) {
+                                                noseed = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if (entity.getStack(2).getItem() == Items.BASIC_ESSENCE) {
+                if (entity.getStack(4).getItem() == Items.BASIC_ESSENCE) {
+                    if (entity.getStack(6).getItem() == Items.BASIC_ESSENCE) {
+                        if (entity.getStack(8).getItem() == Items.BASIC_ESSENCE) {
+                            if (entity.getStack(1).getItem() == net.minecraft.item.Items.AIR) {
+                                if (entity.getStack(3).getItem() == net.minecraft.item.Items.AIR) {
+                                    if (entity.getStack(5).getItem() == net.minecraft.item.Items.AIR) {
+                                        if (entity.getStack(7).getItem() == net.minecraft.item.Items.AIR) {
+                                            if (entity.getStack(9).getItem() == net.minecraft.item.Items.AIR) {
+                                                noseed = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            if (entity.getStack(1).getItem() == null) {
+                                if (entity.getStack(3).getItem() == null) {
+                                    if (entity.getStack(5).getItem() == null) {
+                                        if (entity.getStack(7).getItem() == null) {
+                                            if (entity.getStack(9).getItem() == null) {
+                                                noseed = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if (entity.getStack(2).getItem() == Items.ADVANCE_ESSENCE) {
+                if (entity.getStack(4).getItem() == Items.ADVANCE_ESSENCE) {
+                    if (entity.getStack(6).getItem() == Items.ADVANCE_ESSENCE) {
+                        if (entity.getStack(8).getItem() == Items.ADVANCE_ESSENCE) {
+                            if (entity.getStack(1).getItem() == net.minecraft.item.Items.AIR) {
+                                if (entity.getStack(3).getItem() == net.minecraft.item.Items.AIR) {
+                                    if (entity.getStack(5).getItem() == net.minecraft.item.Items.AIR) {
+                                        if (entity.getStack(7).getItem() == net.minecraft.item.Items.AIR) {
+                                            if (entity.getStack(9).getItem() == net.minecraft.item.Items.AIR) {
+                                                noseed = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            if (entity.getStack(1).getItem() == null) {
+                                if (entity.getStack(3).getItem() == null) {
+                                    if (entity.getStack(5).getItem() == null) {
+                                        if (entity.getStack(7).getItem() == null) {
+                                            if (entity.getStack(9).getItem() == null) {
+                                                noseed = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if (entity.getStack(2).getItem() == Items.ULTRA_ESSENCE) {
+                if (entity.getStack(4).getItem() == Items.ULTRA_ESSENCE) {
+                    if (entity.getStack(6).getItem() == Items.ULTRA_ESSENCE) {
+                        if (entity.getStack(8).getItem() == Items.ULTRA_ESSENCE) {
+                            if (entity.getStack(1).getItem() == net.minecraft.item.Items.AIR) {
+                                if (entity.getStack(3).getItem() == net.minecraft.item.Items.AIR) {
+                                    if (entity.getStack(5).getItem() == net.minecraft.item.Items.AIR) {
+                                        if (entity.getStack(7).getItem() == net.minecraft.item.Items.AIR) {
+                                            if (entity.getStack(9).getItem() == net.minecraft.item.Items.AIR) {
+                                                noseed = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            if (entity.getStack(1).getItem() == null) {
+                                if (entity.getStack(3).getItem() == null) {
+                                    if (entity.getStack(5).getItem() == null) {
+                                        if (entity.getStack(7).getItem() == null) {
+                                            if (entity.getStack(9).getItem() == null) {
+                                                noseed = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else noseed = false;
+        }
+        else noseed = false;
 
         Optional<BotanicalRitualTableRecipe> match = entity.getWorld().getRecipeManager()
                 .getFirstMatch(BotanicalRitualTableRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
-
-            return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                    && canInsertItemIntoOutputSlot(inventory,match.get().getOutput().getItem());
-
+            if(!noseed){
+                return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
+                        && canInsertItemIntoOutputSlot(inventory,match.get().getOutput().getItem());
+            }
+        return noseed;
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
-        return inventory.getStack(9).getItem() == output || inventory.getStack(9).isEmpty();
+        return inventory.getStack(10).getItem() == output || inventory.getStack(10).isEmpty();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory) {
-        return inventory.getStack(9).getMaxCount() > inventory.getStack(9).getCount();
+        return inventory.getStack(10).getMaxCount() > inventory.getStack(10).getCount();
     }
     public void setInventory(DefaultedList<ItemStack> inventory) {
         for (int i = 0; i < inventory.size(); i++) {
@@ -268,18 +425,18 @@ public class BotanicalRitualTableEntity extends net.minecraft.block.entity.Block
         return this.getStack(4);
     }
     public ItemStack getRenderStack4() {
-        return this.getStack(5);
-    }
-    public ItemStack getRenderStack5() {
         return this.getStack(6);
     }
-    public ItemStack getRenderStack6() {
+    public ItemStack getRenderStack5() {
         return this.getStack(7);
     }
-    public ItemStack getRenderStack7() {
+    public ItemStack getRenderStack6() {
         return this.getStack(8);
     }
-    public ItemStack getRenderStack8() {
+    public ItemStack getRenderStack7() {
         return this.getStack(9);
+    }
+    public ItemStack getRenderStack8() {
+        return this.getStack(10);
     }
 }

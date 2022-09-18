@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    "$": {
+      "item": "mysticalcrops:wither_soul"
+    },
+    "@": {
+      "item": "mysticalcrops:dark_crystal"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "$@$",
+    "#$#"
+  ],
+  "result": {
+    "item": "mysticalcrops:wither_crystal"
+  }
+}

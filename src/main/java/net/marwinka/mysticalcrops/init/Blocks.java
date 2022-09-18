@@ -9,6 +9,7 @@ import net.marwinka.mysticalcrops.blocks.BotanicalTableBlock;
 import net.marwinka.mysticalcrops.util.block.BaseBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.block.OreBlock;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -17,6 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
@@ -31,8 +33,25 @@ public class Blocks {
     public static final Map<Block, Identifier> BLOCKS = new LinkedHashMap<>();
     public static final Map<BlockItem, Identifier> BLOCK_ITEMS = new LinkedHashMap<>();
 
+    public static final Block ESSENCE_ORE = register(new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+            UniformIntProvider.create(3, 7)), "essence_ore");
+    public static final Block DEEPSLATE_ESSENCE_ORE = register(new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+            UniformIntProvider.create(3, 7)), "deepslate_essence_ore");
+    public static final Block NETHER_ESSENCE_ORE = register(new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+            UniformIntProvider.create(3, 7)), "nether_essence_ore");
+    public static final Block END_ESSENCE_ORE = register(new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+            UniformIntProvider.create(3, 7)), "end_essence_ore");
+    public static final Block CRYSTAL_ORE = register(new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+            UniformIntProvider.create(3, 7)), "crystal_ore");
+    public static final Block DEEPSLATE_CRYSTAL_ORE = register(new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+            UniformIntProvider.create(3, 7)), "deepslate_crystal_ore");
+    public static final Block NETHER_CRYSTAL_ORE = register(new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+            UniformIntProvider.create(3, 7)), "nether_crystal_ore");
+    public static final Block END_CRYSTAL_ORE = register(new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+            UniformIntProvider.create(3, 7)), "end_crystal_ore");
     public static final Block BOTANICAL_TABLE = register(new BotanicalTableBlock(Material.WOOD, BlockSoundGroup.WOOD, 5.0F, 6.0F), "botanical_table");
     public static final Block BOTANICAL_RITUAL_TABLE = register(new BotanicalRitualTableBlock(Material.WOOD, BlockSoundGroup.WOOD, 5.0F, 6.0F), "botanical_ritual_table");
+
     public static final Block ESSENCE_PLANKS = register(new BaseBlock(Material.WOOD, BlockSoundGroup.WOOD, 5.0F, 6.0F), "essence_planks");
     public static final Block BASIC_ESSENCE_BLOCK = register(new BaseBlock(Material.METAL, BlockSoundGroup.METAL, 5.0F, 6.0F), "basic_essence_block");
     public static final Block UNCOMMON_ESSENCE_BLOCK = register(new BaseBlock(Material.METAL, BlockSoundGroup.METAL, 5.0F, 6.0F), "uncommon_essence_block");

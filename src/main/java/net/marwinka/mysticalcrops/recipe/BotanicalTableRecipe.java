@@ -21,7 +21,9 @@ public class BotanicalTableRecipe implements Recipe<SimpleInventory> {
         this.output = output;
         this.recipeItems = recipeItems;
     }
-
+    public DefaultedList<Ingredient> getRecipeItems() {
+        return recipeItems;
+    }
     @Override
     public boolean matches(SimpleInventory inventory, World world) {
         if(world.isClient()) { return false; }
@@ -62,7 +64,6 @@ public class BotanicalTableRecipe implements Recipe<SimpleInventory> {
     public RecipeType<?> getType() {
         return Type.INSTANCE;
     }
-
     public static class Type implements RecipeType<BotanicalTableRecipe> {
         private Type() { }
         public static final Type INSTANCE = new Type();
@@ -84,7 +85,6 @@ public class BotanicalTableRecipe implements Recipe<SimpleInventory> {
             for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
-
             return new BotanicalTableRecipe(id, output, inputs);
         }
 

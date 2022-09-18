@@ -65,6 +65,9 @@ public class FruitSlot extends Slot {
         if(stack.getItem() == Items.ECHO_FRUIT){
             return true;
         }
+        if(stack.getItem() == Items.WOOD_FRUIT){
+            return true;
+        }
         if(stack.getItem() == Items.GLOWSTONE_FRUIT){
             return true;
         }
@@ -75,6 +78,12 @@ public class FruitSlot extends Slot {
             return true;
         }
         if(stack.getItem() == Items.NETHERITE_FRUIT){
+            return true;
+        }
+        if(stack.getItem() == Items.STAR_FRUIT){
+            return true;
+        }
+        if(stack.getItem() == Items.WITHER_FRUIT){
             return true;
         }
         if(stack.getItem() == OtherItems.GOBBER_GLOB_FRUIT){

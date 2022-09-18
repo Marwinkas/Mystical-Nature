@@ -2,7 +2,7 @@
   "type": "mysticalcrops:botanical_ritual_table_craft",
   "ingredients": [
     {
-      "item": "mysticalcrops:crystal"
+      "tag": "c:crystals"
     },
     {
       "item": "minecraft:coal"
@@ -18,6 +18,9 @@
     },
     {
       "item": "mysticalcrops:essence_seeds_tier_3"
+    },
+    {
+      "item": "mysticalcrops:advance_essence"
     },
     {
       "item": "minecraft:coal"

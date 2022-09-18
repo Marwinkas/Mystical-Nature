@@ -25,7 +25,13 @@ public class BotanicalTableScreen extends HandledScreen<BotanicalTableScreenHand
         super.init();
         titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
     }
-
+    @Override
+    protected void drawForeground(MatrixStack matrices, int mouseX, int mouseY) {
+        String title = this.getTitle().getString();
+        this.textRenderer.draw(matrices, title, (float) (this.backgroundWidth / 2 - this.textRenderer.getWidth(title) / 2), 8, 4210752);
+        String inventory = "";
+        this.textRenderer.draw(matrices, inventory, 8.0F, 200, 4210752);
+    }
     @Override
     protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);

@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "mysticalcrops:basic_essence"
+      "item": "mysticalcrops:crystal_fragments"
     },
     "$": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:amethyst_shard"
     },
     "@": {
       "item": "minecraft:diamond"
@@ -17,6 +17,6 @@
     "#$#"
   ],
   "result": {
-    "item": "mysticalcrops:crystal"
+    "item": "mysticalcrops:empty_crystal"
   }
 }

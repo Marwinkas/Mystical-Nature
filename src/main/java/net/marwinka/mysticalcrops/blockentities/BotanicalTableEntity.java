@@ -29,7 +29,7 @@ public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 40;
+    private int maxProgress = 50;
 
     public BotanicalTableEntity(BlockPos pos, BlockState state) {
         super(BlockEntities.BOTANICAL_TABLE, pos, state);

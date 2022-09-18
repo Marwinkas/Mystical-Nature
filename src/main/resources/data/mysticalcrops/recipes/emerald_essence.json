@@ -2,7 +2,7 @@
   "type": "mysticalcrops:botanical_table_cut",
   "ingredients": [
     {
-      "tag": "mysticalcrops:knifes"
+      "tag": "c:knives"
     },
     {
       "item": "mysticalcrops:emerald_fruit"

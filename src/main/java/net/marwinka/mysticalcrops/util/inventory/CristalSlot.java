@@ -13,7 +13,22 @@ public class CristalSlot extends Slot {
 
     @Override
     public boolean canInsert(ItemStack stack) {
-        if(stack.getItem() == Items.CRYSTAL){
+        if(stack.getItem() == Items.BASIC_CRYSTAL){
+            return true;
+        }
+        if(stack.getItem() == Items.UNCOMMON_CRYSTAL){
+            return true;
+        }
+        if(stack.getItem() == Items.ADVANCE_CRYSTAL){
+            return true;
+        }
+        if(stack.getItem() == Items.ULTRA_CRYSTAL){
+            return true;
+        }
+        if(stack.getItem() == Items.ULTIMATE_CRYSTAL){
+            return true;
+        }
+        if(stack.getItem() == Items.INFINITY_CRYSTAL){
             return true;
         }
         return false;

@@ -36,6 +36,9 @@ public class Crops {
     public static final Block ECHO_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "echo_crop");
     public static final Block OBSIDIAN_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "obsidian_crop");
     public static final Block NETHERITE_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "netherite_crop");
+    public static final Block STAR_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "star_crop");
+    public static final Block WITHER_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "wither_crop");
+    public static final Block WOOD_CROP = register(new BaseCrop(FabricBlockSettings.copy(net.minecraft.block.Blocks.WHEAT)), "wood_crop");
 
     private static Block register(Block block, String name) {
         Identifier id = new Identifier(MysticalCrops.MOD_ID, name);

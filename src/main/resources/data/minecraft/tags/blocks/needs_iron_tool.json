@@ -2,6 +2,14 @@
   "values": [
     "mysticalcrops:botanical_ritual_table",
     "mysticalcrops:uncommon_essence_block",
-    "mysticalcrops:advance_essence_block"
+    "mysticalcrops:advance_essence_block",
+    "mysticalcrops:essence_ore",
+    "mysticalcrops:end_essence_ore",
+    "mysticalcrops:nether_essence_ore",
+    "mysticalcrops:deepslate_essence_ore",
+    "mysticalcrops:crystal_ore",
+    "mysticalcrops:end_crystal_ore",
+    "mysticalcrops:nether_crystal_ore",
+    "mysticalcrops:deepslate_crystal_ore"
   ]
 }

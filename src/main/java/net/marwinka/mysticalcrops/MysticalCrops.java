@@ -7,6 +7,8 @@ import net.marwinka.mysticalcrops.init.itemfromothermods.OtherItems;
 import net.marwinka.mysticalcrops.networking.ModMessages;
 import net.marwinka.mysticalcrops.recipe.ModRecipes;
 import net.marwinka.mysticalcrops.screen.ModScreenHandler;
+import net.marwinka.mysticalcrops.util.generation.ModConfiguredFeatures;
+import net.marwinka.mysticalcrops.util.generation.ModOreGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,5 +28,7 @@ public class MysticalCrops implements ModInitializer {
 		ModRecipes.registerRecipes();
 		ModMessages.registerC2SPackets();
 		Fuels.registerModStuffs();
+		ModConfiguredFeatures.registerConfiguredFeatures();
+		ModOreGeneration.generateOres();
 	}
 }

@@ -38,6 +38,9 @@ public class MysticalCropsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(Crops.GLOWSTONE_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Crops.FIRE_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Crops.ECHO_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Crops.STAR_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Crops.WITHER_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Crops.WOOD_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.GOBBER_GLOB_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.END_GOBBER_GLOB_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.NETHER_GOBBER_GLOB_CROP, RenderLayer.getCutout());

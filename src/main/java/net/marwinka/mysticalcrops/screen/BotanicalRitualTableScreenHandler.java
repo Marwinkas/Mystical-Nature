@@ -16,26 +16,27 @@ public class BotanicalRitualTableScreenHandler extends ScreenHandler {
     private final PropertyDelegate propertyDelegate;
 
     public BotanicalRitualTableScreenHandler(int syncId, PlayerInventory inventory) {
-        this(syncId, inventory, new SimpleInventory(10), new ArrayPropertyDelegate(10));
+        this(syncId, inventory, new SimpleInventory(11), new ArrayPropertyDelegate(11));
     }
 
     public BotanicalRitualTableScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
         super(ModScreenHandler.BOTANICAL_RITUAL_TABLE_SCREEN_HANDLER, syncId);
-        checkSize(inventory, 10);
+        checkSize(inventory, 11);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
 
-        this.addSlot(new CristalSlot(inventory, 0, 13, 42));
-        this.addSlot(new NoSeedSlot(inventory, 1, 54, 16));
-        this.addSlot(new EssenceSlot(inventory, 2, 53, 42));
-        this.addSlot(new NoSeedSlot(inventory, 3, 54, 68));
-        this.addSlot(new EssenceSlot(inventory, 4, 80, 15));
-        this.addSlot(new EssenceandSeedSlot(inventory, 5, 80, 69));
-        this.addSlot(new NoSeedSlot(inventory, 6, 106, 16));
-        this.addSlot(new EssenceSlot(inventory, 7, 107, 42));
-        this.addSlot(new NoSeedSlot(inventory, 8, 106, 68));
-        this.addSlot(new ResultSlot(inventory, 9, 80, 42));
+        this.addSlot(new CristalSlot(inventory, 0, 9, 33));
+        this.addSlot(new NoSeedSlot(inventory, 1, 36, 2));
+        this.addSlot(new EssenceSlot(inventory, 2, 34, 33));
+        this.addSlot(new NoSeedSlot(inventory, 3, 36, 63));
+        this.addSlot(new EssenceSlot(inventory, 4, 66, 0));
+        this.addSlot(new SeedSlot(inventory, 5, 66, 33));
+        this.addSlot(new EssenceSlot(inventory, 6, 66, 65));
+        this.addSlot(new NoSeedSlot(inventory, 7, 96, 2));
+        this.addSlot(new EssenceSlot(inventory, 8, 98, 33));
+        this.addSlot(new NoSeedSlot(inventory, 9, 96, 63));
+        this.addSlot(new ResultSlot(inventory, 10, 148, 33));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
@@ -51,7 +52,7 @@ public class BotanicalRitualTableScreenHandler extends ScreenHandler {
     public int getScaledProgress() {
         int progress = this.propertyDelegate.get(0);
         int maxProgress = this.propertyDelegate.get(1);  // Max Progress
-        int progressArrowSize = 81; // This is the width in pixels of your arrow
+        int progressArrowSize = 24; // This is the width in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }

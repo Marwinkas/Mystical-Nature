@@ -2,6 +2,7 @@ package net.marwinka.mysticalcrops.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.marwinka.mysticalcrops.MysticalCrops;
+import net.marwinka.mysticalcrops.blockentities.BotanicalRitualTableEntity;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
@@ -21,22 +22,34 @@ public class BotanicalRitualTableScreen extends HandledScreen<BotanicalRitualTab
         super.init();
         titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
     }
-
+    @Override
+    protected void drawForeground(MatrixStack matrices, int mouseX, int mouseY) {
+        String title = this.getTitle().getString();
+        this.textRenderer.draw(matrices, title, (float) (this.backgroundWidth / 2 - this.textRenderer.getWidth(title) / 2), -10, 4210752);
+        if(BotanicalRitualTableEntity.noseed){
+            String inventory = "noseed";
+            this.textRenderer.draw(matrices, inventory, 8.0F, 200, 4210752);
+        }
+        else{
+            String inventory = "no";
+            this.textRenderer.draw(matrices, inventory, 8.0F, 200, 4210752);
+        }
+    }
     @Override
     protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - 175) / 2;
-        int y = (height - 190) / 2;
-        drawTexture(matrices, x, y + 14 , 0, 0, 175, 190);
+        int y = (height - 217) / 2;
+        drawTexture(matrices, x, y + 14 , 0, 0, 175, 216);
 
         renderProgressArrow(matrices, x, y);
     }
 
     private void renderProgressArrow(MatrixStack matrices, int x, int y) {
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 48, y + 22, 176, 0, handler.getScaledProgress(), 81);
+            drawTexture(matrices, x + 118, y + 58, 176, 0, handler.getScaledProgress(), 17);
         }
     }
 

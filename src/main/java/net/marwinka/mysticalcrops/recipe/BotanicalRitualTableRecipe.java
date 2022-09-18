@@ -2,6 +2,8 @@ package net.marwinka.mysticalcrops.recipe;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import net.marwinka.mysticalcrops.blockentities.BotanicalRitualTableEntity;
+import net.marwinka.mysticalcrops.screen.BotanicalRitualTableScreen;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
@@ -22,19 +24,21 @@ public class BotanicalRitualTableRecipe implements Recipe<SimpleInventory> {
         this.recipeItems = recipeItems;
     }
 
+
     @Override
     public boolean matches(SimpleInventory inventory, World world) {
-        if(world.isClient()) { return false; }
-
-        if(recipeItems.get(0).test(inventory.getStack(0))) {
-            if(recipeItems.get(1).test(inventory.getStack(1))) {
-                if(recipeItems.get(2).test(inventory.getStack(2))) {
-                    if(recipeItems.get(3).test(inventory.getStack(3))) {
-                        if(recipeItems.get(4).test(inventory.getStack(4))) {
-                            if(recipeItems.get(5).test(inventory.getStack(5))) {
-                                if(recipeItems.get(6).test(inventory.getStack(6))) {
-                                    if(recipeItems.get(7).test(inventory.getStack(7))) {
-                                        return recipeItems.get(8).test(inventory.getStack(8));
+            if(recipeItems.get(0).test(inventory.getStack(0))) {
+                if(recipeItems.get(1).test(inventory.getStack(1))) {
+                    if(recipeItems.get(2).test(inventory.getStack(2))) {
+                        if(recipeItems.get(3).test(inventory.getStack(3))) {
+                            if(recipeItems.get(4).test(inventory.getStack(4))) {
+                                if(recipeItems.get(5).test(inventory.getStack(5))) {
+                                    if(recipeItems.get(6).test(inventory.getStack(6))) {
+                                        if(recipeItems.get(7).test(inventory.getStack(7))) {
+                                            if(recipeItems.get(8).test(inventory.getStack(8))) {
+                                                return recipeItems.get(9).test(inventory.getStack(9));
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -42,7 +46,8 @@ public class BotanicalRitualTableRecipe implements Recipe<SimpleInventory> {
                     }
                 }
             }
-        }
+
+
 
         return false;
     }
@@ -56,12 +61,13 @@ public class BotanicalRitualTableRecipe implements Recipe<SimpleInventory> {
     public boolean fits(int width, int height) {
         return true;
     }
-
+    public DefaultedList<Ingredient> getRecipeItems() {
+        return recipeItems;
+    }
     @Override
     public ItemStack getOutput() {
         return output.copy();
     }
-
     @Override
     public Identifier getId() {
         return id;
@@ -76,7 +82,6 @@ public class BotanicalRitualTableRecipe implements Recipe<SimpleInventory> {
     public RecipeType<?> getType() {
         return Type.INSTANCE;
     }
-
     public static class Type implements RecipeType<BotanicalRitualTableRecipe> {
         private Type() { }
         public static final Type INSTANCE = new Type();
@@ -90,15 +95,14 @@ public class BotanicalRitualTableRecipe implements Recipe<SimpleInventory> {
 
         @Override
         public BotanicalRitualTableRecipe read(Identifier id, JsonObject json) {
-            ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
 
+            ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
             JsonArray ingredients = JsonHelper.getArray(json, "ingredients");
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(9, Ingredient.EMPTY);
+            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(10, Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
-
             return new BotanicalRitualTableRecipe(id, output, inputs);
         }
         @Override
@@ -108,7 +112,6 @@ public class BotanicalRitualTableRecipe implements Recipe<SimpleInventory> {
             for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromPacket(buf));
             }
-
             ItemStack output = buf.readItemStack();
             return new BotanicalRitualTableRecipe(id, output, inputs);
         }

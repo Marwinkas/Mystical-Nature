@@ -22,12 +22,10 @@
     "client": [
       "net.marwinka.mysticalcrops.MysticalCropsClient"
     ],
-    "jei_mod_plugin": [
-      "mezz.jei.common.plugins.vanilla.VanillaPlugin",
-      "mezz.jei.common.plugins.jei.JeiInternalPlugin",
-      "mezz.jei.common.plugins.debug.JeiDebugPlugin"
+    "rei_client": [
+      "net.marwinka.mysticalcrops.compat.rei.ReiPlugin"
     ]
-  },
+},
   "mixins": [
     "mysticalcrops.mixins.json"
   ],

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "mysticalcrops:block/essence_tier_1cropplant_stage0"
-  }
-}

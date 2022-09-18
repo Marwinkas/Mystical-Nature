@@ -1,0 +1,14 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+      "tag": "c:knives"
+    },
+    {
+      "item": "mysticalcrops:star_fruit"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:star_essence"
+  }
+}

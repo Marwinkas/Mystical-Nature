@@ -17,12 +17,12 @@ public class Crystal extends SwordItem {
     }
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.translatable("item.mysticalcrops.tier_1.tooltip") );
         if (Screen.hasShiftDown()) {
             tooltip.add(Text.translatable("item.mysticalcrops.crystal.tooltip.shift"));
         } else {
-            tooltip.add(Text.translatable("item.mysticalcrops.crystal.tooltip") );
+            tooltip.add(Text.translatable("item.mysticalcrops.crystal.tooltip"));
         }
-
         super.appendTooltip(stack, world, tooltip, context);
     }
 }

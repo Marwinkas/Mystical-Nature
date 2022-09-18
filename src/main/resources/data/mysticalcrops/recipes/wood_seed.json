@@ -1,0 +1,38 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "tag": "c:crystals"
+    },
+    {
+      "item": "mysticalcrops:wood_plate"
+    },
+    {
+      "item": "mysticalcrops:uncommon_essence"
+    },
+    {
+      "item": "mysticalcrops:wood_plate"
+    },
+    {
+      "item": "mysticalcrops:uncommon_essence"
+    },
+    {
+      "item": "mysticalcrops:essence_seeds_tier_2"
+    },
+    {
+      "item": "mysticalcrops:uncommon_essence"
+    },
+    {
+      "item": "mysticalcrops:wood_plate"
+    },
+    {
+      "item": "mysticalcrops:uncommon_essence"
+    },
+    {
+      "item": "mysticalcrops:wood_plate"
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:wood_seeds"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:advance_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:uncommon_crystal"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "item": "mysticalcrops:advance_crystal"
+  }
+}
