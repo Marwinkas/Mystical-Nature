@@ -1,6 +1,5 @@
 package net.marwinka.mysticalcrops.util.block;
 
-
 import net.minecraft.block.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;

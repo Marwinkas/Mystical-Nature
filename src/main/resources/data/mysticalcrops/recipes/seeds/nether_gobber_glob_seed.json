@@ -1,0 +1,67 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "gobber2"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "gobber2:gobber2_glob_nether"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "gobber2:gobber2_glob_nether"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_4"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "gobber2:gobber2_glob_nether"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "gobber2:gobber2_glob_nether"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:nether_gobber_glob_seeds"
+  }
+}

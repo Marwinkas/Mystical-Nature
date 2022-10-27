@@ -1,0 +1,59 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:empty"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:empty"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:empty"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:empty"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:empty"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:ultimate_essence"
+  }
+}

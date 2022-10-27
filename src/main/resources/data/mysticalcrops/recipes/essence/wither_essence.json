@@ -1,0 +1,18 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:wither_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:wither_essence",
+    "count": 1
+  }
+}

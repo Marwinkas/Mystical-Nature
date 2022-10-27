@@ -59,7 +59,10 @@ public class BotanicalTableCategory implements DisplayCategory<BotanicalTableDis
         widgets.add(Widgets.createSlot(new Point(startPoint.x - 33, startPoint.y + 9)).entries(inputs.get(0)).markInput());
         widgets.add(Widgets.createArrow(new Point(startPoint.x, startPoint.y - 9)).animationDurationTicks(50));
 
-        widgets.add(Widgets.createSlot(new Point(startPoint.x + 33, startPoint.y - 9)).entries(outputs.get(0)).markOutput());
+        widgets.add(Widgets.createResultSlotBackground(new Point(startPoint.x + 33, startPoint.y - 9)));
+
+        widgets.add(Widgets.createSlot(new Point(startPoint.x + 33, startPoint.y - 9)).entries(outputs.get(0)).disableBackground().markOutput());
+
 
         return widgets;
     }

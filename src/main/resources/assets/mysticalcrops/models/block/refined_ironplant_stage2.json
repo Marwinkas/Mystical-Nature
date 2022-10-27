@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mysticalcrops:block/refined_ironplant_stage2"
+  }
+}

@@ -1,19 +1,19 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "mysticalcrops:block/botanical_ritual_table"
-    },
-    "facing=south": {
-      "model": "mysticalcrops:block/botanical_ritual_table",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "mysticalcrops:block/botanical_ritual_table",
-      "y": 270
-    },
-    "facing=east": {
-      "model": "mysticalcrops:block/botanical_ritual_table",
-      "y": 90
-    }
-  }
+	"variants": {
+		"facing=north": {
+			"model": "mysticalcrops:block/botanical_ritual_table"
+		},
+		"facing=south": {
+			"model": "mysticalcrops:block/botanical_ritual_table",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "mysticalcrops:block/botanical_ritual_table",
+			"y": 270
+		},
+		"facing=east": {
+			"model": "mysticalcrops:block/botanical_ritual_table",
+			"y": 90
+		}
+	}
 }

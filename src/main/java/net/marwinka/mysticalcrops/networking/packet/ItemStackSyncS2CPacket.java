@@ -1,7 +1,7 @@
 package net.marwinka.mysticalcrops.networking.packet;
 
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
-import net.marwinka.mysticalcrops.blockentities.BotanicalRitualTableEntity;
+import net.marwinka.mysticalcrops.blockentities.RitualTableEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.item.ItemStack;
@@ -19,7 +19,7 @@ public class ItemStackSyncS2CPacket {
         }
         BlockPos position = buf.readBlockPos();
 
-        if(client.world.getBlockEntity(position) instanceof BotanicalRitualTableEntity blockEntity) {
+        if(client.world.getBlockEntity(position) instanceof RitualTableEntity blockEntity) {
             blockEntity.setInventory(list);
         }
     }

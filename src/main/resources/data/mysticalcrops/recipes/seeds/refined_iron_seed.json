@@ -1,0 +1,67 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:refined_iron_ingots"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:refined_iron_ingots"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:refined_iron_ingots"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_3"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:refined_iron_ingots"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:refined_iron_ingots"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:refined_iron_seeds"
+  }
+}

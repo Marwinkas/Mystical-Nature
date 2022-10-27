@@ -1,0 +1,18 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:fire_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:fire_essence",
+    "count": 1
+  }
+}

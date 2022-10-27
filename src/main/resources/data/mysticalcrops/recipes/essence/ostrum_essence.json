@@ -1,0 +1,26 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:ostrum_ingots"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:ostrum_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:ostrum_essence",
+    "count": 1
+  }
+}

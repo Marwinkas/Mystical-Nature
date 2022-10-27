@@ -1,0 +1,18 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:netherite_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:netherite_essence",
+    "count": 1
+  }
+}

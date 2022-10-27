@@ -3,6 +3,7 @@
     "age=0": { "model":  "mysticalcrops:block/plant_stage0"},
     "age=1": { "model":  "mysticalcrops:block/plant_stage1"},
     "age=2": { "model":  "mysticalcrops:block/plant_stage2"},
+
     "age=3": { "model":  "mysticalcrops:block/starplant_stage1"},
     "age=4": { "model":  "mysticalcrops:block/starplant_stage2"}
   }

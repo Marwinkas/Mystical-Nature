@@ -1,0 +1,40 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots",
+        "modern_industrialization"
+      ]
+    }
+  ],
+
+  "type": "botanypots:crop",
+
+  "seed": {
+    "item": "mysticalcrops:steel_seeds"
+  },
+  "categories": [
+    "dirt",
+    "farmland"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "mysticalcrops:steel_crop"
+  },
+  "drops": [
+    {
+      "chance": 1.00,
+      "output": {
+        "item": "mysticalcrops:steel_fruit"
+      }
+    },
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "mysticalcrops:steel_fruit"
+      }
+    }
+  ]
+}

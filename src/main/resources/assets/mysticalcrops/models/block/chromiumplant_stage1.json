@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mysticalcrops:block/chromiumplant_stage1"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "techreborn"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "techreborn:rubber"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "techreborn:rubber"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_2"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "techreborn:rubber"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "techreborn:rubber"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:rubber_seeds"
+  }
+}

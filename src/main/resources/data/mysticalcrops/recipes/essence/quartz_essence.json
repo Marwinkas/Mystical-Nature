@@ -1,0 +1,18 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:quartz_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:quartz_essence",
+    "count": 1
+  }
+}

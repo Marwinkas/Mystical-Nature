@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:crystal_fragments"
+    },
+    "@": {
+      "tag": "minecraft:seeds"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "item": "mysticalcrops:craft_seeds"
+  }
+}

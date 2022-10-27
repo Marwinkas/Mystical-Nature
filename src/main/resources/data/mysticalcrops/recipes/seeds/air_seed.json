@@ -1,0 +1,60 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:wheat_seeds"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:sugar_cane"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_2"
+
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:sugar_cane"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:wheat_seeds"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:air_seeds"
+  }
+}

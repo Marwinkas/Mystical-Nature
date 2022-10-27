@@ -1,0 +1,25 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:certus_quartz"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:certus_fruit"}
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:certus_essence",
+    "count": 1
+  }
+}

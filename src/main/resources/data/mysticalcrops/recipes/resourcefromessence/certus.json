@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "ae2"
+      ]
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "mysticalcrops:certus_essence"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "ae2:certus_quartz_crystal"
+  }
+}

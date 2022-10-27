@@ -1,0 +1,59 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:water_buckets"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:water_buckets"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_2"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:water_buckets"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:water_buckets"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:water_seeds"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "ad_astra"
+      ]
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "mysticalcrops:steel_essence"
+    }
+  },
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "ad_astra:steel_ingot"
+  }
+}

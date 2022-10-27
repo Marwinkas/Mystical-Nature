@@ -1,0 +1,59 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:gold_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultimate_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:iron_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultimate_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_5"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "minecraft:diamond"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:lapis_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultimate_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:redstone_essence"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:diamond_seeds"
+  }
+}

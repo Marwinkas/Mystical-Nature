@@ -1,7 +1,7 @@
 package net.marwinka.mysticalcrops.util.inventory;
 
 import net.marwinka.mysticalcrops.init.Items;
-import net.marwinka.mysticalcrops.init.itemfromothermods.OtherItems;
+import net.marwinka.mysticalcrops.init.itemfromothermods.OtherCrops;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.slot.Slot;
@@ -62,9 +62,6 @@ public class FruitSlot extends Slot {
         if(stack.getItem() == Items.STONE_FRUIT){
             return true;
         }
-        if(stack.getItem() == Items.ECHO_FRUIT){
-            return true;
-        }
         if(stack.getItem() == Items.WOOD_FRUIT){
             return true;
         }
@@ -86,13 +83,104 @@ public class FruitSlot extends Slot {
         if(stack.getItem() == Items.WITHER_FRUIT){
             return true;
         }
-        if(stack.getItem() == OtherItems.GOBBER_GLOB_FRUIT){
+        if(stack.getItem() == Items.ECHO_FRUIT){
             return true;
         }
-        if(stack.getItem() == OtherItems.END_GOBBER_GLOB_FRUIT){
+        if(stack.getItem() == OtherCrops.GOBBER_GLOB.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherItems.NETHER_GOBBER_GLOB_FRUIT){
+        if(stack.getItem() == OtherCrops.END_GOBBER_GLOB.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.ZINC.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.BRASS.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.FLUIX.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.CERTUS.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.TITANIUM.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.NIKOLITE.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.NICKEL.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.TUNGSTEN.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.TUNGSTENSTEEL.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.STEEL.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.LEAD.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.TIN.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.ELECTRUM.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.CHROMIUM.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.CALORITE.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.ALUMINIUM.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.INVAR.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.ADVANCED_ALLOY.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.REFINED_IRON.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.PLATINUM.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.IRIDIUM.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.RUBBER.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.WATER.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.NETHER.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.AIR.getFruits()){
+            return true;
+        }
+
+        if(stack.getItem() == OtherCrops.BRONZE.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.SILVER.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.DESH.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.OSTRUM.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.NETHER_GOBBER_GLOB.getFruits()){
             return true;
         }
         return false;

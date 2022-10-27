@@ -1,0 +1,59 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:lava_buckets"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:lava_buckets"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_4"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:lava_buckets"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:lava_buckets"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:fire_seeds"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:certus_quartz"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:certus_quartz"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:certus_quartz"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_3"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:certus_quartz"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:certus_quartz"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:certus_seeds"
+  }
+}

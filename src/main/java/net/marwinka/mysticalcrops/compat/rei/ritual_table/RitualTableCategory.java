@@ -55,6 +55,7 @@ public class RitualTableCategory implements DisplayCategory<RitualTableDisplay> 
         List<EntryIngredient> outputs = display.getOutputEntries();
 
         widgets.add(Widgets.createRecipeBase(bounds));
+
         widgets.add(Widgets.createSlot(new Point(startPoint.x - 80 , startPoint.y - 7)).entries(inputs.get(0)).markInput());
         widgets.add(Widgets.createSlot(new Point(startPoint.x - 53 , startPoint.y - 38)).entries(inputs.get(1)).markInput());
         widgets.add(Widgets.createSlot(new Point(startPoint.x - 55 , startPoint.y - 7)).entries(inputs.get(2)).markInput());
@@ -70,7 +71,10 @@ public class RitualTableCategory implements DisplayCategory<RitualTableDisplay> 
 
         widgets.add(Widgets.createArrow(new Point(startPoint.x + 30, startPoint.y - 7)).animationDurationTicks(100));
 
-        widgets.add(Widgets.createSlot(new Point(startPoint.x + 61, startPoint.y - 7)).entries(outputs.get(0)).markOutput());
+
+        widgets.add(Widgets.createResultSlotBackground(new Point(startPoint.x + 61, startPoint.y - 7)));
+
+        widgets.add(Widgets.createSlot(new Point(startPoint.x + 61, startPoint.y - 7)).entries(outputs.get(0)).disableBackground().markOutput());
 
         return widgets;
     }

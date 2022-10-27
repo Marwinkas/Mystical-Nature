@@ -1,0 +1,67 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:zinc_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:copper_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_4"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "c:ingots/brass"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:copper_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:zinc_essence"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:brass_seeds"
+  }
+}

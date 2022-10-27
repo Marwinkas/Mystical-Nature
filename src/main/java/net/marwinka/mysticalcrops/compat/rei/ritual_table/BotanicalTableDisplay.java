@@ -15,13 +15,14 @@ public record BotanicalTableDisplay(BotanicalTableRecipe recipe) implements Disp
 
     @Override
     public List<EntryIngredient> getInputEntries() {
-        return EntryIngredients.ofIngredients(recipe.getRecipeItems());
+        return EntryIngredients.ofIngredients(recipe.getIngredients());
     }
 
     @Override
     public List<EntryIngredient> getOutputEntries() {
         return List.of(EntryIngredients.of(recipe.getOutput()));
     }
+
 
     @Override
     public CategoryIdentifier<?> getCategoryIdentifier() {

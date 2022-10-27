@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mysticalcrops:craft_seeds",
+    "mysticalcrops:craft_seeds_tier_2",
+    "mysticalcrops:craft_seeds_tier_3",
+    "mysticalcrops:craft_seeds_tier_4",
+    "mysticalcrops:craft_seeds_tier_5"
+  ]
+}

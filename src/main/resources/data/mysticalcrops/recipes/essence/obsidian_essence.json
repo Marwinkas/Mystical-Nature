@@ -1,0 +1,18 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:obsidian_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:obsidian_essence",
+    "count": 1
+  }
+}

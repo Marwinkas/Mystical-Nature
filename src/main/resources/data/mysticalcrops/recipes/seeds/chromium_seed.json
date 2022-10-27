@@ -1,0 +1,67 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:chromium_ingots"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:chromium_ingots"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultimate_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:chromium_ingots"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultimate_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_5"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultimate_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:chromium_ingots"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultimate_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:chromium_ingots"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:chromium_seeds"
+  }
+}

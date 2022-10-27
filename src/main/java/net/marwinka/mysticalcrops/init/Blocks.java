@@ -2,14 +2,12 @@ package net.marwinka.mysticalcrops.init;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.marwinka.mysticalcrops.block.RitualTableBlock;
 import net.marwinka.mysticalcrops.util.group.ModItemGroup;
 import net.marwinka.mysticalcrops.MysticalCrops;
-import net.marwinka.mysticalcrops.blocks.BotanicalRitualTableBlock;
-import net.marwinka.mysticalcrops.blocks.BotanicalTableBlock;
+import net.marwinka.mysticalcrops.block.BotanicalTableBlock;
 import net.marwinka.mysticalcrops.util.block.BaseBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.block.OreBlock;
+import net.minecraft.block.*;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -49,30 +47,32 @@ public class Blocks {
             UniformIntProvider.create(3, 7)), "nether_crystal_ore");
     public static final Block END_CRYSTAL_ORE = register(new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
             UniformIntProvider.create(3, 7)), "end_crystal_ore");
-    public static final Block BOTANICAL_TABLE = register(new BotanicalTableBlock(Material.WOOD, BlockSoundGroup.WOOD, 5.0F, 6.0F), "botanical_table");
-    public static final Block BOTANICAL_RITUAL_TABLE = register(new BotanicalRitualTableBlock(Material.WOOD, BlockSoundGroup.WOOD, 5.0F, 6.0F), "botanical_ritual_table");
+    public static final Block BOTANICAL_TABLE = register(new BotanicalTableBlock(FabricBlockSettings.of(Material.WOOD)
+            .strength(4f).nonOpaque().requiresTool()), "botanical_table");
+    public static final Block BOTANICAL_RITUAL_TABLE = register(new RitualTableBlock(FabricBlockSettings.of(Material.STONE)
+            .strength(4f).nonOpaque().requiresTool()), "botanical_ritual_table");
 
     public static final Block ESSENCE_PLANKS = register(new BaseBlock(Material.WOOD, BlockSoundGroup.WOOD, 5.0F, 6.0F), "essence_planks");
-    public static final Block BASIC_ESSENCE_BLOCK = register(new BaseBlock(Material.METAL, BlockSoundGroup.METAL, 5.0F, 6.0F), "basic_essence_block");
-    public static final Block UNCOMMON_ESSENCE_BLOCK = register(new BaseBlock(Material.METAL, BlockSoundGroup.METAL, 5.0F, 6.0F), "uncommon_essence_block");
-    public static final Block ADVANCE_ESSENCE_BLOCK = register(new BaseBlock(Material.METAL, BlockSoundGroup.METAL, 5.0F, 6.0F), "advance_essence_block");
-    public static final Block ULTRA_ESSENCE_BLOCK = register(new BaseBlock(Material.METAL, BlockSoundGroup.METAL, 5.0F, 6.0F), "ultra_essence_block");
-    public static final Block ULTIMATE_ESSENCE_BLOCK = register(new BaseBlock(Material.METAL, BlockSoundGroup.METAL, 5.0F, 6.0F), "ultimate_essence_block");
+    public static final Block BASIC_ESSENCE_BLOCK = register(new BaseBlock(Material.STONE, BlockSoundGroup.METAL, 5.0F, 6.0F), "basic_essence_block");
+    public static final Block UNCOMMON_ESSENCE_BLOCK = register(new BaseBlock(Material.STONE, BlockSoundGroup.METAL, 5.0F, 6.0F), "uncommon_essence_block");
+    public static final Block ADVANCE_ESSENCE_BLOCK = register(new BaseBlock(Material.STONE, BlockSoundGroup.METAL, 5.0F, 6.0F), "advance_essence_block");
+    public static final Block ULTRA_ESSENCE_BLOCK = register(new BaseBlock(Material.STONE, BlockSoundGroup.METAL, 5.0F, 6.0F), "ultra_essence_block");
+    public static final Block ULTIMATE_ESSENCE_BLOCK = register(new BaseBlock(Material.STONE, BlockSoundGroup.METAL, 5.0F, 6.0F), "ultimate_essence_block");
 
     public static final Block BASIC_COAL_BLOCK = registerBlock("basic_coal_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()),
             ModItemGroup.ITEMGROUP, "item.mysticalcrops.coalblocktier_1.tooltip");
     public static final Block UNCOMMON_COAL_BLOCK = registerBlock("uncommon_coal_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()),
             ModItemGroup.ITEMGROUP, "item.mysticalcrops.coalblocktier_2.tooltip");
     public static final Block ADVANCE_COAL_BLOCK = registerBlock("advance_coal_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()),
             ModItemGroup.ITEMGROUP, "item.mysticalcrops.coalblocktier_3.tooltip");
     public static final Block ULTRA_COAL_BLOCK = registerBlock("ultra_coal_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()),
             ModItemGroup.ITEMGROUP, "item.mysticalcrops.coalblocktier_4.tooltip");
     public static final Block ULTIMATE_COAL_BLOCK = registerBlock("ultimate_coal_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()),
             ModItemGroup.ITEMGROUP, "item.mysticalcrops.coalblocktier_5.tooltip");
 
     private static Block register(Block block, String name) {

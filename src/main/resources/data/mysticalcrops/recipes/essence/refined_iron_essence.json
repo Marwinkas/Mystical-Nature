@@ -1,0 +1,26 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:refined_iron_ingots"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:refined_iron_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:refined_iron_essence",
+    "count": 1
+  }
+}

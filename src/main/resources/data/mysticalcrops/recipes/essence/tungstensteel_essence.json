@@ -1,0 +1,26 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:tungstensteel_ingots"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:tungstensteel_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:tungstensteel_essence",
+    "count": 1
+  }
+}

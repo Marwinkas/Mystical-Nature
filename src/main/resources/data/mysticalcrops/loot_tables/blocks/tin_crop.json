@@ -1,0 +1,76 @@
+{
+  "type": "minecraft:block",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:tin_ingots"
+      ]
+    }
+  ],
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "mysticalcrops:tin_crop",
+                  "properties": {
+                    "age": "4"
+                  }
+                }
+              ],
+              "name": "mysticalcrops:tin_fruit"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "mysticalcrops:tin_seeds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:binomial_with_bonus_count",
+              "parameters": {
+                "extra": 0,
+                "probability": 1
+              }
+            }
+          ],
+          "name": "mysticalcrops:tin_seeds"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "mysticalcrops:tin_crop",
+          "properties": {
+            "age": "4"
+          }
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ]
+}

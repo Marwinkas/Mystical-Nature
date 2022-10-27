@@ -1,0 +1,18 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:lapis_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:lapis_essence",
+    "count": 1
+  }
+}

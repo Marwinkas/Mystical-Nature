@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "minecraft:block/cross",
   "textures": {
-    "crop": "mysticalcrops:block/quartzplant_stage1"
+    "cross": "mysticalcrops:block/quartzplant_stage1"
   }
 }

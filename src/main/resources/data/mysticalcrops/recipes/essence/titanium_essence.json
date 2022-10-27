@@ -1,0 +1,26 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:titanium_ingots"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:titanium_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:titanium_essence",
+    "count": 1
+  }
+}

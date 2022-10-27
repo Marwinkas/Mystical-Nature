@@ -12,8 +12,9 @@ import net.marwinka.mysticalcrops.compat.rei.ritual_table.BotanicalTableDisplay;
 import net.marwinka.mysticalcrops.compat.rei.ritual_table.RitualTableCategory;
 import net.marwinka.mysticalcrops.compat.rei.ritual_table.RitualTableDisplay;
 import net.marwinka.mysticalcrops.init.Blocks;
-import net.marwinka.mysticalcrops.recipe.BotanicalRitualTableRecipe;
 import net.marwinka.mysticalcrops.recipe.BotanicalTableRecipe;
+import net.marwinka.mysticalcrops.recipe.ModRecipes;
+import net.marwinka.mysticalcrops.recipe.RitualTableRecipe;
 
 @Environment(EnvType.CLIENT)
 public class ReiPlugin implements REIClientPlugin {
@@ -31,6 +32,6 @@ public class ReiPlugin implements REIClientPlugin {
     @Override
     public void registerDisplays(DisplayRegistry registry) {
         registry.registerRecipeFiller(BotanicalTableRecipe.class, BotanicalTableRecipe.Type.INSTANCE, BotanicalTableDisplay::new);
-        registry.registerRecipeFiller(BotanicalRitualTableRecipe.class, BotanicalRitualTableRecipe.Type.INSTANCE, RitualTableDisplay::new);
+        registry.registerRecipeFiller(RitualTableRecipe.class, RitualTableRecipe.Type.GF, RitualTableDisplay::new);
     }
 }

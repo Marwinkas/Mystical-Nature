@@ -6,23 +6,23 @@ import me.shedaniel.rei.api.common.util.EntryIngredients;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.marwinka.mysticalcrops.compat.rei.REICategories;
-import net.marwinka.mysticalcrops.recipe.BotanicalRitualTableRecipe;
-import net.marwinka.mysticalcrops.recipe.BotanicalTableRecipe;
+import net.marwinka.mysticalcrops.recipe.RitualTableRecipe;
 
 import java.util.List;
 
 @Environment(EnvType.CLIENT)
-public record RitualTableDisplay(BotanicalRitualTableRecipe recipe) implements Display {
+public record RitualTableDisplay(RitualTableRecipe recipe) implements Display {
 
     @Override
     public List<EntryIngredient> getInputEntries() {
-        return EntryIngredients.ofIngredients(recipe.getRecipeItems());
+        return EntryIngredients.ofIngredients(recipe.getIngredients());
     }
 
     @Override
     public List<EntryIngredient> getOutputEntries() {
         return List.of(EntryIngredients.of(recipe.getOutput()));
     }
+
 
     @Override
     public CategoryIdentifier<?> getCategoryIdentifier() {

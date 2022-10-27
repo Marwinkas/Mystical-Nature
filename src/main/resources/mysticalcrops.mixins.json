@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
+    "CropBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

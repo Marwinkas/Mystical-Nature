@@ -3,8 +3,8 @@
   "id": "mysticalcrops",
   "version": "${version}",
 
-  "name": "Mystical Crops",
-  "description": "Very Many Mystical Crops",
+  "name": "Mystical Nature",
+  "description": "Very Many Mystical Plants",
   "authors": [
     "Marwinka"
   ],
@@ -25,7 +25,7 @@
     "rei_client": [
       "net.marwinka.mysticalcrops.compat.rei.ReiPlugin"
     ]
-},
+  },
   "mixins": [
     "mysticalcrops.mixins.json"
   ],

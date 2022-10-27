@@ -1,0 +1,48 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots",
+        "techreborn"
+      ]
+    }
+  ],
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:item_exists",
+      "values": [
+        "mysticalcrops:iridium_seeds",
+        "mysticalcrops:iridium_fruit"
+      ]
+    }
+  ],
+  "type": "botanypots:crop",
+
+  "seed": {
+    "item": "mysticalcrops:iridium_seeds"
+  },
+  "categories": [
+    "dirt",
+    "farmland"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "mysticalcrops:iridium_crop"
+  },
+  "drops": [
+    {
+      "chance": 1.00,
+      "output": {
+        "item": "mysticalcrops:iridium_fruit"
+      }
+    },
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "mysticalcrops:iridium_fruit"
+      }
+    }
+  ]
+}

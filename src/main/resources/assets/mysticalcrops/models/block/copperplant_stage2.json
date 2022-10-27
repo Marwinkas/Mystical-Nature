@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "minecraft:block/cross",
   "textures": {
-    "crop": "mysticalcrops:block/copperplant_stage2"
+    "cross": "mysticalcrops:block/copperplant_stage2"
   }
 }
