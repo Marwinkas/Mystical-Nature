@@ -8,6 +8,7 @@ import net.marwinka.mysticalcrops.block.BotanicalTableBlock;
 import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.marwinka.mysticalcrops.networking.ModMessages;
 import net.marwinka.mysticalcrops.recipe.BotanicalTableRecipe;
+import net.marwinka.mysticalcrops.recipe.InfusionTableRecipe;
 import net.marwinka.mysticalcrops.screen.BotanicalTableScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -35,6 +36,9 @@ import java.util.Optional;
 public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
+    protected final PropertyDelegate propertyDelegate;
+    private int progress = 0;
+    private int maxProgress = 100;
 
     public void setInventory(DefaultedList<ItemStack> inventory) {
         for (int i = 0; i < inventory.size(); i++) {
@@ -44,28 +48,12 @@ public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenH
 
     @Override
     public void markDirty() {
-        if(!world.isClient()) {
-            PacketByteBuf data = PacketByteBufs.create();
-            data.writeInt(inventory.size());
-            for(int i = 0; i < inventory.size(); i++) {
-                data.writeItemStack(inventory.get(i));
-            }
-            data.writeBlockPos(getPos());
-
-            for (ServerPlayerEntity player : PlayerLookup.tracking((ServerWorld) world, getPos())) {
-                ServerPlayNetworking.send(player, ModMessages.ITEM_SYNC, data);
-            }
-        }
-
         super.markDirty();
+        if (this.world instanceof ServerWorld world) {
+            world.getChunkManager().markForUpdate(this.pos);
+        }
     }
 
-
-
-
-    protected final PropertyDelegate propertyDelegate;
-    private int progress = 0;
-    private int maxProgress = 100;
 
     public BotanicalTableEntity(BlockPos pos, BlockState state) {
         super(BlockEntities.BOTANICAL_TABLE, pos, state);
@@ -115,15 +103,15 @@ public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenH
     @Override
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
-        Inventories.writeNbt(nbt, inventory);
-        nbt.putInt("botanical_table.progress", progress);
+        Inventories.writeNbt(nbt, this.inventory);
+        nbt.putInt("progress", this.progress);
     }
 
     @Override
     public void readNbt(NbtCompound nbt) {
-        Inventories.readNbt(nbt, inventory);
         super.readNbt(nbt);
-        progress = nbt.getInt("botanical_table.progress");
+        Inventories.readNbt(nbt, this.inventory);
+        this.progress = nbt.getInt("progress");
     }
 
     private void resetProgress() {
@@ -135,7 +123,7 @@ public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenH
         Direction localDir = this.getWorld().getBlockState(this.pos).get(BotanicalTableBlock.FACING);
 
         if(side == Direction.UP || side == Direction.DOWN) {
-            return false;
+            return slot == 1;
         }
 
         // Top insert 1
@@ -145,19 +133,19 @@ public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenH
             default ->
                     side.getOpposite() == Direction.NORTH && slot == 1 ||
                             side.getOpposite() == Direction.EAST && slot == 1 ||
-                            side.getOpposite() == Direction.WEST && slot == 0;
+                            side.getOpposite() == Direction.WEST && slot == 1;
             case EAST ->
                     side.rotateYClockwise() == Direction.NORTH && slot == 1 ||
                             side.rotateYClockwise() == Direction.EAST && slot == 1 ||
-                            side.rotateYClockwise() == Direction.WEST && slot == 0;
+                            side.rotateYClockwise() == Direction.WEST && slot == 1;
             case SOUTH ->
                     side == Direction.NORTH && slot == 1 ||
                             side == Direction.EAST && slot == 1 ||
-                            side == Direction.WEST && slot == 0;
+                            side == Direction.WEST && slot == 1;
             case WEST ->
                     side.rotateYCounterclockwise() == Direction.NORTH && slot == 1 ||
                             side.rotateYCounterclockwise() == Direction.EAST && slot == 1 ||
-                            side.rotateYCounterclockwise() == Direction.WEST && slot == 0;
+                            side.rotateYCounterclockwise() == Direction.WEST && slot == 1;
         };
     }
 
@@ -166,7 +154,7 @@ public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenH
         Direction localDir = this.getWorld().getBlockState(this.pos).get(BotanicalTableBlock.FACING);
 
         if(side == Direction.UP) {
-            return false;
+            return slot == 2;
         }
 
         // Down extract 2
@@ -188,60 +176,37 @@ public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenH
         };
     }
 
-    public static void tick(World world, BlockPos blockPos, BlockState state, BotanicalTableEntity entity) {
-        if(world.isClient()) {
-            return;
-        }
-
-        if(hasRecipe(entity)) {
-            entity.progress++;
-            markDirty(world, blockPos, state);
-            if(entity.progress >= entity.maxProgress) {
-                craftItem(entity);
+    public void tick() {
+        if (!this.world.isClient) {
+            SimpleInventory inventory = new SimpleInventory(this.size());
+            for (int i = 0; i < this.size(); i++) {
+                inventory.setStack(i, this.getStack(i));
             }
-        } else {
-            entity.resetProgress();
-            markDirty(world, blockPos, state);
-        }
-    }
-    private static void craftItem(BotanicalTableEntity entity) {
-        SimpleInventory inventory = new SimpleInventory(entity.size());
-        for (int i = 0; i < entity.size(); i++) {
-            inventory.setStack(i, entity.getStack(i));
-        }
+            Optional<BotanicalTableRecipe> recipe = this.getWorld().getRecipeManager()
+                    .getFirstMatch(BotanicalTableRecipe.Type.INSTANCE, inventory, this.getWorld());
 
-        Optional<BotanicalTableRecipe> recipe = entity.getWorld().getRecipeManager()
-                .getFirstMatch(BotanicalTableRecipe.Type.INSTANCE, inventory, entity.getWorld());
+            if (recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, recipe.get().getOutput().getItem())) {
+                this.progress++;
+                if (this.progress >= this.maxProgress) {
 
-        if(recipe.isPresent()) {
-            entity.getStack(0).setDamage(entity.getStack(0).getDamage() + 1);
-            if(entity.getStack(0).getDamage() >= entity.getStack(0).getItem().getMaxDamage())
-            {
-                entity.removeStack(0, 1);
+                    if (this.getStack(0).getItem().isDamageable()) {
+                        this.getStack(0).setDamage(this.getStack(0).getDamage() + 1);
+                        if (this.getStack(0).getDamage() >= this.getStack(0).getItem().getMaxDamage()) {
+                            this.removeStack(0, 1);
+                        }
+                    }
+
+                    this.removeStack(1, 1);
+                    this.setStack(2, new ItemStack(recipe.get().getOutput().getItem(), this.getStack(2).getCount() + 1));
+                    resetProgress();
+                    this.markDirty();
+                }
+            } else {
+                resetProgress();
             }
-            entity.removeStack(1, 1);
-
-            entity.setStack(2, new ItemStack(recipe.get().getOutput().getItem(),
-                    entity.getStack(2).getCount() + recipe.get().getOutput().getCount()));
-
-            entity.resetProgress();
         }
     }
 
-    private static boolean hasRecipe(BotanicalTableEntity entity) {
-        SimpleInventory inventory = new SimpleInventory(entity.size());
-        for (int i = 0; i < entity.size(); i++) {
-            inventory.setStack(i, entity.getStack(i));
-        }
-
-        Optional<BotanicalTableRecipe> match = entity.getWorld().getRecipeManager()
-                .getFirstMatch(BotanicalTableRecipe.Type.INSTANCE, inventory, entity.getWorld());
-
-
-        return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory,match.get().getOutput().getItem());
-
-    }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
         return inventory.getStack(2).getItem() == output || inventory.getStack(2).isEmpty();

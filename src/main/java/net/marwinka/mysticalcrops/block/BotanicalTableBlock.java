@@ -1,5 +1,6 @@
 package net.marwinka.mysticalcrops.block;
 
+import net.marwinka.mysticalcrops.blockentities.InfusionTableEntity;
 import net.marwinka.mysticalcrops.blockentities.RitualTableEntity;
 import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.marwinka.mysticalcrops.blockentities.BotanicalTableEntity;
@@ -95,9 +96,12 @@ public class BotanicalTableBlock extends BlockWithEntity implements BlockEntityP
         return new BotanicalTableEntity(pos, state);
     }
 
-    @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, BlockEntities.BOTANICAL_TABLE, BotanicalTableEntity::tick);
+        return (entityWorld, pos, entityState, blockEntity) -> {
+            if (blockEntity instanceof BotanicalTableEntity machine) {
+                machine.tick();
+            }
+        };
     }
 }

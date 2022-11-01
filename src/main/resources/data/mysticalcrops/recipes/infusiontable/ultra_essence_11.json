@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "type": "mysticalcrops:infusion_table_craft",
   "ingredients": [
     {
       "ingredient": {
@@ -8,47 +8,22 @@
     },
     {
       "ingredient": {
-        "item": "mysticalcrops:empty"
-      }
-    },
-    {
-            "ingredient": {
         "item": "mysticalcrops:advance_essence"
       }
     },
     {
       "ingredient": {
-        "item": "mysticalcrops:empty"
-      }
-    },
-    {
-            "ingredient": {
         "item": "mysticalcrops:advance_essence"
       }
     },
     {
       "ingredient": {
-        "item": "mysticalcrops:empty"
-      }
-    },
-    {
-            "ingredient": {
         "item": "mysticalcrops:advance_essence"
       }
     },
     {
       "ingredient": {
-        "item": "mysticalcrops:empty"
-      }
-    },
-    {
-            "ingredient": {
         "item": "mysticalcrops:advance_essence"
-      }
-    },
-    {
-      "ingredient": {
-        "item": "mysticalcrops:empty"
       }
     }
   ],

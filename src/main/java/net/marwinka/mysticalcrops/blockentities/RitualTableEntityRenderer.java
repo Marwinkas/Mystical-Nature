@@ -52,7 +52,7 @@ public class RitualTableEntityRenderer implements BlockEntityRenderer<RitualTabl
 
 
         matrices.push();
-        matrices.translate(-0.23f + (entity.progress * 0.0073f), 1.35f + (entity.progress * 0.0015), -0.23f + (entity.progress * 0.0073f));
+        matrices.translate(-0.15f , 1.35f , -0.15f);
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
         switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
@@ -67,7 +67,7 @@ public class RitualTableEntityRenderer implements BlockEntityRenderer<RitualTabl
 
 
         matrices.push();
-        matrices.translate(-0.23f + (entity.progress * 0.0073f), 1.35f + (entity.progress * 0.0015), 0.47f + (entity.progress * 0.0003f));
+        matrices.translate(-0.15f + (entity.progress * 0.0073f), 1.35f + (entity.progress * 0.0015), 0.47f + (entity.progress * 0.0003f));
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
         switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
@@ -82,7 +82,7 @@ public class RitualTableEntityRenderer implements BlockEntityRenderer<RitualTabl
 
 
         matrices.push();
-        matrices.translate(-0.23f + (entity.progress * 0.0073f), 1.35f + (entity.progress * 0.0015),  1.23f - (entity.progress * 0.0073f));
+        matrices.translate(-0.15f,1.35f,1.15f);
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
         switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
@@ -97,7 +97,7 @@ public class RitualTableEntityRenderer implements BlockEntityRenderer<RitualTabl
 
 
         matrices.push();
-        matrices.translate(0.53f - (entity.progress * 0.0003f), 1.35f + (entity.progress * 0.0015), -0.23f + (entity.progress * 0.0073f));
+        matrices.translate(0.57f, 1.35f , -0.17f);
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
         switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
@@ -112,7 +112,7 @@ public class RitualTableEntityRenderer implements BlockEntityRenderer<RitualTabl
 
 
         matrices.push();
-        matrices.translate(0.47f + (entity.progress * 0.0003f), 1.35f + (entity.progress * 0.0015), 1.23f - (entity.progress * 0.0073f));
+        matrices.translate(0.57f , 1.35f , 1.17f);
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
         switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
@@ -127,7 +127,7 @@ public class RitualTableEntityRenderer implements BlockEntityRenderer<RitualTabl
 
 
         matrices.push();
-        matrices.translate(1.23f - (entity.progress * 0.0073f), 1.35f + (entity.progress * 0.0015), -0.23f + (entity.progress * 0.0073f));
+        matrices.translate(1.15f, 1.35f , -0.15f);
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
 
@@ -144,7 +144,7 @@ public class RitualTableEntityRenderer implements BlockEntityRenderer<RitualTabl
 
 
         matrices.push();
-        matrices.translate(1.23f - (entity.progress * 0.0073f), 1.35f + (entity.progress * 0.0015), 0.53f - (entity.progress * 0.0003f));
+        matrices.translate(1.15f - (entity.progress * 0.0073f), 1.35f + (entity.progress * 0.0015), 0.47f - (entity.progress * 0.0003f));
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
         switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
@@ -159,7 +159,7 @@ public class RitualTableEntityRenderer implements BlockEntityRenderer<RitualTabl
 
 
         matrices.push();
-        matrices.translate(1.20f - (entity.progress * 0.0070f), 1.35f + (entity.progress * 0.0015), 1.20f - (entity.progress * 0.0070f));
+        matrices.translate(1.15f - (entity.progress * 0.0070f), 1.35f + (entity.progress * 0.0015), 1.15f - (entity.progress * 0.0070f));
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
 

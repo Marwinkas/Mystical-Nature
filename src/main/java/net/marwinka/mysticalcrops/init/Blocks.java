@@ -2,6 +2,7 @@ package net.marwinka.mysticalcrops.init;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.marwinka.mysticalcrops.block.InfusionTableBlock;
 import net.marwinka.mysticalcrops.block.RitualTableBlock;
 import net.marwinka.mysticalcrops.util.group.ModItemGroup;
 import net.marwinka.mysticalcrops.MysticalCrops;
@@ -51,6 +52,8 @@ public class Blocks {
             .strength(4f).nonOpaque().requiresTool()), "botanical_table");
     public static final Block BOTANICAL_RITUAL_TABLE = register(new RitualTableBlock(FabricBlockSettings.of(Material.STONE)
             .strength(4f).nonOpaque().requiresTool()), "botanical_ritual_table");
+    public static final Block INFUSION_TABLE = register(new InfusionTableBlock(FabricBlockSettings.of(Material.STONE)
+            .strength(4f).nonOpaque().requiresTool()), "infusion_table");
 
     public static final Block ESSENCE_PLANKS = register(new BaseBlock(Material.WOOD, BlockSoundGroup.WOOD, 5.0F, 6.0F), "essence_planks");
     public static final Block BASIC_ESSENCE_BLOCK = register(new BaseBlock(Material.STONE, BlockSoundGroup.METAL, 5.0F, 6.0F), "basic_essence_block");

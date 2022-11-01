@@ -20,27 +20,27 @@ public class RitualTableScreen extends HandledScreen<RitualTableScreenHandler> {
     @Override
     protected void init() {
         super.init();
-        titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
+        titleX = (backgroundWidth - 18 - textRenderer.getWidth(title)) / 2;
     }
     @Override
     protected void drawForeground(MatrixStack matrices, int mouseX, int mouseY) {
-        this.textRenderer.draw(matrices, title, (float) (this.backgroundWidth / 2 - this.textRenderer.getWidth(title) / 2), -10, 4210752);
+        this.textRenderer.draw(matrices, title, (float) (this.backgroundWidth - 18 / 2 - this.textRenderer.getWidth(title) - 95 / 2), -30, 65535);
     }
     @Override
     protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, TEXTURE);
-        int x = (width - 175) / 2;
+        int x = (width - 164) / 2;
         int y = (height - 217) / 2;
-        drawTexture(matrices, x, y + 14 , 0, 0, 175, 216);
+        drawTexture(matrices, x, y + 14 , 0, 0, 164, 217);
 
         renderProgressArrow(matrices, x, y);
     }
 
     private void renderProgressArrow(MatrixStack matrices, int x, int y) {
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 118, y + 58, 176, 0, handler.getScaledProgress(), 17);
+            drawTexture(matrices, x + 37, y + 15, 165, 0, handler.getScaledProgress(), 100);
         }
     }
 

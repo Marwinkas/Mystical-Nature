@@ -1,6 +1,8 @@
 package net.marwinka.mysticalcrops.block;
 
+import net.marwinka.mysticalcrops.blockentities.InfusionTableEntity;
 import net.marwinka.mysticalcrops.blockentities.RitualTableEntity;
+import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -9,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
@@ -18,10 +21,9 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class RitualTableBlock extends BlockWithEntity implements BlockEntityProvider {
+public class InfusionTableBlock extends BlockWithEntity implements BlockEntityProvider {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
-
-    public RitualTableBlock(Settings settings) {
+    public InfusionTableBlock(Settings settings) {
         super(settings);
     }
 
@@ -65,19 +67,18 @@ public class RitualTableBlock extends BlockWithEntity implements BlockEntityProv
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof RitualTableEntity) {
-                ItemScatterer.spawn(world, pos, (RitualTableEntity)blockEntity);
+            if (blockEntity instanceof InfusionTableEntity) {
+                ItemScatterer.spawn(world, pos, (InfusionTableEntity)blockEntity);
                 world.updateComparators(pos,this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
         }
     }
-
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos,
                               PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
-            if (world.getBlockEntity(pos) instanceof RitualTableEntity machineBlock) {
+            if (world.getBlockEntity(pos) instanceof InfusionTableEntity machineBlock) {
                 player.openHandledScreen(machineBlock);
             }
         }
@@ -88,13 +89,13 @@ public class RitualTableBlock extends BlockWithEntity implements BlockEntityProv
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new RitualTableEntity(pos, state);
+        return new InfusionTableEntity(pos, state);
     }
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         return (entityWorld, pos, entityState, blockEntity) -> {
-            if (blockEntity instanceof RitualTableEntity machine) {
+            if (blockEntity instanceof InfusionTableEntity machine) {
                 machine.tick();
             }
         };

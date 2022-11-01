@@ -7,12 +7,10 @@ import me.shedaniel.rei.api.client.registry.display.DisplayRegistry;
 import me.shedaniel.rei.api.common.util.EntryStacks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.marwinka.mysticalcrops.compat.rei.ritual_table.BotanicalTableCategory;
-import net.marwinka.mysticalcrops.compat.rei.ritual_table.BotanicalTableDisplay;
-import net.marwinka.mysticalcrops.compat.rei.ritual_table.RitualTableCategory;
-import net.marwinka.mysticalcrops.compat.rei.ritual_table.RitualTableDisplay;
+import net.marwinka.mysticalcrops.compat.rei.ritual_table.*;
 import net.marwinka.mysticalcrops.init.Blocks;
 import net.marwinka.mysticalcrops.recipe.BotanicalTableRecipe;
+import net.marwinka.mysticalcrops.recipe.InfusionTableRecipe;
 import net.marwinka.mysticalcrops.recipe.ModRecipes;
 import net.marwinka.mysticalcrops.recipe.RitualTableRecipe;
 
@@ -27,11 +25,14 @@ public class ReiPlugin implements REIClientPlugin {
         registry.addWorkstations(REICategories.BOTANICAL_TABLE_CATEGORY, EntryStacks.of(Blocks.BOTANICAL_TABLE));
         registry.add(new RitualTableCategory());
         registry.addWorkstations(REICategories.BOTANICAL_RITUAL_TABLE_CATEGORY, EntryStacks.of(Blocks.BOTANICAL_RITUAL_TABLE));
+        registry.add(new InfusionTableCategory());
+        registry.addWorkstations(REICategories.INFUSION_TABLE_CATEGORY, EntryStacks.of(Blocks.INFUSION_TABLE));
     }
 
     @Override
     public void registerDisplays(DisplayRegistry registry) {
         registry.registerRecipeFiller(BotanicalTableRecipe.class, BotanicalTableRecipe.Type.INSTANCE, BotanicalTableDisplay::new);
         registry.registerRecipeFiller(RitualTableRecipe.class, RitualTableRecipe.Type.GF, RitualTableDisplay::new);
+        registry.registerRecipeFiller(InfusionTableRecipe.class, InfusionTableRecipe.Type.INFUSION, InfusionTableDisplay::new);
     }
 }

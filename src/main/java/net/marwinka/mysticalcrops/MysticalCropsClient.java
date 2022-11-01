@@ -3,11 +3,13 @@ package net.marwinka.mysticalcrops;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
+import net.marwinka.mysticalcrops.blockentities.InfusionTableEntityRenderer;
 import net.marwinka.mysticalcrops.blockentities.RitualTableEntityRenderer;
 import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.marwinka.mysticalcrops.init.Crops;
 import net.marwinka.mysticalcrops.init.itemfromothermods.OtherCrops;
 import net.marwinka.mysticalcrops.networking.ModMessages;
+import net.marwinka.mysticalcrops.screen.InfusionTableScreen;
 import net.marwinka.mysticalcrops.screen.RitualTableScreen;
 import net.marwinka.mysticalcrops.screen.BotanicalTableScreen;
 import net.marwinka.mysticalcrops.screen.ModScreenHandler;
@@ -133,8 +135,11 @@ public class MysticalCropsClient implements ClientModInitializer {
             BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.IRIDIUM.getCrop(), RenderLayer.getCutout());
         }
         HandledScreens.register(ModScreenHandler.BOTANICAL_TABLE_SCREEN_HANDLER, BotanicalTableScreen::new);
+
+        HandledScreens.register(ModScreenHandler.INFUSION_TABLE_SCREEN_HANDLER, InfusionTableScreen::new);
         HandledScreens.register(ModScreenHandler.RITUAL_TABLE_SCREEN_HANDLER, RitualTableScreen::new);
         ModMessages.registerS2CPackets();
         BlockEntityRendererRegistry.register(BlockEntities.BOTANICAL_RITUAL_TABLE, RitualTableEntityRenderer::new);
+        BlockEntityRendererRegistry.register(BlockEntities.INFUSION_TABLE, InfusionTableEntityRenderer::new);
     }
     }
