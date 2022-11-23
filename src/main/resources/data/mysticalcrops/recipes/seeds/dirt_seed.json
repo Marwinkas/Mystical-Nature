@@ -1,0 +1,59 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:water_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:air_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_2"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:dirt_plate"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:air_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:uncommon_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:water_essence"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:dirt_seeds"
+  }
+}

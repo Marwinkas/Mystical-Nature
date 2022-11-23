@@ -1,0 +1,59 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:copper_ingots"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:copper_ingots"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_3"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:copper_ingots"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:copper_ingots"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:copper_seeds"
+  }
+}

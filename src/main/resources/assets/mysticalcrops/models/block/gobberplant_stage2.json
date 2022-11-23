@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "mysticalcrops:block/gobberplant_stage2"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_block"
+    },
+    "$": {
+      "item": "mysticalcrops:basic_essence_block"
+    },
+    "@": {
+      "tag": "c:crystals"
+    },
+    "&": {
+      "item": "minecraft:tinted_glass"
+    }
+  },
+  "pattern": [
+    "$&$",
+    "&@&",
+    "#&#"
+  ],
+  "result": {
+    "item": "mysticalcrops:infusion_table"
+  }
+}

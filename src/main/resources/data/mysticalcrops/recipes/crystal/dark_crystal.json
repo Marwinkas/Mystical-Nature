@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:advance_essence"
+    },
+    "$": {
+      "item": "minecraft:tinted_glass"
+    },
+    "%": {
+      "item": "mysticalcrops:soul_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:advance_crystal"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "%@%",
+    "#$#"
+  ],
+  "result": {
+    "item": "mysticalcrops:dark_crystal"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mysticalcrops:item/refined_iron_essence"
+  }
+}

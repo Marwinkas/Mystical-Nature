@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:nature_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:dirt_essence"
+    },
+    "%": {
+      "item": "mysticalcrops:stone_essence"
+    }
+  },
+  "pattern": [
+    "#@@",
+    "#%%",
+    "   "
+  ],
+  "result": {
+    "count": 8,
+    "item": "minecraft:moss_block"
+  }
+}

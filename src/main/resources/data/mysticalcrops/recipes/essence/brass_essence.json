@@ -1,0 +1,25 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:brass_fruit"}
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:brass_essence",
+    "count": 1
+  }
+}

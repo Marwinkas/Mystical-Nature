@@ -1,0 +1,47 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots"
+      ]
+    }
+  ],
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:item_exists",
+      "values": [
+        "mysticalcrops:air_seeds",
+        "mysticalcrops:air_fruit"
+      ]
+    }
+  ],
+  "type": "botanypots:crop",
+
+  "seed": {
+    "item": "mysticalcrops:air_seeds"
+  },
+  "categories": [
+    "dirt",
+    "farmland"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "mysticalcrops:air_crop"
+  },
+  "drops": [
+    {
+      "chance": 1.00,
+      "output": {
+        "item": "mysticalcrops:air_fruit"
+      }
+    },
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "mysticalcrops:air_fruit"
+      }
+    }
+  ]
+}

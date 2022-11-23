@@ -1,0 +1,67 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:bronze_ingots"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:copper_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:tin_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_4"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "c:bronze_ingots"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:tin_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:ultra_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:copper_essence"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:bronze_seeds"
+  }
+}

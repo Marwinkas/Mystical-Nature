@@ -1,0 +1,39 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots"
+      ]
+    }
+  ],
+
+  "type": "botanypots:crop",
+
+  "seed": {
+    "item": "mysticalcrops:redstone_seeds"
+  },
+  "categories": [
+    "dirt",
+    "farmland"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "mysticalcrops:redstone_crop"
+  },
+  "drops": [
+    {
+      "chance": 1.00,
+      "output": {
+        "item": "mysticalcrops:redstone_fruit"
+      }
+    },
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "mysticalcrops:redstone_fruit"
+      }
+    }
+  ]
+}

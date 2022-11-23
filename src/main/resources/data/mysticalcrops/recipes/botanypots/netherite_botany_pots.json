@@ -1,0 +1,47 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botanypots"
+      ]
+    }
+  ],
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:item_exists",
+      "values": [
+        "mysticalcrops:netherite_seeds",
+        "mysticalcrops:netherite_fruit"
+      ]
+    }
+  ],
+  "type": "botanypots:crop",
+
+  "seed": {
+    "item": "mysticalcrops:netherite_seeds"
+  },
+  "categories": [
+    "dirt",
+    "farmland"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "mysticalcrops:netherite_crop"
+  },
+  "drops": [
+    {
+      "chance": 1.00,
+      "output": {
+        "item": "mysticalcrops:netherite_fruit"
+      }
+    },
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "mysticalcrops:netherite_fruit"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:wood_essence"
+    }
+  },
+  "pattern": [
+    "#  ",
+    " # ",
+    "#  "
+  ],
+  "result": {
+    "count": 8,
+    "item": "minecraft:oak_log"
+  }
+}

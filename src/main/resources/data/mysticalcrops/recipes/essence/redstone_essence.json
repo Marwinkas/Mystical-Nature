@@ -1,0 +1,18 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:redstone_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:redstone_essence",
+    "count": 1
+  }
+}

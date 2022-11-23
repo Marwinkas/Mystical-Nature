@@ -1,0 +1,59 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+       "tag": "minecraft:prismarines"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+       "tag": "minecraft:prismarines"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_3"
+      }
+    },
+    {
+      "ingredient": {
+       "tag": "minecraft:prismarines"
+      }
+    },
+    {
+      "ingredient": {
+       "tag": "minecraft:prismarines"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "tag": "minecraft:prismarines"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:prismarine_seeds"
+  }
+}

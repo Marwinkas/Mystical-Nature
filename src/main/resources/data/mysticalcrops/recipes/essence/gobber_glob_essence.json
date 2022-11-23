@@ -1,0 +1,26 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "gobber2"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:gobber_glob_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:gobber_glob_essence",
+    "count": 1
+  }
+}

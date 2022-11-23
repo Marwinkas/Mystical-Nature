@@ -1,0 +1,18 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:snow_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:snow_essence",
+    "count": 1
+  }
+}

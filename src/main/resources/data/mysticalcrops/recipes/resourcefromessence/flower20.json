@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:nature_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:dye_essence"
+    }
+  },
+  "pattern": [
+    "@@@",
+    "###",
+    " @ "
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:cornflower"
+  }
+}

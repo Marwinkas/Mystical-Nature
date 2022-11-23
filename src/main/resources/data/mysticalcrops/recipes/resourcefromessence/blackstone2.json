@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:stone_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:nether_essence"
+    },
+    "$": {
+      "item": "mysticalcrops:gold_essence"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "@$@",
+    "#@#"
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:gilded_blackstone"
+  }
+}

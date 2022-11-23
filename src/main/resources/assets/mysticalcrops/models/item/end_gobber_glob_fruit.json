@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mysticalcrops:item/gobber_globette_end_fruit"
+  }
+}

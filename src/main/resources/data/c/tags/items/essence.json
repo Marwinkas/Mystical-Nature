@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mysticalcrops:basic_essence",
+    "mysticalcrops:uncommon_essence",
+    "mysticalcrops:advance_essence",
+    "mysticalcrops:ultra_essence",
+    "mysticalcrops:ultimate_essence"
+  ]
+}

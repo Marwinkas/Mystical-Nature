@@ -1,0 +1,18 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "ingredients": [
+    {
+            "ingredient": {
+      "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:clay_fruit"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:clay_essence",
+    "count": 1
+  }
+}

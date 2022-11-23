@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mysticalcrops:block/infusion_table"
+    },
+    "facing=south": {
+      "model": "mysticalcrops:block/infusion_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mysticalcrops:block/infusion_table",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "mysticalcrops:block/infusion_table",
+      "y": 90
+    }
+  }
+}

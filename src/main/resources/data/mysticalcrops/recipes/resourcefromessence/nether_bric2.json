@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:nether_essence"
+    },
+    "$": {
+      "item": "mysticalcrops:stone_essence"
+    }
+  },
+  "pattern": [
+    "#$ ",
+    "$# ",
+    "   "
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:nether_brick"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+            "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:fire_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:air_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:craft_seeds_tier_3"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:stone_plate"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:air_essence"
+      }
+    },
+    {
+            "ingredient": {
+        "item": "mysticalcrops:advance_essence"
+      }
+    },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:fire_essence"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:nether_seeds"
+  }
+}

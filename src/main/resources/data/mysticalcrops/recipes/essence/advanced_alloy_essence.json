@@ -1,0 +1,25 @@
+{
+  "type": "mysticalcrops:botanical_table_cut",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:item_tags_populated",
+      "values": [
+        "c:advanced_alloy_ingots"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+            "ingredient": {
+              "tag": "c:knives" }
+            },
+    {
+      "ingredient": {
+      "item": "mysticalcrops:advanced_alloy_fruit"}
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:advanced_alloy_essence",
+    "count": 1
+  }
+}

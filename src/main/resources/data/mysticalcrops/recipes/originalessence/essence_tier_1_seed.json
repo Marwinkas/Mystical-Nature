@@ -1,0 +1,59 @@
+{
+  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:basic_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:basic_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:basic_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:basic_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:craft_seeds"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:basic_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:basic_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:basic_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:basic_essence"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:essence_seeds_tier_1"
+  }
+}
