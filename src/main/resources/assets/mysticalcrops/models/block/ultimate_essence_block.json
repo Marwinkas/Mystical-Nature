@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "mysticalcrops:block/ultimate_essence_block"
-  }
-}

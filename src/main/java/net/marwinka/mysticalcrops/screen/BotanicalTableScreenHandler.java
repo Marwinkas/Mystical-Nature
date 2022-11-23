@@ -1,44 +1,52 @@
 package net.marwinka.mysticalcrops.screen;
 
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.marwinka.mysticalcrops.blockentities.BotanicalTableEntity;
+import net.marwinka.mysticalcrops.util.inventory.FruitSlot;
+import net.marwinka.mysticalcrops.util.inventory.KnifeSlot;
 import net.marwinka.mysticalcrops.util.inventory.ResultSlot;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 
-public class BotanicalTableScreenHandler  extends ScreenHandler {
+public class BotanicalTableScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
+    public final BotanicalTableEntity blockEntity;
 
-    public BotanicalTableScreenHandler(int syncId, PlayerInventory inventory) {
-        this(syncId, inventory, new SimpleInventory(3), new ArrayPropertyDelegate(3));
+    public BotanicalTableScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
+        this(syncId, inventory, inventory.player.getWorld().getBlockEntity(buf.readBlockPos()),
+                new ArrayPropertyDelegate(3));
     }
 
-    public BotanicalTableScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
+    public BotanicalTableScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity entity, PropertyDelegate delegate) {
         super(ModScreenHandler.BOTANICAL_TABLE_SCREEN_HANDLER, syncId);
-        checkSize(inventory, 3);
-        this.inventory = inventory;
+        checkSize(((Inventory) entity), 3);
+        this.inventory = (Inventory)entity;
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
+        this.blockEntity = (BotanicalTableEntity) entity;
 
-        this.addSlot(new Slot(inventory, 0, 56, 56));
-        this.addSlot(new Slot(inventory, 1, 56, 20));
+        this.addSlot(new KnifeSlot(inventory, 0, 56, 56));
+        this.addSlot(new FruitSlot(inventory, 1, 56, 20));
         this.addSlot(new ResultSlot(inventory, 2, 116, 38));
-
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
 
         addProperties(delegate);
     }
 
+
     public boolean isCrafting() {
         return propertyDelegate.get(0) > 0;
-
     }
 
     public int getScaledProgress() {

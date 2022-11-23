@@ -6,11 +6,8 @@ import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-
-import javax.annotation.Nullable;
 
 public class BotanicalTableScreen extends HandledScreen<BotanicalTableScreenHandler> {
     private static final Identifier TEXTURE =
@@ -25,7 +22,13 @@ public class BotanicalTableScreen extends HandledScreen<BotanicalTableScreenHand
         super.init();
         titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
     }
-
+    @Override
+    protected void drawForeground(MatrixStack matrices, int mouseX, int mouseY) {
+        String title = this.getTitle().getString();
+        this.textRenderer.draw(matrices, title, (float) (this.backgroundWidth / 2 - this.textRenderer.getWidth(title) / 2), -15, 111111);
+        String inventory = "";
+        this.textRenderer.draw(matrices, inventory, 8.0F, 200, 4210752);
+    }
     @Override
     protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);

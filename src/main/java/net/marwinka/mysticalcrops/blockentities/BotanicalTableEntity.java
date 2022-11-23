@@ -1,11 +1,17 @@
 package net.marwinka.mysticalcrops.blockentities;
 
-import net.marwinka.mysticalcrops.blocks.BotanicalTableBlock;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
+import net.marwinka.mysticalcrops.block.BotanicalTableBlock;
 import net.marwinka.mysticalcrops.init.BlockEntities;
-import net.marwinka.mysticalcrops.recipe.BotanicalRitualTableRecipe;
+import net.marwinka.mysticalcrops.networking.ModMessages;
 import net.marwinka.mysticalcrops.recipe.BotanicalTableRecipe;
+import net.marwinka.mysticalcrops.recipe.InfusionTableRecipe;
 import net.marwinka.mysticalcrops.screen.BotanicalTableScreenHandler;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -13,9 +19,11 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
@@ -26,12 +34,27 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
+public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 40;
+    private int maxProgress = 100;
+
+    public void setInventory(DefaultedList<ItemStack> inventory) {
+        for (int i = 0; i < inventory.size(); i++) {
+            this.inventory.set(i, inventory.get(i));
+        }
+    }
+
+    @Override
+    public void markDirty() {
+        super.markDirty();
+        if (this.world instanceof ServerWorld world) {
+            world.getChunkManager().markForUpdate(this.pos);
+        }
+    }
+
 
     public BotanicalTableEntity(BlockPos pos, BlockState state) {
         super(BlockEntities.BOTANICAL_TABLE, pos, state);
@@ -74,17 +97,22 @@ public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity
     }
 
     @Override
+    public void writeScreenOpeningData(ServerPlayerEntity player, PacketByteBuf buf) {
+        buf.writeBlockPos(this.pos);
+    }
+
+    @Override
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
-        Inventories.writeNbt(nbt, inventory);
-        nbt.putInt("botanical_table.progress", progress);
+        Inventories.writeNbt(nbt, this.inventory);
+        nbt.putInt("progress", this.progress);
     }
 
     @Override
     public void readNbt(NbtCompound nbt) {
-        Inventories.readNbt(nbt, inventory);
         super.readNbt(nbt);
-        progress = nbt.getInt("botanical_table.progress");
+        Inventories.readNbt(nbt, this.inventory);
+        this.progress = nbt.getInt("progress");
     }
 
     private void resetProgress() {
@@ -95,11 +123,8 @@ public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity
     public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
         Direction localDir = this.getWorld().getBlockState(this.pos).get(BotanicalTableBlock.FACING);
 
-        if(side == Direction.UP) {
-            return side == Direction.UP && slot == 1;
-        }
-        if(side == Direction.DOWN) {
-            return false;
+        if(side == Direction.UP || side == Direction.DOWN) {
+            return slot == 1;
         }
 
         // Top insert 1
@@ -108,24 +133,20 @@ public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity
         return switch (localDir) {
             default ->
                     side.getOpposite() == Direction.NORTH && slot == 1 ||
-                            side.getOpposite() == Direction.EAST && slot == 0 ||
-                            side.getOpposite() == Direction.WEST && slot == 1 ||
-                            side.getOpposite() == Direction.SOUTH && slot == 0;
+                            side.getOpposite() == Direction.EAST && slot == 1 ||
+                            side.getOpposite() == Direction.WEST && slot == 1;
             case EAST ->
                     side.rotateYClockwise() == Direction.NORTH && slot == 1 ||
-                            side.rotateYClockwise() == Direction.EAST && slot == 0 ||
-                            side.rotateYClockwise() == Direction.WEST && slot == 1||
-                            side.rotateYClockwise() == Direction.SOUTH && slot == 0;
+                            side.rotateYClockwise() == Direction.EAST && slot == 1 ||
+                            side.rotateYClockwise() == Direction.WEST && slot == 1;
             case SOUTH ->
                     side == Direction.NORTH && slot == 1 ||
                             side == Direction.EAST && slot == 1 ||
-                            side == Direction.WEST && slot == 0||
-                            side == Direction.SOUTH && slot == 0;
+                            side == Direction.WEST && slot == 1;
             case WEST ->
                     side.rotateYCounterclockwise() == Direction.NORTH && slot == 1 ||
-                            side.rotateYCounterclockwise() == Direction.EAST && slot == 0 ||
-                            side.rotateYCounterclockwise() == Direction.WEST && slot == 1||
-                            side.rotateYCounterclockwise() == Direction.SOUTH && slot == 0;
+                            side.rotateYCounterclockwise() == Direction.EAST && slot == 1 ||
+                            side.rotateYCounterclockwise() == Direction.WEST && slot == 1;
         };
     }
 
@@ -156,67 +177,40 @@ public class BotanicalTableEntity extends net.minecraft.block.entity.BlockEntity
         };
     }
 
-
-    public static void tick(World world, BlockPos blockPos, BlockState state, BotanicalTableEntity entity) {
-        if(world.isClient()) {
-            return;
-        }
-
-        if(hasRecipe(entity)) {
-            entity.progress++;
-            markDirty(world, blockPos, state);
-            if(entity.progress >= entity.maxProgress) {
-                craftItem(entity);
+    public void tick() {
+        if (!this.world.isClient) {
+            SimpleInventory inventory = new SimpleInventory(this.size());
+            for (int i = 0; i < this.size(); i++) {
+                inventory.setStack(i, this.getStack(i));
             }
-        } else {
-            entity.resetProgress();
-            markDirty(world, blockPos, state);
-        }
-    }
+            Optional<BotanicalTableRecipe> recipe = this.getWorld().getRecipeManager()
+                    .getFirstMatch(BotanicalTableRecipe.Type.INSTANCE, inventory, this.getWorld());
 
-    private static void craftItem(BotanicalTableEntity entity) {
-        World world = entity.world;
-        SimpleInventory inventory = new SimpleInventory(entity.size());
-        for (int i = 0; i < entity.size(); i++) {
-            inventory.setStack(i, entity.getStack(i));
-        }
+            if (recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, recipe.get().getOutput().getItem())) {
+                this.progress++;
+                if (this.progress >= this.maxProgress) {
 
-        Optional<BotanicalTableRecipe> recipe = world.getRecipeManager()
-                .getFirstMatch(BotanicalTableRecipe.Type.INSTANCE, inventory, world);
+                    if (this.getStack(0).getItem().isDamageable()) {
+                        this.getStack(0).setDamage(this.getStack(0).getDamage() + 1);
+                        if (this.getStack(0).getDamage() >= this.getStack(0).getItem().getMaxDamage()) {
+                            this.removeStack(0, 1);
+                        }
+                    }
 
-        if(recipe.isPresent()) {
-            entity.getStack(0).setDamage(entity.getStack(0).getDamage() + 1);
-            if(entity.getStack(0).getDamage() >= 250)
-            {
-                entity.removeStack(0, 1);
+                    this.removeStack(1, 1);
+                    this.setStack(2, new ItemStack(recipe.get().getOutput().getItem(), this.getStack(2).getCount() + recipe.get().getOutput().getCount()));
+                    resetProgress();
+                    this.markDirty();
+                }
+            } else {
+                resetProgress();
             }
-            entity.removeStack(1, 1);
-
-            entity.setStack(2, new ItemStack(recipe.get().getOutput().getItem(),
-                    entity.getStack(2).getCount() + 1));
-
-            entity.resetProgress();
         }
     }
 
-    private static boolean hasRecipe(BotanicalTableEntity entity) {
-        World world = entity.world;
-        SimpleInventory inventory = new SimpleInventory(entity.size());
-        for (int i = 0; i < entity.size(); i++) {
-            inventory.setStack(i, entity.getStack(i));
-        }
 
-        Optional<BotanicalTableRecipe> match = world.getRecipeManager()
-                .getFirstMatch(BotanicalTableRecipe.Type.INSTANCE, inventory, world);
-
-
-        return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory,match.get().getOutput());
-
-    }
-
-    private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, ItemStack output) {
-        return inventory.getStack(2).getItem() == output.getItem() || inventory.getStack(9).isEmpty();
+    private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
+        return inventory.getStack(2).getItem() == output || inventory.getStack(2).isEmpty();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory) {

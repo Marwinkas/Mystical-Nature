@@ -3,33 +3,59 @@ package net.marwinka.mysticalcrops.recipe;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class BotanicalTableRecipe implements Recipe<SimpleInventory> {
     private final Identifier id;
     private final ItemStack output;
-    private final DefaultedList<Ingredient> recipeItems;
-
-    public BotanicalTableRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
+    private final List<Ingredient> recipeItems = new ArrayList<>();
+    protected List<Integer> stackCounts;
+    public BotanicalTableRecipe(Identifier id, List<Ingredient> recipeItems, List<Integer> stackCounts, ItemStack output) {
         this.id = id;
         this.output = output;
-        this.recipeItems = recipeItems;
+        this.recipeItems.addAll(recipeItems);
+        this.stackCounts = stackCounts;
     }
-
+    public Ingredient getInputIngredient() {
+        return this.recipeItems.get(0);
+    }
+    public List<Integer> getStackCounts() {
+        return this.stackCounts;
+    }
     @Override
     public boolean matches(SimpleInventory inventory, World world) {
-        if(world.isClient()) { return false; }
-
-        if(recipeItems.get(0).test(inventory.getStack(0))) {
-            return recipeItems.get(1).test(inventory.getStack(1));
+        for (int i = 0; i < this.recipeItems.size(); i++) {
+            if (!recipeItems.get(i).test(inventory.getStack(i))) {
+                return false;
+            }
         }
 
+        return true;
+    }
+    @Override
+    public DefaultedList<Ingredient> getIngredients() {
+        DefaultedList<Ingredient> defaultedList = DefaultedList.of();
+        defaultedList.addAll(this.recipeItems);
+        return defaultedList;
+    }
+    public boolean matches(ItemStack itemStack) {
+        for (Ingredient input : this.recipeItems) {
+            if (input.test(itemStack)) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -47,7 +73,6 @@ public class BotanicalTableRecipe implements Recipe<SimpleInventory> {
     public ItemStack getOutput() {
         return output.copy();
     }
-
     @Override
     public Identifier getId() {
         return id;
@@ -55,17 +80,16 @@ public class BotanicalTableRecipe implements Recipe<SimpleInventory> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return Serializer.INSTANCE;
+        return BotanicalTableRecipe.Serializer.INSTANCE;
     }
 
     @Override
     public RecipeType<?> getType() {
-        return Type.INSTANCE;
+        return BotanicalTableRecipe.Type.INSTANCE;
     }
-
     public static class Type implements RecipeType<BotanicalTableRecipe> {
         private Type() { }
-        public static final Type INSTANCE = new Type();
+        public static final BotanicalTableRecipe.Type INSTANCE = new BotanicalTableRecipe.Type();
         public static final String ID = "botanical_table_cut";
     }
 
@@ -76,36 +100,45 @@ public class BotanicalTableRecipe implements Recipe<SimpleInventory> {
 
         @Override
         public BotanicalTableRecipe read(Identifier id, JsonObject json) {
-            ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
 
-            JsonArray ingredients = JsonHelper.getArray(json, "ingredients");
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(2, Ingredient.EMPTY);
+            List<Ingredient> ingredients = new LinkedList<>();
+            List<Integer> stackCounts = new LinkedList<>();
+            json.getAsJsonArray("ingredients").forEach(element -> {
+                JsonObject jsonObject = element.getAsJsonObject();
+                ingredients.add(Ingredient.fromJson(jsonObject.get("ingredient").getAsJsonObject()));
+                if (jsonObject.has("count")) {
+                    stackCounts.add(jsonObject.get("count").getAsInt());
+                } else {
+                    stackCounts.add(1);
+                }
+            });
 
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
-            }
+            Item item = Registry.ITEM.get(new Identifier(json.get("output").getAsJsonObject().get("item").getAsString()));
+            short stackSize = json.get("output").getAsJsonObject().get("count").getAsShort();
+            ItemStack output = new ItemStack(item, stackSize);
 
-            return new BotanicalTableRecipe(id, output, inputs);
+            return new BotanicalTableRecipe(id, ingredients, stackCounts, output);
         }
-
         @Override
         public BotanicalTableRecipe read(Identifier id, PacketByteBuf buf) {
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
-
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromPacket(buf));
-            }
-
+            List<Ingredient> ingredients = buf.readList(buf2 -> {
+                return Ingredient.fromPacket(buf2);
+            });
+            List<Integer> stackCounts = buf.readList(buf2 -> {
+                return buf2.readInt();
+            });
             ItemStack output = buf.readItemStack();
-            return new BotanicalTableRecipe(id, output, inputs);
+            return new BotanicalTableRecipe(id, ingredients, stackCounts, output);
         }
 
         @Override
         public void write(PacketByteBuf buf, BotanicalTableRecipe recipe) {
-            buf.writeInt(recipe.getIngredients().size());
-            for (Ingredient ing : recipe.getIngredients()) {
-                ing.write(buf);
-            }
+            buf.writeCollection(recipe.getIngredients(), (buf2, ingredient) -> {
+                ingredient.write(buf2);
+            });
+            buf.writeCollection(recipe.getStackCounts(), (buf2, count) -> {
+                buf2.writeInt(count);
+            });
             buf.writeItemStack(recipe.getOutput());
         }
     }

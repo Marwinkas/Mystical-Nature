@@ -11,9 +11,14 @@ public class ModRecipes {
         Registry.register(Registry.RECIPE_TYPE, new Identifier(MysticalCrops.MOD_ID, BotanicalTableRecipe.Type.ID),
                 BotanicalTableRecipe.Type.INSTANCE);
 
-        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MysticalCrops.MOD_ID, BotanicalRitualTableRecipe.Serializer.ID),
-                BotanicalRitualTableRecipe.Serializer.INSTANCE);
-        Registry.register(Registry.RECIPE_TYPE, new Identifier(MysticalCrops.MOD_ID, BotanicalRitualTableRecipe.Type.ID),
-                BotanicalRitualTableRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MysticalCrops.MOD_ID, RitualTableRecipe.Serializer.ID),
+                RitualTableRecipe.Serializer.GF);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(MysticalCrops.MOD_ID, RitualTableRecipe.Type.ID),
+                RitualTableRecipe.Type.GF);
+
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MysticalCrops.MOD_ID, InfusionTableRecipe.Serializer.ID),
+                InfusionTableRecipe.Serializer.INFUSION);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(MysticalCrops.MOD_ID, InfusionTableRecipe.Type.ID),
+                InfusionTableRecipe.Type.INFUSION);
     }
 }

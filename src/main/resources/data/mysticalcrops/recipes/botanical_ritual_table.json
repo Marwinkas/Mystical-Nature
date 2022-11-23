@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "mysticalcrops:basic_essence_block"
+      "item": "minecraft:calcite"
     },
     "%": {
-      "item": "minecraft:iron_ingot"
+      "item": "mysticalcrops:advance_essence"
     },
     "@": {
-      "item": "mysticalcrops:botanical_table"
+      "tag": "c:crystals"
+    },
+    "&": {
+      "item": "minecraft:gold_ingot"
     }
   },
   "pattern": [
     "#%#",
-    "%@%",
+    "&@&",
     "#%#"
   ],
   "result": {

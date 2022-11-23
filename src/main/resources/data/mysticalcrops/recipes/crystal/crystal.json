@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:crystal_fragments"
+    },
+    "$": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "@": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "$@$",
+    "#$#"
+  ],
+  "result": {
+    "item": "mysticalcrops:empty_crystal"
+  }
+}

@@ -4,23 +4,20 @@
     "#": {
       "item": "mysticalcrops:essence_planks"
     },
-    "$": {
-      "item": "mysticalcrops:crystal"
-    },
     "@": {
       "item": "minecraft:crafting_table"
     },
     "%": {
-      "item": "minecraft:poppy"
+      "tag": "minecraft:flower"
     },
-    "^": {
-      "item": "minecraft:dandelion"
+    "*": {
+      "item": "mysticalcrops:advance_essence"
     }
   },
   "pattern": [
-    "###",
-    "%@^",
-    "#$#"
+    "#*#",
+    "%@%",
+    "#*#"
   ],
   "result": {
     "item": "mysticalcrops:botanical_table"
