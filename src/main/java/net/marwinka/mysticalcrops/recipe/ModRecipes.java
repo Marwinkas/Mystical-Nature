@@ -20,5 +20,10 @@ public class ModRecipes {
                 InfusionTableRecipe.Serializer.INFUSION);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(MysticalCrops.MOD_ID, InfusionTableRecipe.Type.ID),
                 InfusionTableRecipe.Type.INFUSION);
+
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MysticalCrops.MOD_ID, seedsfruit.Serializer.ID),
+                seedsfruit.Serializer.FRUITS);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(MysticalCrops.MOD_ID, seedsfruit.Type.ID),
+                seedsfruit.Type.FRUITS);
     }
 }

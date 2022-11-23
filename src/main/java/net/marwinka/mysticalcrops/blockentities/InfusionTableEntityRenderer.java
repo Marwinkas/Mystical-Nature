@@ -1,5 +1,5 @@
 package net.marwinka.mysticalcrops.blockentities;
-import net.marwinka.mysticalcrops.block.RitualTableBlock;
+import net.marwinka.mysticalcrops.block.InfusionTableBlock;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.render.OverlayTexture;
@@ -36,7 +36,7 @@ public class InfusionTableEntityRenderer implements BlockEntityRenderer<Infusion
         matrices.translate(0.5, 1.2, 0.7);
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
-        switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
+        switch (entity.getCachedState().get(InfusionTableBlock.FACING)) {
             case NORTH -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(0));
             case SOUTH -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(180));
             case EAST -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(270));
@@ -51,7 +51,7 @@ public class InfusionTableEntityRenderer implements BlockEntityRenderer<Infusion
         matrices.translate(0.3, 1.2, 0.5);
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
-        switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
+        switch (entity.getCachedState().get(InfusionTableBlock.FACING)) {
             case NORTH -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(0));
             case SOUTH -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(180));
             case EAST -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(270));
@@ -66,7 +66,7 @@ public class InfusionTableEntityRenderer implements BlockEntityRenderer<Infusion
         matrices.translate(0.7, 1.2, 0.5);
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
-        switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
+        switch (entity.getCachedState().get(InfusionTableBlock.FACING)) {
             case NORTH -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(0));
             case SOUTH -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(180));
             case EAST -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(270));
@@ -81,7 +81,7 @@ public class InfusionTableEntityRenderer implements BlockEntityRenderer<Infusion
         matrices.translate(0.5, 1.2, 0.3);
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
-        switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
+        switch (entity.getCachedState().get(InfusionTableBlock.FACING)) {
             case NORTH -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(0));
             case SOUTH -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(180));
             case EAST -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(270));
@@ -96,7 +96,7 @@ public class InfusionTableEntityRenderer implements BlockEntityRenderer<Infusion
         matrices.translate(0.5, 1.4, 0.5);
         matrices.scale(0.2f, 0.3f, 0.2f);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(0));
-        switch (entity.getCachedState().get(RitualTableBlock.FACING)) {
+        switch (entity.getCachedState().get(InfusionTableBlock.FACING)) {
             case NORTH -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(0));
             case SOUTH -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(180));
             case EAST -> matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(270));

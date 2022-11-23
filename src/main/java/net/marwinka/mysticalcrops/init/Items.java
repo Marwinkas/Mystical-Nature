@@ -103,7 +103,6 @@ public class Items {
     public static final Item WITHER_SOUL = register(new Souls(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)),"wither_soul");
     public static final Item EMPTY_CRYSTAL = register("empty_crystal");
     public static final Item WITHER_CRYSTAL = register("wither_crystal");
-    public static final Item EMPTY = register("empty");
     public static final Item BASIC_COAL = register(new CoalTier1(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "basic_coal");
     public static final Item UNCOMMON_COAL = register(new CoalTier2(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "uncommon_coal");
     public static final Item ADVANCE_COAL = register(new CoalTier3(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "advance_coal");
@@ -113,6 +112,11 @@ public class Items {
     public static final Item DIRT_PLATE = register(new ItemTier2(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "dirt_plate");
     public static final Item STONE_PLATE = register(new ItemTier2(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "stone_plate");
     public static final Item WOOD_PLATE = register(new ItemTier2(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "wood_plate");
+    public static final Item GRAVEL_PLATE = register(new ItemTier3(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "gravel_plate");
+    public static final Item SAND_PLATE = register(new ItemTier3(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "sand_plate");
+    public static final Item CLAY_PLATE = register(new ItemTier3(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "clay_plate");
+    public static final Item SNOW_PLATE = register(new ItemTier3(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "snow_plate");
+    public static final Item SOUL_PLATE = register(new ItemTier3(new FabricItemSettings().group(ModItemGroup.ITEMGROUP)), "soul_plate");
     public static final Item BASIC_CRYSTAL = register(new Crystal(CrystalDurability.CRYSTAL,0,0,new FabricItemSettings().group(ModItemGroup.ITEMGROUP).maxCount(1)), "basic_crystal");
     public static final Item UNCOMMON_CRYSTAL = register(new CrystalUncommon(CrystalUNCOMMONDurability.UNCOMMON_CRYSTALS,0,0,new FabricItemSettings().group(ModItemGroup.ITEMGROUP).maxCount(1)), "uncommon_crystal");
     public static final Item ADVANCE_CRYSTAL = register(new Crystaladvance(CrystalADVANCEdurability.ADVANCE_CRYSTALS,0,0,new FabricItemSettings().group(ModItemGroup.ITEMGROUP).maxCount(1)), "advance_crystal");

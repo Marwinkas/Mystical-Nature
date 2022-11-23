@@ -7,13 +7,16 @@
     "$": {
       "item": "minecraft:tinted_glass"
     },
+    "%": {
+      "item": "mysticalcrops:soul_essence"
+    },
     "@": {
       "item": "mysticalcrops:advance_crystal"
     }
   },
   "pattern": [
     "#$#",
-    "$@$",
+    "%@%",
     "#$#"
   ],
   "result": {

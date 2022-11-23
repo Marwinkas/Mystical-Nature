@@ -32,17 +32,17 @@ public class RitualTableScreenHandler extends ScreenHandler {
         this.blockEntity = (RitualTableEntity) entity;
 
         this.addSlot(new CristalSlot(inventory, 0, 14, 32));
-        this.addSlot(new NoSeedSlot(inventory, 1, 51, 0));
+        this.addSlot(new Slot(inventory, 1, 51, 0));
         this.addSlot(new EssenceSlot(inventory, 2, 49, 32));
-        this.addSlot(new NoSeedSlot(inventory, 3, 51, 63));
+        this.addSlot(new Slot(inventory, 3, 51, 63));
         this.addSlot(new EssenceSlot(inventory, 4, 80, -2));
         this.addSlot(new SeedSlot(inventory, 5, 80, 32));
-        this.addSlot(new NoSeedSlot(inventory, 6, 80, 65));
-        this.addSlot(new NoSeedSlot(inventory, 7, 109, 0));
+        this.addSlot(new Slot(inventory, 6, 80, 65));
+        this.addSlot(new Slot(inventory, 7, 109, 0));
         this.addSlot(new EssenceSlot(inventory, 8, 111, 32));
-        this.addSlot(new NoSeedSlot(inventory, 9, 109, 63));
+        this.addSlot(new Slot(inventory, 9, 109, 63));
 
-        this.addSlot(new NoSeedSlot(inventory, 10, 0, 0));
+        this.addSlot(new Slot(inventory, 10, 0, 0));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

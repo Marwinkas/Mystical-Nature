@@ -47,6 +47,17 @@ public class MysticalCropsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.AIR.getCrop(), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.WATER.getCrop(), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.NETHER.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.AMETHYST.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.SAND.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.GRAVEL.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.SNOW.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.DYE.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.END.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.ENDER.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.CLAY.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.NATURE.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.SOUL.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.PRISMARINE.getCrop(), RenderLayer.getCutout());
         if(OtherCrops.END_GOBBER_GLOB.isEnabled()){
             BlockRenderLayerMap.INSTANCE.putBlock(OtherCrops.END_GOBBER_GLOB.getCrop(), RenderLayer.getCutout());
         }

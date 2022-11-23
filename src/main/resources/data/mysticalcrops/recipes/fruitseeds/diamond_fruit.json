@@ -1,0 +1,14 @@
+{
+  "type": "mysticalcrops:fruitcheck",
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "mysticalcrops:diamond_seeds"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:diamond_fruit",
+    "count": 1
+  }
+}

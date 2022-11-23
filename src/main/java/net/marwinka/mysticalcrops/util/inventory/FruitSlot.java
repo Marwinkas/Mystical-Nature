@@ -164,6 +164,39 @@ public class FruitSlot extends Slot {
         if(stack.getItem() == OtherCrops.NETHER.getFruits()){
             return true;
         }
+        if(stack.getItem() == OtherCrops.AMETHYST.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.SAND.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.GRAVEL.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.SNOW.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.DYE.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.ENDER.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.END.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.CLAY.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.NATURE.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.PRISMARINE.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == OtherCrops.SOUL.getFruits()){
+            return true;
+        }
         if(stack.getItem() == OtherCrops.AIR.getFruits()){
             return true;
         }

@@ -1,0 +1,14 @@
+{
+  "type": "mysticalcrops:fruitcheck",
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "mysticalcrops:iron_seeds"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:iron_fruit",
+    "count": 1
+  }
+}

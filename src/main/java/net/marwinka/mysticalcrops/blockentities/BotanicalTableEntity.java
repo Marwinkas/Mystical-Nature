@@ -197,7 +197,7 @@ public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenH
                     }
 
                     this.removeStack(1, 1);
-                    this.setStack(2, new ItemStack(recipe.get().getOutput().getItem(), this.getStack(2).getCount() + 1));
+                    this.setStack(2, new ItemStack(recipe.get().getOutput().getItem(), this.getStack(2).getCount() + recipe.get().getOutput().getCount()));
                     resetProgress();
                     this.markDirty();
                 }

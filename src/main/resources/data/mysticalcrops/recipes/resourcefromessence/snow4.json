@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:snow_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:water_essence"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "@#@",
+    "#@#"
+  ],
+  "result": {
+    "count": 16,
+    "item": "minecraft:ice"
+  }
+}

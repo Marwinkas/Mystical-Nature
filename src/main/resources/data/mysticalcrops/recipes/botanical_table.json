@@ -8,10 +8,7 @@
       "item": "minecraft:crafting_table"
     },
     "%": {
-      "item": "minecraft:poppy"
-    },
-    "^": {
-      "item": "minecraft:dandelion"
+      "tag": "minecraft:flower"
     },
     "*": {
       "item": "mysticalcrops:advance_essence"
@@ -19,7 +16,7 @@
   },
   "pattern": [
     "#*#",
-    "%@^",
+    "%@%",
     "#*#"
   ],
   "result": {

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:soul_essence"
+    },
+    "%": {
+      "item": "mysticalcrops:nature_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:air_essence"
+    }
+  },
+  "pattern": [
+    "#%#",
+    "%@%",
+    "#%#"
+  ],
+  "result": {
+    "count": 8,
+    "item": "minecraft:nether_wart"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:obsidian_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:glowstone_essence"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "@#@",
+    "#@#"
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:crying_obsidian"
+  }
+}
