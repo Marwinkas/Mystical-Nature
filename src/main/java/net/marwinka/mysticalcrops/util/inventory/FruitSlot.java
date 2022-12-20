@@ -1,7 +1,9 @@
 package net.marwinka.mysticalcrops.util.inventory;
 
 import net.marwinka.mysticalcrops.init.Items;
+import net.marwinka.mysticalcrops.init.classic_item;
 import net.marwinka.mysticalcrops.init.itemfromothermods.OtherCrops;
+import net.marwinka.mysticalcrops.init.new_system_seed;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.slot.Slot;
@@ -26,19 +28,19 @@ public class FruitSlot extends Slot {
         if(stack.getItem() == Items.EMERALD_FRUIT){
             return true;
         }
-        if(stack.getItem() == Items.ESSENCE_FRUIT_TIER_1){
+        if(stack.getItem() == classic_item.ESSENCE_FRUIT_TIER_1){
             return true;
         }
-        if(stack.getItem() == Items.ESSENCE_FRUIT_TIER_2){
+        if(stack.getItem() == classic_item.ESSENCE_FRUIT_TIER_2){
             return true;
         }
-        if(stack.getItem() == Items.ESSENCE_FRUIT_TIER_3){
+        if(stack.getItem() == classic_item.ESSENCE_FRUIT_TIER_3){
             return true;
         }
-        if(stack.getItem() == Items.ESSENCE_FRUIT_TIER_4){
+        if(stack.getItem() == classic_item.ESSENCE_FRUIT_TIER_4){
             return true;
         }
-        if(stack.getItem() == Items.ESSENCE_FRUIT_TIER_5){
+        if(stack.getItem() == classic_item.ESSENCE_FRUIT_TIER_5){
             return true;
         }
         if(stack.getItem() == Items.IRON_FRUIT){
@@ -158,46 +160,46 @@ public class FruitSlot extends Slot {
         if(stack.getItem() == OtherCrops.RUBBER.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.WATER.getFruits()){
+        if(stack.getItem() == new_system_seed.WATER.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.NETHER.getFruits()){
+        if(stack.getItem() == new_system_seed.NETHER.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.AMETHYST.getFruits()){
+        if(stack.getItem() == new_system_seed.AMETHYST.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.SAND.getFruits()){
+        if(stack.getItem() == new_system_seed.SAND.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.GRAVEL.getFruits()){
+        if(stack.getItem() == new_system_seed.GRAVEL.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.SNOW.getFruits()){
+        if(stack.getItem() == new_system_seed.SNOW.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.DYE.getFruits()){
+        if(stack.getItem() == new_system_seed.DYE.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.ENDER.getFruits()){
+        if(stack.getItem() == new_system_seed.ENDER.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.END.getFruits()){
+        if(stack.getItem() == new_system_seed.END.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.CLAY.getFruits()){
+        if(stack.getItem() == new_system_seed.CLAY.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.NATURE.getFruits()){
+        if(stack.getItem() == new_system_seed.NATURE.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.PRISMARINE.getFruits()){
+        if(stack.getItem() == new_system_seed.PRISMARINE.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.SOUL.getFruits()){
+        if(stack.getItem() == new_system_seed.SOUL.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.AIR.getFruits()){
+        if(stack.getItem() == new_system_seed.AIR.getFruits()){
             return true;
         }
 

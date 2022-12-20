@@ -8,6 +8,7 @@ import net.marwinka.mysticalcrops.block.BotanicalTableBlock;
 import net.marwinka.mysticalcrops.block.InfusionTableBlock;
 import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.marwinka.mysticalcrops.init.Items;
+import net.marwinka.mysticalcrops.init.classic_item;
 import net.marwinka.mysticalcrops.networking.ModMessages;
 import net.marwinka.mysticalcrops.recipe.InfusionTableRecipe;
 import net.marwinka.mysticalcrops.recipe.RitualTableRecipe;
@@ -67,6 +68,26 @@ public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHa
                 return 2;
             }
         };
+    }
+
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
+        if (!stack.isStackable()) {
+            return slot == 0;
+        }
+        if (stack.isStackable() && this.getStack(1).getCount() <= this.getStack(2).getCount() && this.getStack(1).getCount() <= this.getStack(3).getCount() && this.getStack(1).getCount() <= this.getStack(4).getCount()) {
+            return slot == 1;
+        }
+        if (stack.isStackable() && this.getStack(2).getCount() <= this.getStack(1).getCount() && this.getStack(2).getCount() <= this.getStack(3).getCount() && this.getStack(2).getCount() <= this.getStack(4).getCount()) {
+            return slot == 2;
+        }
+        if (stack.isStackable() && this.getStack(3).getCount() <= this.getStack(2).getCount() && this.getStack(3).getCount() <= this.getStack(1).getCount() && this.getStack(3).getCount() <= this.getStack(4).getCount()) {
+            return slot == 3;
+        }
+        if (stack.isStackable() && this.getStack(4).getCount() <= this.getStack(2).getCount() && this.getStack(4).getCount() <= this.getStack(3).getCount() && this.getStack(4).getCount() <= this.getStack(1).getCount()) {
+            return slot == 4;
+        }
+        return false;
     }
 
     public int progress = 0;
@@ -169,29 +190,7 @@ public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHa
 
     @Override
     public boolean canExtract(int slot, ItemStack stack, Direction side) {
-        Direction localDir = this.getWorld().getBlockState(this.pos).get(BotanicalTableBlock.FACING);
-
-        if(side == Direction.UP) {
-            return slot == 5;
-        }
-
-        // Down extract 2
-        if(side == Direction.DOWN) {
-            return slot == 5;
-        }
-
-        // bottom extract 2
-        // right extract 2
-        return switch (localDir) {
-            default -> side.getOpposite() == Direction.SOUTH && slot == 5 ||
-                    side.getOpposite() == Direction.EAST && slot == 5;
-            case EAST -> side.rotateYClockwise() == Direction.SOUTH && slot == 5 ||
-                    side.rotateYClockwise() == Direction.EAST && slot == 5;
-            case SOUTH -> side == Direction.SOUTH && slot == 5 ||
-                    side == Direction.EAST && slot == 5;
-            case WEST -> side.rotateYCounterclockwise() == Direction.SOUTH && slot == 5 ||
-                    side.rotateYCounterclockwise() == Direction.EAST && slot == 5;
-        };
+        return slot == 5;
     }
 
     public ItemStack getRenderStack() {

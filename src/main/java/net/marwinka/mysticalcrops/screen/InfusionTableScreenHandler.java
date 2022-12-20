@@ -31,12 +31,12 @@ public class InfusionTableScreenHandler extends ScreenHandler {
         this.propertyDelegate = delegate;
         this.blockEntity = (InfusionTableEntity) entity;
 
-        this.addSlot(new CristalSlot(inventory, 0, 8, 38));
-        this.addSlot(new EssenceSlot(inventory, 1, 48, 38));
-        this.addSlot(new EssenceSlot(inventory, 2, 80, 6));
-        this.addSlot(new EssenceSlot(inventory, 3, 80, 70));
-        this.addSlot(new EssenceSlot(inventory, 4, 112, 38));
-        this.addSlot(new ResultSlot(inventory, 5, 80, 38));
+        this.addSlot(new CristalSlot(inventory, 0, 8, 33));
+        this.addSlot(new EssenceSlot(inventory, 1, 48, 33));
+        this.addSlot(new EssenceSlot(inventory, 2, 80, 1));
+        this.addSlot(new EssenceSlot(inventory, 3, 80, 65));
+        this.addSlot(new EssenceSlot(inventory, 4, 112, 33));
+        this.addSlot(new ResultSlot(inventory, 5, 80, 33));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
@@ -89,14 +89,14 @@ public class InfusionTableScreenHandler extends ScreenHandler {
     private void addPlayerInventory(PlayerInventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 91 + i * 18));
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 86 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(PlayerInventory playerInventory) {
         for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 149));
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
         }
     }
 }

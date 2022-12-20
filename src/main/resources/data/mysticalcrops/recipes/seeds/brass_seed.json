@@ -40,8 +40,8 @@
       }
     },
     {
-            "ingredient": {
-        "tag": "c:brass_ingots"
+      "ingredient": {
+        "item": "techreborn:brass_ingot"
       }
     },
     {

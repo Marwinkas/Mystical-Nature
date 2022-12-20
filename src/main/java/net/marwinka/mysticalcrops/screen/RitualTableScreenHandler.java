@@ -31,16 +31,16 @@ public class RitualTableScreenHandler extends ScreenHandler {
         this.propertyDelegate = delegate;
         this.blockEntity = (RitualTableEntity) entity;
 
-        this.addSlot(new CristalSlot(inventory, 0, 14, 32));
-        this.addSlot(new Slot(inventory, 1, 51, 0));
-        this.addSlot(new EssenceSlot(inventory, 2, 49, 32));
-        this.addSlot(new Slot(inventory, 3, 51, 63));
-        this.addSlot(new EssenceSlot(inventory, 4, 80, -2));
-        this.addSlot(new SeedSlot(inventory, 5, 80, 32));
-        this.addSlot(new Slot(inventory, 6, 80, 65));
-        this.addSlot(new Slot(inventory, 7, 109, 0));
-        this.addSlot(new EssenceSlot(inventory, 8, 111, 32));
-        this.addSlot(new Slot(inventory, 9, 109, 63));
+        this.addSlot(new CristalSlot(inventory, 0, 17, 26));
+        this.addSlot(new Slot(inventory, 1, 51, -3));
+        this.addSlot(new Slot(inventory, 2, 50, 26));
+        this.addSlot(new Slot(inventory, 3, 51, 55));
+        this.addSlot(new Slot(inventory, 4, 80, -4));
+        this.addSlot(new SeedSlot(inventory, 5, 80, 26));
+        this.addSlot(new Slot(inventory, 6, 80, 56));
+        this.addSlot(new Slot(inventory, 7, 109, -3));
+        this.addSlot(new Slot(inventory, 8, 110, 26));
+        this.addSlot(new Slot(inventory, 9, 109, 55));
 
         this.addSlot(new Slot(inventory, 10, 0, 0));
 
@@ -57,7 +57,7 @@ public class RitualTableScreenHandler extends ScreenHandler {
     public int getScaledProgress() {
         int progress = this.propertyDelegate.get(0);
         int maxProgress = this.propertyDelegate.get(1);  // Max Progress
-        int progressArrowSize = 92; // This is the width in pixels of your arrow
+        int progressArrowSize = 62; // This is the width in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
@@ -93,44 +93,16 @@ public class RitualTableScreenHandler extends ScreenHandler {
     }
 
     private void addPlayerInventory(PlayerInventory playerInventory) {
-        this.addSlot(new Slot(playerInventory, 9, 13, 91));
-        this.addSlot(new Slot(playerInventory, 10, 12 + 18, 91));
-        this.addSlot(new Slot(playerInventory, 11, 10 + 2 * 18, 91));
-        this.addSlot(new Slot(playerInventory, 12, 9 + 3 * 18, 91));
-        this.addSlot(new Slot(playerInventory, 13, 8 + 4 * 18, 91));
-        this.addSlot(new Slot(playerInventory, 14, 7 + 5 * 18, 91));
-        this.addSlot(new Slot(playerInventory, 15, 6 + 6 * 18, 91));
-        this.addSlot(new Slot(playerInventory, 16, 5 + 7 * 18, 91));
-        this.addSlot(new Slot(playerInventory, 17, 4 + 8 * 18, 91));
-        this.addSlot(new Slot(playerInventory, 18, 13, 109));
-        this.addSlot(new Slot(playerInventory, 19, 12 + 18, 109));
-        this.addSlot(new Slot(playerInventory, 20, 10 + 2 * 18, 109));
-        this.addSlot(new Slot(playerInventory, 21, 9 + 3 * 18, 109));
-        this.addSlot(new Slot(playerInventory, 22, 8 + 4 * 18, 109));
-        this.addSlot(new Slot(playerInventory, 23, 7 + 5 * 18, 109));
-        this.addSlot(new Slot(playerInventory, 24, 6 + 6 * 18, 109));
-        this.addSlot(new Slot(playerInventory, 25, 5 + 7 * 18, 109));
-        this.addSlot(new Slot(playerInventory, 26, 4 + 8 * 18, 109));
-        this.addSlot(new Slot(playerInventory, 27, 13, 127));
-        this.addSlot(new Slot(playerInventory, 28, 12 + 18, 127));
-        this.addSlot(new Slot(playerInventory, 29, 10 + 2 * 18, 127));
-        this.addSlot(new Slot(playerInventory, 30, 9 + 3 * 18, 127));
-        this.addSlot(new Slot(playerInventory, 31, 8 + 4 * 18, 127));
-        this.addSlot(new Slot(playerInventory, 32, 7 + 5 * 18, 127));
-        this.addSlot(new Slot(playerInventory, 33, 6 + 6 * 18, 127));
-        this.addSlot(new Slot(playerInventory, 34, 5 + 7 * 18, 127));
-        this.addSlot(new Slot(playerInventory, 35, 4 + 8 * 18, 127));
+        for (int i = 0; i < 3; ++i) {
+            for (int l = 0; l < 9; ++l) {
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 86 + i * 18));
+            }
+        }
     }
 
     private void addPlayerHotbar(PlayerInventory playerInventory) {
-        this.addSlot(new Slot(playerInventory, 0, 13, 149));
-        this.addSlot(new Slot(playerInventory, 1, 12 + 18, 149));
-        this.addSlot(new Slot(playerInventory, 2, 10 + 2 * 18, 149));
-        this.addSlot(new Slot(playerInventory, 3, 9 + 3 * 18, 149));
-        this.addSlot(new Slot(playerInventory, 4, 8 + 4 * 18, 149));
-        this.addSlot(new Slot(playerInventory, 5, 7 + 5 * 18, 149));
-        this.addSlot(new Slot(playerInventory, 6, 6 + 6 * 18, 149));
-        this.addSlot(new Slot(playerInventory, 7, 5 + 7 * 18, 149));
-        this.addSlot(new Slot(playerInventory, 8, 4 + 8 * 18, 149));
+        for (int i = 0; i < 9; ++i) {
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
+        }
     }
 }

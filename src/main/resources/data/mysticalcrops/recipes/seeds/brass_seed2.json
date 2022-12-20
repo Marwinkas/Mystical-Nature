@@ -41,7 +41,7 @@
     },
     {
       "ingredient": {
-      "item": "c:ingots/brass"
+      "item": "create:brass_ingot"
       }
     },
     {

@@ -11,6 +11,7 @@ import net.marwinka.mysticalcrops.init.Items;
 import net.marwinka.mysticalcrops.networking.ModMessages;
 import net.marwinka.mysticalcrops.recipe.RitualTableRecipe;
 import net.marwinka.mysticalcrops.screen.RitualTableScreenHandler;
+import net.marwinka.mysticalcrops.util.tags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -58,6 +59,47 @@ public class RitualTableEntity  extends BlockEntity implements ExtendedScreenHan
                 return 10;
             }
         };
+    }
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
+        if (side == Direction.UP) {
+            if (!stack.isStackable()) {
+                return slot == 0;
+            }
+            else if(this.getStack(5).isEmpty()){
+                return slot == 5;
+            }
+        }
+        if (side == Direction.DOWN || side == Direction.NORTH || side == Direction.SOUTH || side == Direction.WEST || side == Direction.EAST) {
+            if (!stack.isStackable()) {
+                return slot == 0;
+            }
+            if (stack.isStackable() && this.getStack(1).getCount() <= this.getStack(2).getCount() && this.getStack(1).getCount() <= this.getStack(3).getCount() && this.getStack(1).getCount() <= this.getStack(4).getCount() && this.getStack(1).getCount() <= this.getStack(6).getCount() && this.getStack(1).getCount() <= this.getStack(7).getCount() && this.getStack(1).getCount() <= this.getStack(8).getCount() && this.getStack(1).getCount() <= this.getStack(9).getCount()) {
+                return slot == 1;
+            }
+            if (stack.isStackable() && this.getStack(2).getCount() <= this.getStack(1).getCount() && this.getStack(2).getCount() <= this.getStack(3).getCount() && this.getStack(2).getCount() <= this.getStack(4).getCount() && this.getStack(2).getCount() <= this.getStack(6).getCount() && this.getStack(2).getCount() <= this.getStack(7).getCount() && this.getStack(2).getCount() <= this.getStack(8).getCount() && this.getStack(2).getCount() <= this.getStack(9).getCount()) {
+                return slot == 2;
+            }
+            if (stack.isStackable() && this.getStack(3).getCount() <= this.getStack(1).getCount() && this.getStack(3).getCount() <= this.getStack(2).getCount() && this.getStack(3).getCount() <= this.getStack(4).getCount() && this.getStack(3).getCount() <= this.getStack(6).getCount() && this.getStack(3).getCount() <= this.getStack(7).getCount() && this.getStack(3).getCount() <= this.getStack(8).getCount() && this.getStack(3).getCount() <= this.getStack(9).getCount()) {
+                return slot == 3;
+            }
+            if (stack.isStackable() && this.getStack(4).getCount() <= this.getStack(1).getCount() && this.getStack(4).getCount() <= this.getStack(3).getCount() && this.getStack(4).getCount() <= this.getStack(2).getCount() && this.getStack(4).getCount() <= this.getStack(6).getCount() && this.getStack(4).getCount() <= this.getStack(7).getCount() && this.getStack(4).getCount() <= this.getStack(8).getCount() && this.getStack(4).getCount() <= this.getStack(9).getCount()) {
+                return slot == 4;
+            }
+            if (stack.isStackable() && this.getStack(6).getCount() <= this.getStack(1).getCount() && this.getStack(6).getCount() <= this.getStack(3).getCount() && this.getStack(6).getCount() <= this.getStack(4).getCount() && this.getStack(6).getCount() <= this.getStack(2).getCount() && this.getStack(6).getCount() <= this.getStack(7).getCount() && this.getStack(6).getCount() <= this.getStack(8).getCount() && this.getStack(6).getCount() <= this.getStack(9).getCount()) {
+                return slot == 6;
+            }
+            if (stack.isStackable() && this.getStack(7).getCount() <= this.getStack(1).getCount() && this.getStack(7).getCount() <= this.getStack(3).getCount() && this.getStack(7).getCount() <= this.getStack(4).getCount() && this.getStack(7).getCount() <= this.getStack(6).getCount() && this.getStack(7).getCount() <= this.getStack(2).getCount() && this.getStack(7).getCount() <= this.getStack(8).getCount() && this.getStack(7).getCount() <= this.getStack(9).getCount()) {
+                return slot == 7;
+            }
+            if (stack.isStackable() && this.getStack(8).getCount() <= this.getStack(1).getCount() && this.getStack(8).getCount() <= this.getStack(3).getCount() && this.getStack(8).getCount() <= this.getStack(4).getCount() && this.getStack(8).getCount() <= this.getStack(6).getCount() && this.getStack(8).getCount() <= this.getStack(7).getCount() && this.getStack(8).getCount() <= this.getStack(2).getCount() && this.getStack(8).getCount() <= this.getStack(9).getCount()) {
+                return slot == 8;
+            }
+            if (stack.isStackable() && this.getStack(9).getCount() <= this.getStack(1).getCount() && this.getStack(9).getCount() <= this.getStack(3).getCount() && this.getStack(9).getCount() <= this.getStack(4).getCount() && this.getStack(9).getCount() <= this.getStack(6).getCount() && this.getStack(9).getCount() <= this.getStack(7).getCount() && this.getStack(9).getCount() <= this.getStack(8).getCount() && this.getStack(9).getCount() <= this.getStack(2).getCount()) {
+                return slot == 9;
+            }
+        }
+        return false;
     }
     public int progress = 0;
     public int maxProgress = 300;
@@ -147,8 +189,12 @@ public class RitualTableEntity  extends BlockEntity implements ExtendedScreenHan
         }
     }
     @Override
-    public boolean canExtract(int slot, ItemStack stack, Direction side) {
-        return true;
+    public boolean canExtract(int slot, ItemStack stack, Direction side)
+    {
+        if(this.getStack(5).isIn(tags.SEEDSS) || this.getStack(5).isIn(tags.CRAFT_SEEDS)){
+            return false;
+        }
+        else return slot == 5;
     }
 
     public ItemStack getRenderStack8() {

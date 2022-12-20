@@ -17,20 +17,6 @@ import static net.marwinka.mysticalcrops.MysticalCrops.MOD_ID;
 
 public class OtherCrops {
     private static final List<Crop> crops = new ArrayList<>();
-    public static final Crop WATER = register(withRequiredMods(new Crop("water",  "2"), "minecraft"));
-    public static final Crop AIR = register(withRequiredMods(new Crop("air",  "2"), "minecraft"));
-    public static final Crop NETHER = register(withRequiredMods(new Crop("nether",  "3"), "minecraft"));
-    public static final Crop AMETHYST = register(withRequiredMods(new Crop("amethyst",  "4"), "minecraft"));
-    public static final Crop SAND = register(withRequiredMods(new Crop("sand",  "3"), "minecraft"));
-    public static final Crop GRAVEL = register(withRequiredMods(new Crop("gravel",  "3"), "minecraft"));
-    public static final Crop SNOW = register(withRequiredMods(new Crop("snow",  "3"), "minecraft"));
-    public static final Crop DYE = register(withRequiredMods(new Crop("dye",  "4"), "minecraft"));
-    public static final Crop ENDER = register(withRequiredMods(new Crop("ender",  "4"), "minecraft"));
-    public static final Crop END = register(withRequiredMods(new Crop("end",  "4"), "minecraft"));
-    public static final Crop CLAY = register(withRequiredMods(new Crop("clay",  "3"), "minecraft"));
-    public static final Crop NATURE = register(withRequiredMods(new Crop("nature",  "4"), "minecraft"));
-    public static final Crop PRISMARINE = register(withRequiredMods(new Crop("prismarine",  "3"), "minecraft"));
-    public static final Crop SOUL = register(withRequiredMods(new Crop("soul",  "3"), "minecraft"));
     public static final Crop RUBBER = register(withRequiredMods(new Crop("rubber",  "2"), "techreborn"));
     public static final Crop GOBBER_GLOB = register(withRequiredMods(new Crop("gobber_glob",  "3"), "gobber2"));
     public static final Crop NETHER_GOBBER_GLOB = register(withRequiredMods(new Crop("nether_gobber_glob",  "4"), "gobber2"));

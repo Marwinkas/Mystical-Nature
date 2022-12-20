@@ -8,7 +8,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
-public class ModItemGroup {
+public class ModItemGroupClassic {
     public static final ItemGroup ITEMGROUP = FabricItemGroupBuilder.build(
-            new Identifier(MysticalCrops.MOD_ID, "mysticalcrops"), () -> new ItemStack(classic_item.ADVANCE_ESSENCE));
+            new Identifier(MysticalCrops.MOD_ID, "mysticalcropsclassic"), () -> new ItemStack(classic_item.ULTIMATE_ESSENCE));
 }

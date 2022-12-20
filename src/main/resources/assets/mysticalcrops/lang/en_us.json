@@ -279,7 +279,9 @@
   "item.mysticalcrops.onlydecoration.tooltip": "§cDECORATION ONLY",
 
   "itemGroup.mysticalcrops.mysticalcrops": "Mystical Nature",
-  "itemGroup.mysticalcrops.mysticalcropsothermods": "Mystical Nature: New Code Seeds",
+  "itemGroup.mysticalcrops.mysticalcropsothermods": "Mystical Nature: Other Mods",
+  "itemGroup.mysticalcrops.mysticalcropsminecraft": "Mystical Nature: Vanilla Resource",
+  "itemGroup.mysticalcrops.mysticalcropsclassic": "Mystical Nature: Classic Resource",
   "block.mysticalcrops.essence_crafting_table": "Essence Crafting Table",
   "block.mysticalcrops.crystal_ore": "Crystal Ore",
   "block.mysticalcrops.essence_ore": "§aEssence Ore",
