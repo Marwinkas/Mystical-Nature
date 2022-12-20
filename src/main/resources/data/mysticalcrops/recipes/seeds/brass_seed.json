@@ -10,53 +10,53 @@
   ],
   "ingredients": [
     {
-            "ingredient": {
+      "ingredient": {
         "tag": "c:crystals"
       }
     },
     {
       "ingredient": {
-      "item": "mysticalcrops:zinc_essence"
+        "item": "mysticalcrops:zinc_essence"
       }
     },
     {
-            "ingredient": {
+      "ingredient": {
         "item": "mysticalcrops:ultra_essence"
       }
     },
     {
       "ingredient": {
-      "item": "mysticalcrops:copper_essence"
+        "item": "mysticalcrops:copper_essence"
       }
     },
     {
-            "ingredient": {
+      "ingredient": {
         "item": "mysticalcrops:ultra_essence"
       }
     },
     {
-            "ingredient": {
+      "ingredient": {
         "item": "mysticalcrops:craft_seeds_tier_4"
       }
     },
     {
-            "ingredient": {
-        "tag": "c:brass_ingots"
+      "ingredient": {
+        "item": "techreborn:brass_ingot"
       }
     },
     {
       "ingredient": {
-      "item": "mysticalcrops:copper_essence"
+        "item": "mysticalcrops:copper_essence"
       }
     },
     {
-            "ingredient": {
+      "ingredient": {
         "item": "mysticalcrops:ultra_essence"
       }
     },
     {
       "ingredient": {
-      "item": "mysticalcrops:zinc_essence"
+        "item": "mysticalcrops:zinc_essence"
       }
     }
   ],

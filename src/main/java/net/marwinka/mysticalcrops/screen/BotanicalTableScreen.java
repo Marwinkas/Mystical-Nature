@@ -34,16 +34,16 @@ public class BotanicalTableScreen extends HandledScreen<BotanicalTableScreenHand
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, TEXTURE);
-        int x = (width - 175) / 2;
-        int y = (height - 170) / 2;
-        drawTexture(matrices, x, y + 2, 0, 0, 175, 170);
+        int x = (width - backgroundWidth) / 2;
+        int y = (height - backgroundHeight) / 2;
+        drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
         renderProgressArrow(matrices, x, y);
     }
 
     private void renderProgressArrow(MatrixStack matrices, int x, int y) {
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 80, y + 39, 176, 0, handler.getScaledProgress(), 17);
+            drawTexture(matrices, x + 80, y + 37, 176, 0, handler.getScaledProgress(), 17);
         }
     }
     @Override

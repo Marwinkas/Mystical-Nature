@@ -23,23 +23,23 @@ public class InfusionTableScreen extends HandledScreen<InfusionTableScreenHandle
     }
     @Override
     protected void drawForeground(MatrixStack matrices, int mouseX, int mouseY) {
-        this.textRenderer.draw(matrices, title, (float) (this.backgroundWidth / 2 - this.textRenderer.getWidth(title) / 2), -5, 4210752);
+        this.textRenderer.draw(matrices, title, (float) (this.backgroundWidth / 2 - this.textRenderer.getWidth(title) / 2), -12, 4210752);
     }
     @Override
     protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, TEXTURE);
-        int x = (width - 175) / 2;
-        int y = (height - 217) / 2;
-        drawTexture(matrices, x, y + 14 , 0, 0, 175, 217);
+        int x = (width - backgroundWidth) / 2;
+        int y = (height - backgroundHeight) / 2 - 17;
+        drawTexture(matrices, x, y , 0, 0, backgroundWidth, backgroundHeight + 17);
 
         renderProgressArrow(matrices, x, y);
     }
 
     private void renderProgressArrow(MatrixStack matrices, int x, int y) {
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 47, y + 31, 176, 0, handler.getScaledProgress(), 82);
+            drawTexture(matrices, x + 47, y + 17, 176, 0, handler.getScaledProgress(), 82);
         }
     }
 
