@@ -23,7 +23,6 @@ public class Knife extends SwordItem {
         } else {
             tooltip.add(new TranslatableText("item.mysticalcrops.knife.tooltip") );
         }
-
         super.appendTooltip(stack, world, tooltip, context);
     }
 }

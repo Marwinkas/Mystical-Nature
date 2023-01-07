@@ -1,15 +1,10 @@
 package net.marwinka.mysticalcrops.blockentities;
 
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
-import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
-import net.marwinka.mysticalcrops.block.BotanicalTableBlock;
-import net.marwinka.mysticalcrops.init.BlockEntities;
-import net.marwinka.mysticalcrops.networking.ModMessages;
+import net.marwinka.mysticalcrops.init.ModBlockEntities;
 import net.marwinka.mysticalcrops.recipe.BotanicalTableRecipe;
-import net.marwinka.mysticalcrops.recipe.InfusionTableRecipe;
 import net.marwinka.mysticalcrops.screen.BotanicalTableScreenHandler;
+import net.marwinka.mysticalcrops.util.inventory.ImplementedInventory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -29,7 +24,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -57,7 +51,7 @@ public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenH
 
 
     public BotanicalTableEntity(BlockPos pos, BlockState state) {
-        super(BlockEntities.BOTANICAL_TABLE, pos, state);
+        super(ModBlockEntities.BOTANICAL_TABLE, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
@@ -121,8 +115,8 @@ public class BotanicalTableEntity extends BlockEntity implements ExtendedScreenH
 
     @Override
     public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
-            if (!stack.isStackable()) return slot == 0;
-            else return slot == 1;
+        if (!stack.isStackable()) return slot == 0;
+        else return slot == 1;
     }
     @Override
     public boolean canExtract(int slot, ItemStack stack, Direction side) {

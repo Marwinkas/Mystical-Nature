@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:excellent_ingot"
+    },
+    "@": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    " @ "
+  ],
+  "result": {
+    "count": 1,
+    "item": "mysticalcrops:excellent_knife"
+  }
+}

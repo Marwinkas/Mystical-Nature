@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:common_ingot"
+    },
+    "$": {
+      "item": "mysticalcrops:watering_can"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#$#",
+    " # "
+  ],
+  "result": {
+    "item": "mysticalcrops:basic_watering_can"
+  }
+}

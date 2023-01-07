@@ -7,9 +7,8 @@ import me.shedaniel.rei.api.client.registry.display.DisplayRegistry;
 import me.shedaniel.rei.api.common.util.EntryStacks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.marwinka.mysticalcrops.compat.rei.ritual_table.*;
-import net.marwinka.mysticalcrops.init.Blocks;
-import net.marwinka.mysticalcrops.init.Items;
+import net.marwinka.mysticalcrops.compat.rei.display.*;
+import net.marwinka.mysticalcrops.init.ModBlocks;
 import net.marwinka.mysticalcrops.recipe.*;
 
 @Environment(EnvType.CLIENT)
@@ -20,11 +19,11 @@ public class ReiPlugin implements REIClientPlugin {
     public void registerCategories(CategoryRegistry registry) {
 
         registry.add(new BotanicalTableCategory());
-        registry.addWorkstations(REICategories.BOTANICAL_TABLE_CATEGORY, EntryStacks.of(Blocks.BOTANICAL_TABLE));
+        registry.addWorkstations(REICategories.BOTANICAL_TABLE_CATEGORY, EntryStacks.of(ModBlocks.BOTANICAL_TABLE));
         registry.add(new RitualTableCategory());
-        registry.addWorkstations(REICategories.BOTANICAL_RITUAL_TABLE_CATEGORY, EntryStacks.of(Blocks.BOTANICAL_RITUAL_TABLE));
+        registry.addWorkstations(REICategories.BOTANICAL_RITUAL_TABLE_CATEGORY, EntryStacks.of(ModBlocks.BOTANICAL_RITUAL_TABLE));
         registry.add(new InfusionTableCategory());
-        registry.addWorkstations(REICategories.INFUSION_TABLE_CATEGORY, EntryStacks.of(Blocks.INFUSION_TABLE));
+        registry.addWorkstations(REICategories.INFUSION_TABLE_CATEGORY, EntryStacks.of(ModBlocks.INFUSION_TABLE));
     }
 
     @Override

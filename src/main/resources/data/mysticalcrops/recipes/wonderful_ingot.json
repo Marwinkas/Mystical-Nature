@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:advance_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:uncommon_ingot"
+    }
+  },
+  "pattern": [
+    "@# ",
+    "## ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "item": "mysticalcrops:wonderful_ingot"
+  }
+}

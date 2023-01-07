@@ -8,15 +8,15 @@ import net.minecraft.world.gen.placementmodifier.*;
 import java.util.List;
 public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> ESSENCE_ORE_PLACED = PlacedFeatures.register("essence_ore_placed",
-            ModConfiguredFeatures.ESSENCE_ORE, modifiersWithCount(9,
+            ModConfiguredFeatures.ESSENCE_ORE, modifiersWithCount(8,
                     HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
 
     public static final RegistryEntry<PlacedFeature> NETHER_ESSENCE_ORE_PLACED = PlacedFeatures.register("nether_essence_ore_placed",
-            ModConfiguredFeatures.NETHER_ESSENCE_ORE, modifiersWithCount(9,
+            ModConfiguredFeatures.NETHER_ESSENCE_ORE, modifiersWithCount(8,
                     HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
 
     public static final RegistryEntry<PlacedFeature> END_ESSENCE_ORE_PLACED = PlacedFeatures.register("end_essence_ore_placed",
-            ModConfiguredFeatures.END_ESSENCE_ORE, modifiersWithCount(9,
+            ModConfiguredFeatures.END_ESSENCE_ORE, modifiersWithCount(8,
                     HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
 
     public static final RegistryEntry<PlacedFeature> CRYSTAL_ORE_PLACED = PlacedFeatures.register("crystal_ore_placed",

@@ -1,16 +1,10 @@
 package net.marwinka.mysticalcrops.blockentities;
 
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
-import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
-import net.marwinka.mysticalcrops.block.BotanicalTableBlock;
-import net.marwinka.mysticalcrops.block.RitualTableBlock;
-import net.marwinka.mysticalcrops.init.BlockEntities;
-import net.marwinka.mysticalcrops.init.Items;
-import net.marwinka.mysticalcrops.networking.ModMessages;
+import net.marwinka.mysticalcrops.init.ModBlockEntities;
 import net.marwinka.mysticalcrops.recipe.RitualTableRecipe;
 import net.marwinka.mysticalcrops.screen.RitualTableScreenHandler;
+import net.marwinka.mysticalcrops.util.inventory.ImplementedInventory;
 import net.marwinka.mysticalcrops.util.tags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -18,7 +12,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
@@ -31,7 +24,6 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -39,7 +31,7 @@ import java.util.Optional;
 public class RitualTableEntity  extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
 
     public RitualTableEntity(BlockPos pos, BlockState state) {
-        super(BlockEntities.BOTANICAL_RITUAL_TABLE, pos, state);
+        super(ModBlockEntities.BOTANICAL_RITUAL_TABLE, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {

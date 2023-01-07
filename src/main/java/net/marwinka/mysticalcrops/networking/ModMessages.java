@@ -1,7 +1,6 @@
 package net.marwinka.mysticalcrops.networking;
 
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.marwinka.mysticalcrops.MysticalCrops;
 import net.marwinka.mysticalcrops.networking.packet.ItemStackSyncS2CPacket;
 import net.minecraft.util.Identifier;

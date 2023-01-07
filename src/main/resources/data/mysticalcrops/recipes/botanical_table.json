@@ -11,11 +11,14 @@
       "tag": "minecraft:flower"
     },
     "*": {
-      "item": "mysticalcrops:advance_essence"
+      "item": "mysticalcrops:iron_knife"
+    },
+    "&": {
+      "item": "mysticalcrops:basic_essence_block"
     }
   },
   "pattern": [
-    "#*#",
+    "#&#",
     "%@%",
     "#*#"
   ],

@@ -9,11 +9,12 @@
     }
   },
   "pattern": [
-    "###",
+    " # ",
     "#@#",
-    "###"
+    " # "
   ],
   "result": {
+    "count": 1,
     "item": "mysticalcrops:essence_planks"
   }
 }

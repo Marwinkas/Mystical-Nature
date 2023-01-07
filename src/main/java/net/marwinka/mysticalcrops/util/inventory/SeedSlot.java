@@ -1,6 +1,5 @@
 package net.marwinka.mysticalcrops.util.inventory;
 
-import net.marwinka.mysticalcrops.init.Items;
 import net.marwinka.mysticalcrops.util.tags;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;

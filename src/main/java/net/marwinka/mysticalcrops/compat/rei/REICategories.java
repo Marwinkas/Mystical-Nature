@@ -1,9 +1,7 @@
 package net.marwinka.mysticalcrops.compat.rei;
 
 import me.shedaniel.rei.api.common.category.CategoryIdentifier;
-import net.marwinka.mysticalcrops.compat.rei.ritual_table.BotanicalTableDisplay;
-import net.marwinka.mysticalcrops.compat.rei.ritual_table.InfusionTableDisplay;
-import net.marwinka.mysticalcrops.compat.rei.ritual_table.RitualTableDisplay;
+import net.marwinka.mysticalcrops.compat.rei.display.*;
 import net.marwinka.mysticalcrops.util.inventory.ModIdentifier;
 
 public class REICategories {

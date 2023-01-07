@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:excellent_ingot"
+    },
+    "@": {
+      "item": "minecraft:bone_block"
+    },
+    "$": {
+      "item": "minecraft:bucket"
+    }
+  },
+  "pattern": [
+    "#@ ",
+    "#$#",
+    "###"
+  ],
+  "result": {
+    "item": "mysticalcrops:ultra_watering_can"
+  }
+}

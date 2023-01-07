@@ -181,7 +181,7 @@ public class wateringcan extends BaseItem {
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(new TranslatableText("item.mysticalcrops.range.tooltip") );
 
-        tooltip.add(new TranslatableText("item.mysticalcrops.wip.tooltip") );
+        tooltip.add(new TranslatableText("item.mysticalcrops.essence_tier_0.tooltip") );
         super.appendTooltip(stack, world, tooltip, context);
     }
 }

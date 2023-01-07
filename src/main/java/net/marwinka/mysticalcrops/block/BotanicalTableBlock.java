@@ -1,8 +1,5 @@
 package net.marwinka.mysticalcrops.block;
 
-import net.marwinka.mysticalcrops.blockentities.InfusionTableEntity;
-import net.marwinka.mysticalcrops.blockentities.RitualTableEntity;
-import net.marwinka.mysticalcrops.init.BlockEntities;
 import net.marwinka.mysticalcrops.blockentities.BotanicalTableEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
@@ -10,7 +7,6 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;

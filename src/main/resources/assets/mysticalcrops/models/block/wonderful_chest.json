@@ -1,0 +1,7 @@
+{
+	"parent": "mysticalcrops:block/chest_template",
+	"textures": {
+		"0": "mysticalcrops:model/wonderful_chest",
+		"particle": "mysticalcrops:model/wonderful_chest"
+	}
+}
