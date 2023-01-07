@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:ultimate_essence"
+    },
+    "$": {
+      "item": "mysticalcrops:perfect_ingot"
+    },
+    "@": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "$@$",
+    "#$#"
+  ],
+  "result": {
+    "item": "mysticalcrops:infinity_ingot"
+  }
+}

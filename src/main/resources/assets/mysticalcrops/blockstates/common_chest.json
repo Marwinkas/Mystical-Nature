@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mysticalcrops:block/common_chest"
+    },
+    "facing=east": {
+      "model": "mysticalcrops:block/common_chest",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mysticalcrops:block/common_chest",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mysticalcrops:block/common_chest",
+      "y": 270
+    }
+  }
+}

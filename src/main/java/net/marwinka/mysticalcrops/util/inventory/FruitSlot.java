@@ -1,9 +1,8 @@
 package net.marwinka.mysticalcrops.util.inventory;
 
-import net.marwinka.mysticalcrops.init.Items;
-import net.marwinka.mysticalcrops.init.classic_item;
-import net.marwinka.mysticalcrops.init.itemfromothermods.OtherCrops;
-import net.marwinka.mysticalcrops.init.new_system_seed;
+import net.marwinka.mysticalcrops.init.ModBaseItems;
+import net.marwinka.mysticalcrops.init.ModVanillaResources;
+import net.marwinka.mysticalcrops.init.ModCompatResources;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.slot.Slot;
@@ -16,206 +15,215 @@ public class FruitSlot extends Slot {
 
     @Override
     public boolean canInsert(ItemStack stack) {
-        if(stack.getItem() == Items.COAL_FRUIT){
+        if(stack.getItem() == ModVanillaResources.COAL.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.COPPER_FRUIT){
+        if(stack.getItem() == ModVanillaResources.COPPER.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.DIAMOND_FRUIT){
+        if(stack.getItem() == ModVanillaResources.DIAMOND.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.EMERALD_FRUIT){
+        if(stack.getItem() == ModVanillaResources.EMERALD.getFruits()){
             return true;
         }
-        if(stack.getItem() == classic_item.ESSENCE_FRUIT_TIER_1){
+        if(stack.getItem() == ModBaseItems.ESSENCE_FRUIT_TIER_1){
             return true;
         }
-        if(stack.getItem() == classic_item.ESSENCE_FRUIT_TIER_2){
+        if(stack.getItem() == ModBaseItems.ESSENCE_FRUIT_TIER_2){
             return true;
         }
-        if(stack.getItem() == classic_item.ESSENCE_FRUIT_TIER_3){
+        if(stack.getItem() == ModBaseItems.ESSENCE_FRUIT_TIER_3){
             return true;
         }
-        if(stack.getItem() == classic_item.ESSENCE_FRUIT_TIER_4){
+        if(stack.getItem() == ModBaseItems.ESSENCE_FRUIT_TIER_4){
             return true;
         }
-        if(stack.getItem() == classic_item.ESSENCE_FRUIT_TIER_5){
+        if(stack.getItem() == ModBaseItems.ESSENCE_FRUIT_TIER_5){
             return true;
         }
-        if(stack.getItem() == Items.IRON_FRUIT){
+        if(stack.getItem() == ModVanillaResources.IRON.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.GOLD_FRUIT){
+        if(stack.getItem() == ModVanillaResources.GOLD.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.LAPIS_FRUIT){
+        if(stack.getItem() == ModVanillaResources.LAPIS.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.OBSIDIAN_FRUIT){
+        if(stack.getItem() == ModVanillaResources.OBSIDIAN.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.QUARTZ_FRUIT){
+        if(stack.getItem() == ModVanillaResources.QUARTZ.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.DIRT_FRUIT){
+        if(stack.getItem() == ModVanillaResources.DIRT.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.STONE_FRUIT){
+        if(stack.getItem() == ModVanillaResources.STONE.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.WOOD_FRUIT){
+        if(stack.getItem() == ModVanillaResources.WOOD.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.GLOWSTONE_FRUIT){
+        if(stack.getItem() == ModVanillaResources.GLOWSTONE.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.FIRE_FRUIT){
+        if(stack.getItem() == ModVanillaResources.FIRE.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.REDSTONE_FRUIT){
+        if(stack.getItem() == ModVanillaResources.REDSTONE.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.NETHERITE_FRUIT){
+        if(stack.getItem() == ModVanillaResources.NETHERITE.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.STAR_FRUIT){
+        if(stack.getItem() == ModVanillaResources.STAR.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.WITHER_FRUIT){
+        if(stack.getItem() == ModVanillaResources.WITHER.getFruits()){
             return true;
         }
-        if(stack.getItem() == Items.ECHO_FRUIT){
+        if(stack.getItem() == ModCompatResources.GOBBER_GLOB.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.GOBBER_GLOB.getFruits()){
+        if(stack.getItem() == ModCompatResources.END_GOBBER_GLOB.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.END_GOBBER_GLOB.getFruits()){
+        if(stack.getItem() == ModCompatResources.ZINC.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.ZINC.getFruits()){
+        if(stack.getItem() == ModCompatResources.BRASS.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.BRASS.getFruits()){
+        if(stack.getItem() == ModCompatResources.FLUIX.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.FLUIX.getFruits()){
+        if(stack.getItem() == ModCompatResources.CERTUS.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.CERTUS.getFruits()){
+        if(stack.getItem() == ModCompatResources.TITANIUM.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.TITANIUM.getFruits()){
+        if(stack.getItem() == ModCompatResources.NIKOLITE.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.NIKOLITE.getFruits()){
+        if(stack.getItem() == ModCompatResources.NICKEL.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.NICKEL.getFruits()){
+        if(stack.getItem() == ModCompatResources.TUNGSTEN.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.TUNGSTEN.getFruits()){
+        if(stack.getItem() == ModCompatResources.TUNGSTENSTEEL.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.TUNGSTENSTEEL.getFruits()){
+        if(stack.getItem() == ModCompatResources.STEEL.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.STEEL.getFruits()){
+        if(stack.getItem() == ModCompatResources.LEAD.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.LEAD.getFruits()){
+        if(stack.getItem() == ModCompatResources.TIN.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.TIN.getFruits()){
+        if(stack.getItem() == ModCompatResources.ELECTRUM.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.ELECTRUM.getFruits()){
+        if(stack.getItem() == ModCompatResources.CHROMIUM.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.CHROMIUM.getFruits()){
+        if(stack.getItem() == ModCompatResources.CALORITE.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.CALORITE.getFruits()){
+        if(stack.getItem() == ModCompatResources.ALUMINIUM.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.ALUMINIUM.getFruits()){
+        if(stack.getItem() == ModCompatResources.INVAR.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.INVAR.getFruits()){
+        if(stack.getItem() == ModCompatResources.ADVANCED_ALLOY.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.ADVANCED_ALLOY.getFruits()){
+        if(stack.getItem() == ModCompatResources.REFINED_IRON.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.REFINED_IRON.getFruits()){
+        if(stack.getItem() == ModCompatResources.PLATINUM.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.PLATINUM.getFruits()){
+        if(stack.getItem() == ModCompatResources.IRIDIUM.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.IRIDIUM.getFruits()){
+        if(stack.getItem() == ModCompatResources.RUBBER.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.RUBBER.getFruits()){
+        if(stack.getItem() == ModVanillaResources.WATER.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.WATER.getFruits()){
+        if(stack.getItem() == ModVanillaResources.NETHER.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.NETHER.getFruits()){
+        if(stack.getItem() == ModVanillaResources.AMETHYST.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.AMETHYST.getFruits()){
+        if(stack.getItem() == ModVanillaResources.SAND.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.SAND.getFruits()){
+        if(stack.getItem() == ModVanillaResources.GRAVEL.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.GRAVEL.getFruits()){
+        if(stack.getItem() == ModVanillaResources.SNOW.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.SNOW.getFruits()){
+        if(stack.getItem() == ModVanillaResources.DYE.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.DYE.getFruits()){
+        if(stack.getItem() == ModVanillaResources.ENDER.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.ENDER.getFruits()){
+        if(stack.getItem() == ModVanillaResources.END.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.END.getFruits()){
+        if(stack.getItem() == ModVanillaResources.CLAY.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.CLAY.getFruits()){
+        if(stack.getItem() == ModVanillaResources.NATURE.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.NATURE.getFruits()){
+        if(stack.getItem() == ModVanillaResources.PRISMARINE.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.PRISMARINE.getFruits()){
+        if(stack.getItem() == ModVanillaResources.ECHO.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.SOUL.getFruits()){
+        if(stack.getItem() == ModVanillaResources.SHEEP.getFruits()){
             return true;
         }
-        if(stack.getItem() == new_system_seed.AIR.getFruits()){
+        if(stack.getItem() == ModVanillaResources.COW.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == ModVanillaResources.CHICKEN.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == ModVanillaResources.SOUL.getFruits()){
+            return true;
+        }
+        if(stack.getItem() == ModVanillaResources.AIR.getFruits()){
             return true;
         }
 
-        if(stack.getItem() == OtherCrops.BRONZE.getFruits()){
+        if(stack.getItem() == ModCompatResources.BRONZE.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.SILVER.getFruits()){
+        if(stack.getItem() == ModCompatResources.SILVER.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.DESH.getFruits()){
+        if(stack.getItem() == ModCompatResources.DESH.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.OSTRUM.getFruits()){
+        if(stack.getItem() == ModCompatResources.OSTRUM.getFruits()){
             return true;
         }
-        if(stack.getItem() == OtherCrops.NETHER_GOBBER_GLOB.getFruits()){
+        if(stack.getItem() == ModCompatResources.NETHER_GOBBER_GLOB.getFruits()){
             return true;
         }
         return false;

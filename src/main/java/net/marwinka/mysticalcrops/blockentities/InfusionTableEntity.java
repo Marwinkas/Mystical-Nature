@@ -1,21 +1,14 @@
 package net.marwinka.mysticalcrops.blockentities;
 
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
-import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
-import net.marwinka.mysticalcrops.block.BotanicalTableBlock;
-import net.marwinka.mysticalcrops.block.InfusionTableBlock;
-import net.marwinka.mysticalcrops.init.BlockEntities;
-import net.marwinka.mysticalcrops.init.Items;
-import net.marwinka.mysticalcrops.init.classic_item;
-import net.marwinka.mysticalcrops.networking.ModMessages;
+import net.marwinka.mysticalcrops.init.ModBlockEntities;
 import net.marwinka.mysticalcrops.recipe.InfusionTableRecipe;
-import net.marwinka.mysticalcrops.recipe.RitualTableRecipe;
 import net.marwinka.mysticalcrops.screen.InfusionTableScreenHandler;
-import net.marwinka.mysticalcrops.screen.RitualTableScreenHandler;
+import net.marwinka.mysticalcrops.util.inventory.ImplementedInventory;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -28,19 +21,17 @@ import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.state.property.IntProperty;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
 public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     public InfusionTableEntity(BlockPos pos, BlockState state) {
-        super(BlockEntities.INFUSION_TABLE, pos, state);
+        super(ModBlockEntities.INFUSION_TABLE, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
@@ -52,7 +43,6 @@ public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHa
                         return 0;
                 }
             }
-
             public void set(int index, int value) {
                 switch (index) {
                     case 0:
@@ -70,6 +60,9 @@ public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHa
         };
     }
 
+    public int progress = 0;
+    public int maxProgress = 100;
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(6, ItemStack.EMPTY);
     @Override
     public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
         if (!stack.isStackable()) {
@@ -89,11 +82,6 @@ public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHa
         }
         return false;
     }
-
-    public int progress = 0;
-    public int maxProgress = 100;
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(6, ItemStack.EMPTY);
-
     public void resetProgress() {
         this.progress = 0;
     }
@@ -132,6 +120,12 @@ public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHa
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, this.inventory);
         nbt.putInt("progress", this.progress);
+        if(this.getStack(1) != null){
+            getRenderStack1 = this.getStack(1);
+        }
+        else{
+            getRenderStack1 = new ItemStack(Blocks.AIR);
+        }
     }
 
     @Override
@@ -139,6 +133,16 @@ public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHa
         super.readNbt(nbt);
         Inventories.readNbt(nbt, this.inventory);
         this.progress = nbt.getInt("progress");
+        if(this.getStack(1) != null){
+            getRenderStack1 = this.getStack(1);
+        }
+        else{
+            getRenderStack1 = new ItemStack(Blocks.AIR);
+        }
+    }
+    public ItemStack getItem(int index) {
+        if(world != null) world.tickEntity(Entity::tick,this.getWorld().getEntityById(0));
+        return index >= 0 && index < this.inventory.size() ? this.inventory.get(index) : ItemStack.EMPTY;
     }
 
     private boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory) {
@@ -148,7 +152,17 @@ public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHa
         return inventory.getStack(5).getItem() == output || inventory.getStack(5).isEmpty();
     }
     public void tick() {
+
+
+        if(this.getStack(1) != null){
+            getRenderStack1 = this.getStack(1);
+        }
+        else{
+            getRenderStack1 = new ItemStack(Blocks.AIR);
+        }
+
         if (!this.world.isClient) {
+
             SimpleInventory inventory = new SimpleInventory(this.size());
             for (int i = 0; i < this.size(); i++) {
                 inventory.setStack(i, this.getStack(i));
@@ -162,7 +176,7 @@ public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHa
 
                     if (this.getStack(0).getItem().isDamageable()) {
                         this.getStack(0).setDamage(this.getStack(0).getDamage() + 1);
-                        if (this.getStack(0).getDamage() >= this.getStack(0).getItem().getMaxDamage()) {
+                        if (this.getStack(0).getDamage() >= this.getStack(0).getItem().getMaxDamage() && this.getStack(0).getItem().isDamageable()) {
                             this.removeStack(0, 1);
                         }
                     }
@@ -196,9 +210,7 @@ public class InfusionTableEntity extends BlockEntity implements ExtendedScreenHa
     public ItemStack getRenderStack() {
         return this.getStack(1);
     }
-    public ItemStack getRenderStack1() {
-        return this.getStack(2);
-    }
+    public ItemStack getRenderStack1;
     public ItemStack getRenderStack2() {
         return this.getStack(3);
     }

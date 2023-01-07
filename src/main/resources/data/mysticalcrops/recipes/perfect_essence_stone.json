@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mysticalcrops:perfect_essence_cobblestone"
+  },
+  "result": "mysticalcrops:perfect_essence_stone",
+  "experience": 0.7,
+  "cookingtime": 200
+}

@@ -8,12 +8,12 @@
     },
     {
       "ingredient": {
-      "tag": "c:lava_buckets"
+      "item": "minecraft:flint_and_steel"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:uncommon_essence"
       }
     },
     {
@@ -23,32 +23,32 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:uncommon_essence"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:craft_seeds_tier_4"
+        "item": "mysticalcrops:craft_seeds_tier_2"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:uncommon_essence"
       }
     },
     {
       "ingredient": {
-      "tag": "c:lava_buckets"
+      "item": "minecraft:gunpowder"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:uncommon_essence"
       }
     },
     {
       "ingredient": {
-      "tag": "c:lava_buckets"
+      "tag": "c:coal"
       }
     }
   ],

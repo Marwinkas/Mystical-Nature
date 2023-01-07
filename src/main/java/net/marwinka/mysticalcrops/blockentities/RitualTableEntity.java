@@ -1,16 +1,10 @@
 package net.marwinka.mysticalcrops.blockentities;
 
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
-import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
-import net.marwinka.mysticalcrops.block.BotanicalTableBlock;
-import net.marwinka.mysticalcrops.block.RitualTableBlock;
-import net.marwinka.mysticalcrops.init.BlockEntities;
-import net.marwinka.mysticalcrops.init.Items;
-import net.marwinka.mysticalcrops.networking.ModMessages;
+import net.marwinka.mysticalcrops.init.ModBlockEntities;
 import net.marwinka.mysticalcrops.recipe.RitualTableRecipe;
 import net.marwinka.mysticalcrops.screen.RitualTableScreenHandler;
+import net.marwinka.mysticalcrops.util.inventory.ImplementedInventory;
 import net.marwinka.mysticalcrops.util.tags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -18,7 +12,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
@@ -30,7 +23,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -38,7 +30,7 @@ import java.util.Optional;
 public class RitualTableEntity  extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
 
     public RitualTableEntity(BlockPos pos, BlockState state) {
-        super(BlockEntities.BOTANICAL_RITUAL_TABLE, pos, state);
+        super(ModBlockEntities.BOTANICAL_RITUAL_TABLE, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
@@ -60,6 +52,9 @@ public class RitualTableEntity  extends BlockEntity implements ExtendedScreenHan
             }
         };
     }
+    public int progress = 0;
+    public int maxProgress = 300;
+
     @Override
     public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
         if (side == Direction.UP) {
@@ -101,8 +96,6 @@ public class RitualTableEntity  extends BlockEntity implements ExtendedScreenHan
         }
         return false;
     }
-    public int progress = 0;
-    public int maxProgress = 300;
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(11, ItemStack.EMPTY);
     public void resetProgress() {
         this.progress = 0;
@@ -160,10 +153,9 @@ public class RitualTableEntity  extends BlockEntity implements ExtendedScreenHan
                 this.progress++;
                 if (this.progress >= this.maxProgress) {
 
-                    if(this.getStack(0).getItem().isDamageable()){
+                    if (this.getStack(0).getItem().isDamageable()) {
                         this.getStack(0).setDamage(this.getStack(0).getDamage() + 1);
-                        if(this.getStack(0).getDamage() >= this.getStack(0).getItem().getMaxDamage())
-                        {
+                        if (this.getStack(0).getDamage() >= this.getStack(0).getItem().getMaxDamage() && this.getStack(0).getItem().isDamageable()) {
                             this.removeStack(0, 1);
                         }
                     }
@@ -198,7 +190,7 @@ public class RitualTableEntity  extends BlockEntity implements ExtendedScreenHan
     }
 
     public ItemStack getRenderStack8() {
-            return this.getStack(5);
+        return this.getStack(5);
     }
     public ItemStack getRenderStack() {
         return this.getStack(1);

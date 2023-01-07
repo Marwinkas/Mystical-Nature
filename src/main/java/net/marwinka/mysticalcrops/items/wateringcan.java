@@ -21,7 +21,6 @@ import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.util.math.random.RandomSplitter;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 
@@ -185,7 +184,7 @@ public class wateringcan extends BaseItem {
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable("item.mysticalcrops.range.tooltip") );
 
-        tooltip.add(Text.translatable("item.mysticalcrops.wip.tooltip") );
+        tooltip.add(Text.translatable("item.mysticalcrops.essence_tier_0.tooltip") );
         super.appendTooltip(stack, world, tooltip, context);
     }
 }

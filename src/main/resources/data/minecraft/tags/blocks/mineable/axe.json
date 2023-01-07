@@ -1,6 +1,16 @@
 {
   "values": [
     "mysticalcrops:botanical_table",
-    "mysticalcrops:essence_planks"
+    "mysticalcrops:essence_planks",
+    "mysticalcrops:common_chest",
+    "mysticalcrops:uncommon_chest",
+    "mysticalcrops:wonderful_chest",
+    "mysticalcrops:excellent_chest",
+    "mysticalcrops:perfect_chest",
+    "mysticalcrops:essence_planks",
+    "mysticalcrops:uncommon_essence_planks",
+    "mysticalcrops:wonderful_essence_planks",
+    "mysticalcrops:excellent_essence_planks",
+    "mysticalcrops:perfect_essence_planks"
   ]
 }

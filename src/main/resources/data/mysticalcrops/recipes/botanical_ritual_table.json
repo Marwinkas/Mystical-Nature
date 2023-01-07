@@ -4,13 +4,13 @@
     "#": {
       "item": "minecraft:calcite"
     },
-    "%": {
+    "&": {
       "item": "mysticalcrops:advance_essence"
     },
     "@": {
       "tag": "c:crystals"
     },
-    "&": {
+    "%": {
       "item": "minecraft:gold_ingot"
     }
   },

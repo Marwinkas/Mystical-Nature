@@ -9,9 +9,7 @@
     }
   ],
   "result": "mysticalcrops:crystal_fragments",
-  "input": {
-    "item": "minecraft:sand"
-  },
+  "input": "minecraft:sand",
   "rolls": {
     "fabricaeexnihilo:iron_mesh": [0.05],
     "fabricaeexnihilo:diamond_mesh": [0.2],

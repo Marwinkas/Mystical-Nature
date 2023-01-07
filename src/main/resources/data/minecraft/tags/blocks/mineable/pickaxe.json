@@ -19,6 +19,16 @@
     "mysticalcrops:end_crystal_ore",
     "mysticalcrops:nether_crystal_ore",
     "mysticalcrops:deepslate_crystal_ore",
-    "mysticalcrops:infusion_table"
+    "mysticalcrops:infusion_table",
+    "mysticalcrops:essence_stone",
+    "mysticalcrops:uncommon_essence_stone",
+    "mysticalcrops:wonderful_essence_stone",
+    "mysticalcrops:excellent_essence_stone",
+    "mysticalcrops:perfect_essence_stone",
+    "mysticalcrops:essence_cobblestone",
+    "mysticalcrops:uncommon_essence_cobblestone",
+    "mysticalcrops:wonderful_essence_cobblestone",
+    "mysticalcrops:excellent_essence_cobblestone",
+    "mysticalcrops:perfect_essence_cobblestone"
   ]
 }

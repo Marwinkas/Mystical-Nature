@@ -7,7 +7,6 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-
 import javax.annotation.Nullable;
 import java.util.List;
 

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:ultra_essence"
+    },
+    "$": {
+      "item": "mysticalcrops:chicken_soul"
+    },
+    "@": {
+      "item": "mysticalcrops:dark_crystal"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "$@$",
+    "#$#"
+  ],
+  "result": {
+    "item": "mysticalcrops:chicken_crystal"
+  }
+}

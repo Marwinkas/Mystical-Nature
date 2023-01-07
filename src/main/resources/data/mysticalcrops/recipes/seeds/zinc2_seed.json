@@ -10,53 +10,53 @@
   ],
   "ingredients": [
     {
-            "ingredient": {
+      "ingredient": {
         "tag": "c:crystals"
       }
     },
     {
       "ingredient": {
-      "item": "create:zinc_ingot"
+        "item": "create:zinc_ingot"
       }
     },
     {
-            "ingredient": {
+      "ingredient": {
         "item": "mysticalcrops:advance_essence"
       }
     },
     {
       "ingredient": {
-      "item": "create:zinc_ingot"
+        "item": "create:zinc_ingot"
       }
     },
     {
-            "ingredient": {
+      "ingredient": {
         "item": "mysticalcrops:advance_essence"
       }
     },
     {
-            "ingredient": {
+      "ingredient": {
         "item": "mysticalcrops:craft_seeds_tier_3"
       }
     },
     {
-            "ingredient": {
+      "ingredient": {
         "item": "mysticalcrops:advance_essence"
       }
     },
     {
       "ingredient": {
-      "item": "create:zinc_ingot"
+        "item": "create:zinc_ingot"
       }
     },
     {
-            "ingredient": {
+      "ingredient": {
         "item": "mysticalcrops:advance_essence"
       }
     },
     {
       "ingredient": {
-      "item": "create:zinc_ingot"
+        "item": "create:zinc_ingot"
       }
     }
   ],

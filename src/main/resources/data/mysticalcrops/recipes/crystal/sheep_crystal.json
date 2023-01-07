@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:ultra_essence"
+    },
+    "$": {
+      "item": "mysticalcrops:sheep_soul"
+    },
+    "@": {
+      "item": "mysticalcrops:dark_crystal"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "$@$",
+    "#$#"
+  ],
+  "result": {
+    "item": "mysticalcrops:sheep_crystal"
+  }
+}
