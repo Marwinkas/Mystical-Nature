@@ -2,7 +2,6 @@ package net.marwinka.mysticalcrops.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.marwinka.mysticalcrops.MysticalCrops;
-import net.marwinka.mysticalcrops.blockentities.RitualTableEntity;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;

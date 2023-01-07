@@ -1,4 +1,4 @@
-package net.marwinka.mysticalcrops.blockentities;
+package net.marwinka.mysticalcrops.block.Chests.entity;
 
 import net.marwinka.mysticalcrops.block.ChestTypes;
 import net.minecraft.block.BlockState;

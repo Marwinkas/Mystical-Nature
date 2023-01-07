@@ -1,6 +1,6 @@
 package net.marwinka.mysticalcrops.block;
 
-import net.marwinka.mysticalcrops.blockentities.BotanicalTableEntity;
+import net.marwinka.mysticalcrops.block.entity.BotanicalTableEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;

@@ -1,7 +1,6 @@
 package net.marwinka.mysticalcrops.screen;
 
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
-import net.marwinka.mysticalcrops.blockentities.BotanicalTableEntity;
+import net.marwinka.mysticalcrops.block.entity.BotanicalTableEntity;
 import net.marwinka.mysticalcrops.util.inventory.FruitSlot;
 import net.marwinka.mysticalcrops.util.inventory.KnifeSlot;
 import net.marwinka.mysticalcrops.util.inventory.ResultSlot;
@@ -9,7 +8,6 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.ArrayPropertyDelegate;

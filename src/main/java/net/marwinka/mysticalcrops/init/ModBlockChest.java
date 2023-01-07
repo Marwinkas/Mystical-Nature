@@ -1,5 +1,6 @@
 package net.marwinka.mysticalcrops.init;
 
+import net.marwinka.mysticalcrops.block.Chests.GenericChestBlock;
 import net.marwinka.mysticalcrops.MysticalCrops;
 import net.marwinka.mysticalcrops.block.*;
 import net.minecraft.block.Block;

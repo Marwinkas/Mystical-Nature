@@ -1,8 +1,9 @@
 package net.marwinka.mysticalcrops.init;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
+import net.marwinka.mysticalcrops.block.Chests.entity.*;
 import net.marwinka.mysticalcrops.MysticalCrops;
-import net.marwinka.mysticalcrops.blockentities.*;
+import net.marwinka.mysticalcrops.block.entity.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;

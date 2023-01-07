@@ -1,4 +1,4 @@
-package net.marwinka.mysticalcrops.blockentities;
+package net.marwinka.mysticalcrops.block.Chests;
 
 import net.marwinka.mysticalcrops.MysticalCrops;
 import net.marwinka.mysticalcrops.init.ModBlockChest;

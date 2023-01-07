@@ -1,4 +1,4 @@
-package net.marwinka.mysticalcrops.blockentities;
+package net.marwinka.mysticalcrops.block.Chests.entity;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

@@ -1,7 +1,8 @@
-package net.marwinka.mysticalcrops.block;
+package net.marwinka.mysticalcrops.block.Chests;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.marwinka.mysticalcrops.blockentities.GenericChestEntity;
+import net.marwinka.mysticalcrops.block.ChestTypes;
+import net.marwinka.mysticalcrops.block.Chests.entity.GenericChestEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ChestBlock;
 import net.minecraft.block.entity.BlockEntity;

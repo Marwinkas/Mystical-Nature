@@ -1,4 +1,4 @@
-package net.marwinka.mysticalcrops.blockentities;
+package net.marwinka.mysticalcrops.block.Chests;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.marwinka.mysticalcrops.init.ModBlockEntities;
 

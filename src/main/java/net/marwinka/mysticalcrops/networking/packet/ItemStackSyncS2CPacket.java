@@ -1,7 +1,7 @@
 package net.marwinka.mysticalcrops.networking.packet;
 
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
-import net.marwinka.mysticalcrops.blockentities.RitualTableEntity;
+import net.marwinka.mysticalcrops.block.entity.RitualTableEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.item.ItemStack;

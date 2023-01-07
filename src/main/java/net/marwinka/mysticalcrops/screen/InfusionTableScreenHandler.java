@@ -1,6 +1,6 @@
 package net.marwinka.mysticalcrops.screen;
 
-import net.marwinka.mysticalcrops.blockentities.InfusionTableEntity;
+import net.marwinka.mysticalcrops.block.entity.InfusionTableEntity;
 import net.marwinka.mysticalcrops.util.inventory.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;

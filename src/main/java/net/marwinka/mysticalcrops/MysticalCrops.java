@@ -2,7 +2,7 @@ package net.marwinka.mysticalcrops;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents;
-import net.marwinka.mysticalcrops.blockentities.ChestBlockItem;
+import net.marwinka.mysticalcrops.block.Chests.ChestBlockItem;
 import net.marwinka.mysticalcrops.init.*;
 import net.marwinka.mysticalcrops.init.ModCompatResources;
 import net.marwinka.mysticalcrops.recipe.ModRecipes;

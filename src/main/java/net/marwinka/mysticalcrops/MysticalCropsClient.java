@@ -2,10 +2,8 @@ package net.marwinka.mysticalcrops;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
-import net.marwinka.mysticalcrops.blockentities.ModBlockEntityRenderer;
-import net.marwinka.mysticalcrops.blockentities.ModTextures;
-import net.marwinka.mysticalcrops.init.ModBlockEntities;
+import net.marwinka.mysticalcrops.block.Chests.ModBlockEntityRenderer;
+import net.marwinka.mysticalcrops.block.Chests.ModTextures;
 import net.marwinka.mysticalcrops.init.ModCompatResources;
 import net.marwinka.mysticalcrops.init.ModCrops;
 import net.marwinka.mysticalcrops.init.ModVanillaResources;

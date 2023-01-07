@@ -1,4 +1,4 @@
-package net.marwinka.mysticalcrops.blockentities;
+package net.marwinka.mysticalcrops.block.entity;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.marwinka.mysticalcrops.init.ModBlockEntities;
