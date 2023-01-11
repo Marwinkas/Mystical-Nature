@@ -15,7 +15,7 @@ import java.util.List;
 
 import static net.marwinka.mysticalcrops.MysticalCrops.MOD_ID;
 
-public class ModCompatResources {
+public class ModOtherItems {
     private static final List<Crop> crops = new ArrayList<>();
     public static final Crop RUBBER = register(withRequiredMods(new Crop("rubber",  "2"), "techreborn"));
     public static final Crop ZINC = register(withRequiredMods(new Crop("zinc",  "3"), "create","techreborn"));

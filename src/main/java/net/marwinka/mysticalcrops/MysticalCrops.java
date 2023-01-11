@@ -2,10 +2,10 @@ package net.marwinka.mysticalcrops;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents;
-import net.marwinka.mysticalcrops.blockentities.ChestBlockItem;
 import net.marwinka.mysticalcrops.init.*;
-import net.marwinka.mysticalcrops.init.ModCompatResources;
+import net.marwinka.mysticalcrops.init.ModOtherItems;
 import net.marwinka.mysticalcrops.recipe.ModRecipes;
+import net.marwinka.mysticalcrops.screen.ModScreenHandler;
 import net.marwinka.mysticalcrops.screen.ModScreenHandlerType;
 import net.marwinka.mysticalcrops.util.generation.ModConfiguredFeatures;
 import net.marwinka.mysticalcrops.util.generation.ModOreGeneration;
@@ -28,22 +28,22 @@ public class MysticalCrops implements ModInitializer {
 	public void onInitialize() {
 		ServerEntityCombatEvents.AFTER_KILLED_OTHER_ENTITY.register((world, entity, killedEntity) -> {
 			if(killedEntity instanceof PathAwareEntity && Math.random() < 0.25) {
-				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModBaseItems.BASIC_ESSENCE)));
+				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModItems.BASIC_ESSENCE)));
 			}
 			if(killedEntity instanceof PathAwareEntity && Math.random() < 0.15) {
-				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModBaseItems.CRYSTAL_FRAGMENTS)));
+				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModItems.CRYSTAL_FRAGMENTS)));
 			}
 			if(killedEntity instanceof WitherSkeletonEntity && Math.random() < 0.07) {
-				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModBaseItems.WITHER_SOUL)));
+				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModItems.WITHER_SOUL)));
 			}
 			if(killedEntity instanceof CowEntity && Math.random() < 0.07) {
-				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModBaseItems.COW_SOUL)));
+				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModItems.COW_SOUL)));
 			}
 			if(killedEntity instanceof ChickenEntity && Math.random() < 0.07) {
-				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModBaseItems.CHICKEN_SOUL)));
+				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModItems.CHICKEN_SOUL)));
 			}
 			if(killedEntity instanceof SheepEntity && Math.random() < 0.07) {
-				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModBaseItems.SHEEP_SOUL)));
+				world.spawnEntity(new ItemEntity(world, killedEntity.getX(), killedEntity.getY(), killedEntity.getZ(), new ItemStack(ModItems.SHEEP_SOUL)));
 			}
 			if (entity instanceof ServerPlayerEntity) {
 				ServerPlayerEntity player = (ServerPlayerEntity) entity;
@@ -54,17 +54,17 @@ public class MysticalCrops implements ModInitializer {
 		ModBlocks.registerBlocks();
 		ModCrops.registerCrops();
 		ModItems.registerItems();
-		ModBaseItems.registerItems();
-		ModCompatResources.registerBlocks();
-		ModCompatResources.registerItems();
-		ModVanillaResources.registerBlocks();
-		ModVanillaResources.registerItems();
+		ModOtherItems.registerBlocks();
+		ModOtherItems.registerItems();
+		ModVanillaItems.registerBlocks();
+		ModBlockChest.registerBlocks();
+		ModVanillaItems.registerItems();
 		ModRecipes.registerRecipes();
-		ModFuels.registerModStuffs();
+		ModItems.registerModStuffs();
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModOreGeneration.generateOres();
-		ModBlockChest.registerBlocks();
 		ModScreenHandlerType.registerScreenHandlers();
-		ChestBlockItem.registerItems();
+		ModScreenHandler.registerAllScreenHandlers();
+		ModItems2.registerItems();
 	}
 }

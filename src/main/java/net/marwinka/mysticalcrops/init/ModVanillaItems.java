@@ -16,7 +16,7 @@ import java.util.Map;
 
 import static net.marwinka.mysticalcrops.MysticalCrops.MOD_ID;
 
-public class ModVanillaResources {
+public class ModVanillaItems {
     private static final List<Crop> crops = new ArrayList<>();
     public static final Map<Item, Identifier> ITEMS = new LinkedHashMap<>();
     public static final Crop FIRE = register(withRequiredMods(new Crop("fire",  "2"), "minecraft"));
@@ -54,7 +54,6 @@ public class ModVanillaResources {
     public static final Crop NETHERITE = register(withRequiredMods(new Crop("netherite",  "5"), "minecraft"));
     public static final Crop STAR = register(withRequiredMods(new Crop("star",  "5"), "minecraft"));
     public static final Crop WITHER = register(withRequiredMods(new Crop("wither",  "5"), "minecraft"));
-
     public static Crop getCropById(String id) {
         return crops.stream().filter(c -> id.equals(c.getId())).findFirst().orElse(null);
     }

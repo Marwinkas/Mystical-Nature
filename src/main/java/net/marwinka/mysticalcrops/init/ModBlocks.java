@@ -76,19 +76,19 @@ public class ModBlocks {
             .strength(4f).nonOpaque().requiresTool()), "infusion_table");
     public static final Block BASIC_COAL_BLOCK = registerBlock("basic_coal_block",
             new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()),
-            ModItemGroupClassic.ITEMGROUP, "item.mysticalcrops.coalblocktier_1.tooltip");
+            ModItemGroupClassic.ITEMGROUP, "item.mysticalcrops.coaltier_1.tooltip");
     public static final Block UNCOMMON_COAL_BLOCK = registerBlock("uncommon_coal_block",
             new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()),
-            ModItemGroupClassic.ITEMGROUP, "item.mysticalcrops.coalblocktier_2.tooltip");
+            ModItemGroupClassic.ITEMGROUP, "item.mysticalcrops.coaltier_2.tooltip");
     public static final Block ADVANCE_COAL_BLOCK = registerBlock("advance_coal_block",
             new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()),
-            ModItemGroupClassic.ITEMGROUP, "item.mysticalcrops.coalblocktier_3.tooltip");
+            ModItemGroupClassic.ITEMGROUP, "item.mysticalcrops.coaltier_3.tooltip");
     public static final Block ULTRA_COAL_BLOCK = registerBlock("ultra_coal_block",
             new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()),
-            ModItemGroupClassic.ITEMGROUP, "item.mysticalcrops.coalblocktier_4.tooltip");
+            ModItemGroupClassic.ITEMGROUP, "item.mysticalcrops.coaltier_4.tooltip");
     public static final Block ULTIMATE_COAL_BLOCK = registerBlock("ultimate_coal_block",
             new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()),
-            ModItemGroupClassic.ITEMGROUP, "item.mysticalcrops.coalblocktier_5.tooltip");
+            ModItemGroupClassic.ITEMGROUP, "item.mysticalcrops.coaltier_5.tooltip");
 
     private static Block register(Block block, String name) {
         Identifier id = new Identifier(MysticalCrops.MOD_ID, name);

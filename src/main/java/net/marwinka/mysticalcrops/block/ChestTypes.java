@@ -2,8 +2,9 @@ package net.marwinka.mysticalcrops.block;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.marwinka.mysticalcrops.MysticalCrops;
-import net.marwinka.mysticalcrops.init.ModBlockEntities;
 import net.marwinka.mysticalcrops.init.ModBlockChest;
+import net.marwinka.mysticalcrops.init.ModBlockEntities;
+import net.marwinka.mysticalcrops.init.ModBlocks;
 import net.marwinka.mysticalcrops.screen.GenericChestScreenHandler;
 import net.marwinka.mysticalcrops.screen.ModScreenHandlerType;
 import net.minecraft.block.Block;

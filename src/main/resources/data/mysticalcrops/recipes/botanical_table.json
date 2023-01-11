@@ -11,7 +11,7 @@
       "tag": "minecraft:flower"
     },
     "*": {
-      "item": "mysticalcrops:iron_knife"
+      "tag": "c:knives"
     },
     "&": {
       "item": "mysticalcrops:basic_essence_block"

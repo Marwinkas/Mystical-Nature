@@ -8,15 +8,15 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModBlockEntities {
+    public static BlockEntityType<BotanicalTableEntity> BOTANICAL_TABLE;
+    public static BlockEntityType<RitualTableEntity> BOTANICAL_RITUAL_TABLE;
+    public static BlockEntityType<InfusionTableEntity> INFUSION_TABLE;
+
     public static final BlockEntityType<CommonChestEntity> COMMON_CHEST = FabricBlockEntityTypeBuilder.create(CommonChestEntity::new, ModBlockChest.COMMON_CHEST).build(null);
     public static final BlockEntityType<UncommonChestEntity> UNCOMMON_CHEST = FabricBlockEntityTypeBuilder.create(UncommonChestEntity::new, ModBlockChest.UNCOMMON_CHEST).build(null);
     public static final BlockEntityType<WonderfulChestEntity> WONDERFUL_CHEST = FabricBlockEntityTypeBuilder.create(WonderfulChestEntity::new, ModBlockChest.WONDERFUL_CHEST).build(null);
     public static final BlockEntityType<ExcellentChestEntity> EXCELLENT_CHEST = FabricBlockEntityTypeBuilder.create(ExcellentChestEntity::new, ModBlockChest.EXCELLENT_CHEST).build(null);
     public static final BlockEntityType<PerfectChestEntity> PERFECT_CHEST = FabricBlockEntityTypeBuilder.create(PerfectChestEntity::new, ModBlockChest.PERFECT_CHEST).build(null);
-
-    public static BlockEntityType<BotanicalTableEntity> BOTANICAL_TABLE;
-    public static BlockEntityType<RitualTableEntity> BOTANICAL_RITUAL_TABLE;
-    public static BlockEntityType<InfusionTableEntity> INFUSION_TABLE;
     public static void registerBlockEntities() {
         BOTANICAL_TABLE = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MysticalCrops.MOD_ID, "botanical_table"),
                 FabricBlockEntityTypeBuilder.create(BotanicalTableEntity::new, ModBlocks.BOTANICAL_TABLE).build(null));
