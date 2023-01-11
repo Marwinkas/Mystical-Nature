@@ -1,5 +1,6 @@
-package net.marwinka.mysticalcrops.items;
+package net.marwinka.mysticalcrops.items.tools;
 import net.marwinka.mysticalcrops.util.block.BaseItem;
+import net.marwinka.mysticalcrops.util.group.ModItemGroupClassic;
 import net.marwinka.mysticalcrops.util.helper.NBTHelper;
 import net.minecraft.block.*;
 import net.minecraft.client.item.TooltipContext;
@@ -29,18 +30,20 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-public class ultimatewateringcan extends BaseItem {
+public class WateringCan extends BaseItem {
     private static final Map<String, Long> THROTTLES = new HashMap<>();
     protected final int range;
+    protected final int tier;
     protected final double chance;
-    public ultimatewateringcan(Function<Settings, Settings> settings) {
-        this(13, 0.6, settings);
+    public WateringCan(int ranges, double chances, int tier) {
+        this(ranges, chances, tier, p -> p.group(ModItemGroupClassic.ITEMGROUP));
     }
 
-    public ultimatewateringcan(int range, double chance, Function<Settings, Settings> settings) {
+    public WateringCan(int range, double chance, int tier, Function<Settings, Settings> settings) {
         super(settings.compose(p -> p.maxCount(1)));
         this.range = range;
         this.chance = chance;
+        this.tier = tier;
     }
 
     @Override
@@ -179,9 +182,7 @@ public class ultimatewateringcan extends BaseItem {
     }
 
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(new TranslatableText("item.mysticalcrops.range6.tooltip") );
-
-        tooltip.add(new TranslatableText("item.mysticalcrops.essence_tier_5.tooltip") );
+        tooltip.add(new TranslatableText("item.mysticalcrops.range" + tier + ".tooltip") );
         super.appendTooltip(stack, world, tooltip, context);
     }
 }
