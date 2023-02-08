@@ -1,8 +1,10 @@
 package net.marwinka.mysticalcrops.util.block;
 
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
@@ -13,13 +15,10 @@ import java.util.function.Function;
 
 public class MysticalFruitItem extends BaseItem {
     private final Crop crop;
-
     public MysticalFruitItem(Crop crop, Function<Settings, Settings> settings) {
         super(settings);
         this.crop = crop;
     }
-
-
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(new TranslatableText("item.mysticalcrops.tier_"+ this.crop.getTier() + ".tooltip"));
         super.appendTooltip(stack, world, tooltip, context);
@@ -27,5 +26,4 @@ public class MysticalFruitItem extends BaseItem {
     public Crop getCrop() {
         return this.crop;
     }
-
 }

@@ -2,26 +2,26 @@ package net.marwinka.mysticalcrops.items.tools;
 
 import java.util.function.Supplier;
 
-import net.marwinka.mysticalcrops.init.ModItems;
+import net.marwinka.mysticalcrops.registry.ModItems;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
 
 public enum ToolMaterials implements ToolMaterial {
     COMMON_CRYSTAL(0, 750, 2, 0, 15, () -> {
-        return Ingredient.ofItems(ModItems.BASIC_ESSENCE);
+        return Ingredient.ofItems(ModItems.COMMON_ESSENCE);
     }),
     UNCOMMON_CRYSTAL(1, 1500, 2, 0, 15, () -> {
         return Ingredient.ofItems(ModItems.UNCOMMON_ESSENCE);
     }),
     WONDERFUL_CRYSTAL(2, 3000, 2, 0, 15, () -> {
-        return Ingredient.ofItems(ModItems.ADVANCE_ESSENCE);
+        return Ingredient.ofItems(ModItems.WONDERFUL_ESSENCE);
     }),
     EXCELLENT_CRYSTAL(3, 6000, 2, 0, 15, () -> {
-        return Ingredient.ofItems(ModItems.ULTRA_ESSENCE);
+        return Ingredient.ofItems(ModItems.EXCELLENT_ESSENCE);
     }),
     PERFECT_CRYSTAL(4, 11000, 2, 0, 15, () -> {
-        return Ingredient.ofItems(ModItems.ULTIMATE_ESSENCE);
+        return Ingredient.ofItems(ModItems.PERFECT_ESSENCE);
     }),
     COMMON_KNIFE(0, 750, 2, 0, 15, () -> {
         return Ingredient.ofItems(ModItems.COMMON_INGOT);
@@ -29,9 +29,7 @@ public enum ToolMaterials implements ToolMaterial {
     UNCOMMON_KNIFE(1, 1500, 2, 0, 15, () -> {
         return Ingredient.ofItems(ModItems.UNCOMMON_INGOT);
     }),
-    WONDERFUL_KNIFE(2, 3000, 2, 0, 15, () -> {
-        return Ingredient.ofItems(ModItems.WONDERFUL_INGOT);
-    }),
+    WONDERFUL_KNIFE(2, 3000, 2, 0, 15, () -> Ingredient.ofItems(ModItems.WONDERFUL_INGOT)),
     EXCELLENT_KNIFE(3, 6000, 2, 0, 15, () -> {
         return Ingredient.ofItems(ModItems.EXCELLENT_INGOT);
     }),

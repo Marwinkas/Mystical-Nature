@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:ultra_essence_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "   ",
+    "   "
+  ],
+  "result": {
+
+    "item": "mysticalcrops:excellent_block"
+  }
+}

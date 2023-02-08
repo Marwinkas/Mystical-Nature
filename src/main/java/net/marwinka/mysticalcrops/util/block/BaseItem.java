@@ -11,7 +11,6 @@ public class BaseItem extends Item {
     public BaseItem(Function<Settings, Settings> properties) {
         super(properties.apply(new Settings()));
     }
-
     @Override
     public void appendStacks(ItemGroup group, DefaultedList<ItemStack> items) {
             super.appendStacks(group, items);

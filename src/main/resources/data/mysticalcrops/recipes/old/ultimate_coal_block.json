@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:ultimate_coal_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "   ",
+    "   "
+  ],
+  "result": {
+
+    "item": "mysticalcrops:perfect_coal_block"
+  }
+}

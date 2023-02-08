@@ -1,6 +1,5 @@
 package net.marwinka.mysticalcrops.util.helper;
 
-import com.mojang.datafixers.types.templates.Tag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 
@@ -24,10 +23,6 @@ public class NBTHelper {
 
     public static boolean hasKey(ItemStack stack, String key) {
         return stack.hasNbt() && getTagCompound(stack).contains(key);
-    }
-
-    public static void flipBoolean(ItemStack stack, String key) {
-        setBoolean(stack, key, !getBoolean(stack, key));
     }
 
     public static void validateCompound(ItemStack stack) {

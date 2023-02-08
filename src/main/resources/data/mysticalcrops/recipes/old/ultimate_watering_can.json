@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:ultimate_watering_can"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "   ",
+    "   "
+  ],
+  "result": {
+
+    "item": "mysticalcrops:perfect_watering_can"
+  }
+}

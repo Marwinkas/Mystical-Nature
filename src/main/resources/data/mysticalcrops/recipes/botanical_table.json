@@ -14,7 +14,7 @@
       "tag": "c:knives"
     },
     "&": {
-      "item": "mysticalcrops:basic_essence_block"
+      "item": "mysticalcrops:common_block"
     }
   },
   "pattern": [

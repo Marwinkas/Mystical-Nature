@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:wonderful_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mysticalcrops:wonderful_essence"
+  }
+}

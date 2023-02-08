@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "mysticalcrops:ultimate_essence"
+      "item": "mysticalcrops:perfect_essence"
     },
     "$": {
       "item": "mysticalcrops:wither_soul"

@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "type": "mysticalcrops:transform",
   "conditions": [
     {
       "type": "mysticalagriculture:crop_enabled",
@@ -19,7 +19,7 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultimate_essence"
+        "item": "mysticalcrops:perfect_essence"
       }
     },
     {
@@ -29,12 +29,12 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultimate_essence"
+        "item": "mysticalcrops:perfect_essence"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:craft_seeds_tier_5"
+        "item": "mysticalcrops:perfect_craft_seeds"
       }
     },
     {
@@ -49,7 +49,7 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultimate_essence"
+        "item": "mysticalcrops:perfect_essence"
       }
     },
     {
@@ -59,7 +59,7 @@
     }
   ],
   "output": {
-    "count": 1,
+
     "item": "mysticalcrops:netherite_seeds"
   }
 }

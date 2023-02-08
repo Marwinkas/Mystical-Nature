@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "mysticalcrops:advance_essence"
+      "item": "mysticalcrops:uncommon_block"
     }
   ],
   "result": {
-    "count": 4,
+    "count": 9,
     "item": "mysticalcrops:uncommon_essence"
   }
 }

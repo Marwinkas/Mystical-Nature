@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:excellent_essence"
+    },
+    "@": {
+      "item": "mysticalcrops:wonderful_crystal"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "item": "mysticalcrops:excellent_crystal"
+  }
+}

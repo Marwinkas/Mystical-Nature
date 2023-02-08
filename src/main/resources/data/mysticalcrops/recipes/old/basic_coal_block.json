@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:basic_coal_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "   ",
+    "   "
+  ],
+  "result": {
+
+    "item": "mysticalcrops:common_coal_block"
+  }
+}

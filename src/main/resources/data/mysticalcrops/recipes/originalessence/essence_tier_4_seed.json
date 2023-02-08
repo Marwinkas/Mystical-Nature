@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "type": "mysticalcrops:transform",
   "ingredients": [
     {
       "ingredient": {
@@ -8,22 +8,22 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:excellent_essence"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:excellent_essence"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:excellent_essence"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:excellent_essence"
       }
     },
     {
@@ -33,27 +33,26 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:excellent_essence"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:excellent_essence"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:excellent_essence"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultra_essence"
+        "item": "mysticalcrops:excellent_essence"
       }
     }
   ],
   "output": {
-    "count": 1,
-    "item": "mysticalcrops:essence_seeds_tier_4"
+    "item": "mysticalcrops:essence_tier_4_seeds"
   }
 }

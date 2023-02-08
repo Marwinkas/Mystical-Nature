@@ -13,19 +13,14 @@ import java.util.function.Function;
 
 public class MysticalSeedItem extends AliasedBlockItem {
     private final Crop crop;
-
     public MysticalSeedItem(Crop crop, Function<Settings, Settings> settings) {
         super(crop.getCrop(), settings.apply(new Settings()));
         this.crop = crop;
     }
-
-
-
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(new TranslatableText("item.mysticalcrops.tier_"+ this.crop.getTier() + ".tooltip"));
         super.appendTooltip(stack, world, tooltip, context);
     }
-
     public Crop getCrop() {
         return this.crop;
     }

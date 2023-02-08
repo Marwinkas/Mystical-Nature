@@ -1,0 +1,18 @@
+{
+  "type": "mysticalcrops:cut",
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "c:knives" }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:essence_tier_1_fruit"
+      }
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "mysticalcrops:common_essence"
+  }
+}

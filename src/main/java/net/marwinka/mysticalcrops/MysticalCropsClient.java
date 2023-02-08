@@ -1,29 +1,32 @@
 package net.marwinka.mysticalcrops;
 
-import io.github.cottonmc.cotton.gui.client.CottonInventoryScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
-import net.marwinka.mysticalcrops.blockentities.ModBlockEntityRenderer;
-import net.marwinka.mysticalcrops.blockentities.ModTextures;
-import net.marwinka.mysticalcrops.init.ModBlocks;
-import net.marwinka.mysticalcrops.init.ModCrops;
-import net.marwinka.mysticalcrops.init.ModOtherItems;
-import net.marwinka.mysticalcrops.init.ModVanillaItems;
-import net.marwinka.mysticalcrops.networking.ModMessages;
-import net.marwinka.mysticalcrops.screen.*;
-import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.marwinka.mysticalcrops.client.screen.ModScreens;
+import net.marwinka.mysticalcrops.registry.*;
+import net.marwinka.mysticalcrops.block.chest.ModTextures;
 import net.minecraft.client.render.RenderLayer;
 
 public class MysticalCropsClient implements ClientModInitializer {
-
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(ModCrops.ESSENCE_CROP_TIER_1, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModCrops.ESSENCE_CROP_TIER_2, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModCrops.ESSENCE_CROP_TIER_3, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModCrops.ESSENCE_CROP_TIER_4, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModCrops.ESSENCE_CROP_TIER_5, RenderLayer.getCutout());
+        registercrops();
+        ModScreens.register();
+        ModBlockEntityRenderer.registerBlockEntityRenderer();
+        ModTextures.registerTextures();
+    }
+
+    public void registercrops(){
+        BlockRenderLayerMap.INSTANCE.putBlock(ModCrops.ESSENCE_TIER_1.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModCrops.ESSENCE_TIER_2.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModCrops.ESSENCE_TIER_3.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModCrops.ESSENCE_TIER_4.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModCrops.ESSENCE_TIER_5.getCrop(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OldCrops.ESSENCE_CROP_TIER_1, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OldCrops.ESSENCE_CROP_TIER_2, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OldCrops.ESSENCE_CROP_TIER_3, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OldCrops.ESSENCE_CROP_TIER_4, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OldCrops.ESSENCE_CROP_TIER_5, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModVanillaItems.DIAMOND.getCrop(), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModVanillaItems.IRON.getCrop(), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModVanillaItems.REDSTONE.getCrop(), RenderLayer.getCutout());
@@ -146,16 +149,5 @@ public class MysticalCropsClient implements ClientModInitializer {
         if(ModOtherItems.IRIDIUM.isEnabled()){
             BlockRenderLayerMap.INSTANCE.putBlock(ModOtherItems.IRIDIUM.getCrop(), RenderLayer.getCutout());
         }
-        HandledScreens.register(ModScreenHandler.INFUSION_TABLE_SCREEN_HANDLER, InfusionTableScreen::new);
-        HandledScreens.register(ModScreenHandler.RITUAL_TABLE_SCREEN_HANDLER, RitualTableScreen::new);
-        HandledScreens.register(ModScreenHandler.BOTANICAL_TABLE_SCREEN_HANDLER, BotanicalTableScreen::new);
-        ModMessages.registerS2CPackets();
-        ModBlockEntityRenderer.registerBlockEntityRenderer();
-        ModTextures.registerTextures();
-        ScreenRegistry.<GenericChestScreenHandler, CottonInventoryScreen<GenericChestScreenHandler>>register(ModScreenHandlerType.COMMON_CHEST, (desc, inventory, title) -> new CottonInventoryScreen<>(desc, inventory.player, title));
-        ScreenRegistry.<GenericChestScreenHandler, CottonInventoryScreen<GenericChestScreenHandler>>register(ModScreenHandlerType.UNCOMMON_CHEST, (desc, inventory, title) -> new CottonInventoryScreen<>(desc, inventory.player, title));
-        ScreenRegistry.<GenericChestScreenHandler, CottonInventoryScreen<GenericChestScreenHandler>>register(ModScreenHandlerType.WONDERFUL_CHEST, (desc, inventory, title) -> new CottonInventoryScreen<>(desc, inventory.player, title));
-        ScreenRegistry.<GenericChestScreenHandler, CottonInventoryScreen<GenericChestScreenHandler>>register(ModScreenHandlerType.EXCELLENT_CHEST, (desc, inventory, title) -> new CottonInventoryScreen<>(desc, inventory.player, title));
-        ScreenRegistry.<GenericChestScreenHandler, CottonInventoryScreen<GenericChestScreenHandler>>register(ModScreenHandlerType.PERFECT_CHEST, (desc, inventory, title) -> new CottonInventoryScreen<>(desc, inventory.player, title));
     }
 }

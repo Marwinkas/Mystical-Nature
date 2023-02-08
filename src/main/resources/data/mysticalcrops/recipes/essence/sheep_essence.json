@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_table_cut",
+  "type": "mysticalcrops:cut",
   "ingredients": [
     {
       "ingredient": {
@@ -11,7 +11,7 @@
     }
   ],
   "output": {
-    "item": "mysticalcrops:sheep_essence",
-    "count": 1
+    "count": 1,
+    "item": "mysticalcrops:sheep_essence"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "type": "mysticalcrops:transform",
   "ingredients": [
     {
             "ingredient": {
@@ -13,7 +13,7 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultimate_essence"
+        "item": "mysticalcrops:perfect_essence"
       }
     },
     {
@@ -23,7 +23,7 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultimate_essence"
+        "item": "mysticalcrops:perfect_essence"
       }
     },
     {
@@ -33,7 +33,7 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultimate_essence"
+        "item": "mysticalcrops:perfect_essence"
       }
     },
     {
@@ -43,7 +43,7 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:ultimate_essence"
+        "item": "mysticalcrops:perfect_essence"
       }
     },
     {
@@ -53,7 +53,7 @@
     }
   ],
   "output": {
-    "count": 1,
-    "item": "mysticalcrops:craft_seeds_tier_5"
+
+    "item": "mysticalcrops:perfect_craft_seeds"
   }
 }

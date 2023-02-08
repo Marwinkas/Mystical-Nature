@@ -1,6 +1,5 @@
 package net.marwinka.mysticalcrops.items.tools;
 import net.marwinka.mysticalcrops.util.block.BaseItem;
-import net.marwinka.mysticalcrops.util.group.ModItemGroupClassic;
 import net.marwinka.mysticalcrops.util.helper.NBTHelper;
 import net.minecraft.block.*;
 import net.minecraft.client.item.TooltipContext;
@@ -30,13 +29,15 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
+import static net.marwinka.mysticalcrops.MysticalCrops.ITEMGROUPCLASSIC;
+
 public class WateringCan extends BaseItem {
     private static final Map<String, Long> THROTTLES = new HashMap<>();
     protected final int range;
     protected final int tier;
     protected final double chance;
     public WateringCan(int ranges, double chances, int tier) {
-        this(ranges, chances, tier, p -> p.group(ModItemGroupClassic.ITEMGROUP));
+        this(ranges, chances, tier, p -> p.group(ITEMGROUPCLASSIC));
     }
 
     public WateringCan(int range, double chance, int tier, Function<Settings, Settings> settings) {

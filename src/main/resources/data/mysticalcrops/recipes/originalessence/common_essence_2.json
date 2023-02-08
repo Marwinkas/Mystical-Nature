@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mysticalcrops:uncommon_essence"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "mysticalcrops:common_essence"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:advance_essence_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "   ",
+    "   "
+  ],
+  "result": {
+
+    "item": "mysticalcrops:wonderful_block"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "type": "mysticalcrops:transform",
   "ingredients": [
     {
             "ingredient": {
@@ -13,7 +13,7 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:advance_essence"
+        "item": "mysticalcrops:wonderful_essence"
       }
     },
     {
@@ -23,17 +23,17 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:advance_essence"
+        "item": "mysticalcrops:wonderful_essence"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:craft_seeds_tier_3"
+        "item": "mysticalcrops:wonderful_craft_seeds"
       }
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:advance_essence"
+        "item": "mysticalcrops:wonderful_essence"
       }
     },
     {
@@ -43,7 +43,7 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:advance_essence"
+        "item": "mysticalcrops:wonderful_essence"
       }
     },
     {
@@ -53,7 +53,7 @@
     }
   ],
   "output": {
-    "count": 1,
+
     "item": "mysticalcrops:copper_seeds"
   }
 }

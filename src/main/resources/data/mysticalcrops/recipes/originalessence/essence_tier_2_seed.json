@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "type": "mysticalcrops:transform",
   "ingredients": [
     {
       "ingredient": {
@@ -53,7 +53,6 @@
     }
   ],
   "output": {
-    "count": 1,
-    "item": "mysticalcrops:essence_seeds_tier_2"
+    "item": "mysticalcrops:essence_tier_2_seeds"
   }
 }

@@ -11,7 +11,7 @@
   "type": "botanypots:crop",
 
   "seed": {
-    "item": "mysticalcrops:essence_seeds_tier_4"
+    "item": "mysticalcrops:essence_tier_4_seeds"
   },
   "categories": [
     "dirt",
@@ -20,19 +20,19 @@
   "growthTicks": 1200,
   "display": {
     "type": "botanypots:aging",
-    "block": "mysticalcrops:essence_crop_tier_4"
+    "block": "mysticalcrops:essence_tier_4_crop"
   },
   "drops": [
     {
       "chance": 1.00,
       "output": {
-        "item": "mysticalcrops:essence_fruit_tier_4"
+        "item": "mysticalcrops:essence_tier_4_fruit"
       }
     },
     {
       "chance": 0.2,
       "output": {
-        "item": "mysticalcrops:essence_fruit_tier_4"
+        "item": "mysticalcrops:essence_tier_4_fruit"
       }
     }
   ]

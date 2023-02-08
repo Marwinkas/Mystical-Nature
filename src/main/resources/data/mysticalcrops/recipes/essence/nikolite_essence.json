@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_table_cut",
+  "type": "mysticalcrops:cut",
   "fabric:load_conditions": [
     {
       "condition": "fabric:all_mods_loaded",
@@ -20,7 +20,7 @@
     }
   ],
   "output": {
-    "item": "mysticalcrops:nikolite_essence",
-    "count": 1
+    "count": 1,
+    "item": "mysticalcrops:nikolite_essence"
   }
 }
