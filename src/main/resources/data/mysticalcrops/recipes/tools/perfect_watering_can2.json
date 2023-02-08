@@ -5,7 +5,7 @@
       "item": "mysticalcrops:perfect_ingot"
     },
     "$": {
-      "item": "mysticalcrops:ultra_watering_can"
+      "item": "mysticalcrops:excellent_watering_can"
     }
   },
   "pattern": [
@@ -14,6 +14,6 @@
     " # "
   ],
   "result": {
-    "item": "mysticalcrops:ultimate_watering_can"
+    "item": "mysticalcrops:perfect_watering_can"
   }
 }

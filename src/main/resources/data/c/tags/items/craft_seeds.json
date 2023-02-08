@@ -5,6 +5,10 @@
     "mysticalcrops:craft_seeds_tier_2",
     "mysticalcrops:craft_seeds_tier_3",
     "mysticalcrops:craft_seeds_tier_4",
-    "mysticalcrops:craft_seeds_tier_5"
+    "mysticalcrops:craft_seeds_tier_5",
+    "mysticalcrops:uncommon_craft_seeds",
+    "mysticalcrops:wonderful_craft_seeds",
+    "mysticalcrops:excellent_craft_seeds",
+    "mysticalcrops:perfect_craft_seeds"
   ]
 }

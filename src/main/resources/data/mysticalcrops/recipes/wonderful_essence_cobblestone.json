@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "mysticalcrops:advance_essence"
+      "item": "mysticalcrops:wonderful_essence"
     },
     "@": {
       "item": "minecraft:cobblestone"
@@ -14,7 +14,6 @@
     " # "
   ],
   "result": {
-    "count": 1,
     "item": "mysticalcrops:wonderful_essence_cobblestone"
   }
 }

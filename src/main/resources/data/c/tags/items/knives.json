@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "mysticalcrops:iron_knife",
-    "mysticalcrops:diamond_knife",
-    "mysticalcrops:netherite_knife",
     "mysticalcrops:common_knife",
     "mysticalcrops:uncommon_knife",
     "mysticalcrops:wonderful_knife",

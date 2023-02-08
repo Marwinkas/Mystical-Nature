@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_table_cut",
+  "type": "mysticalcrops:cut",
   "ingredients": [
     {
             "ingredient": {
@@ -12,7 +12,7 @@
     }
   ],
   "output": {
-    "item": "mysticalcrops:copper_essence",
-    "count": 1
+    "count": 1,
+    "item": "mysticalcrops:copper_essence"
   }
 }

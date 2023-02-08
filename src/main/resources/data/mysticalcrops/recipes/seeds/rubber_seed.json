@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_ritual_table_craft",
+  "type": "mysticalcrops:transform",
   "fabric:load_conditions": [
     {
       "condition": "fabric:all_mods_loaded",
@@ -36,7 +36,7 @@
     },
     {
             "ingredient": {
-        "item": "mysticalcrops:craft_seeds_tier_2"
+        "item": "mysticalcrops:uncommon_craft_seeds"
       }
     },
     {
@@ -61,7 +61,7 @@
     }
   ],
   "output": {
-    "count": 1,
+
     "item": "mysticalcrops:rubber_seeds"
   }
 }

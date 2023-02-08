@@ -5,10 +5,10 @@
       "item": "minecraft:calcite"
     },
     "&": {
-      "item": "mysticalcrops:advance_essence"
+      "item": "mysticalcrops:wonderful_essence"
     },
     "@": {
-      "tag": "c:crystals"
+      "item": "mysticalcrops:botanical_table"
     },
     "%": {
       "item": "minecraft:gold_ingot"
@@ -20,6 +20,6 @@
     "#%#"
   ],
   "result": {
-    "item": "mysticalcrops:botanical_ritual_table"
+    "item": "mysticalcrops:ritual_table"
   }
 }

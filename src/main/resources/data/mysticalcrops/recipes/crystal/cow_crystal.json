@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "mysticalcrops:ultra_essence"
+      "item": "mysticalcrops:excellent_essence"
     },
     "$": {
       "item": "mysticalcrops:cow_soul"

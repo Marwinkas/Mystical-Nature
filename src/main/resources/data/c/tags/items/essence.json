@@ -5,6 +5,10 @@
     "mysticalcrops:uncommon_essence",
     "mysticalcrops:advance_essence",
     "mysticalcrops:ultra_essence",
-    "mysticalcrops:ultimate_essence"
+    "mysticalcrops:ultimate_essence",
+    "mysticalcrops:common_essence",
+    "mysticalcrops:wonderful_essence",
+    "mysticalcrops:excellent_essence",
+    "mysticalcrops:perfect_essence"
   ]
 }

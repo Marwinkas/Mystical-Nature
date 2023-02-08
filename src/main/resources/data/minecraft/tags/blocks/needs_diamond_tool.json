@@ -1,6 +1,8 @@
 {
   "values": [
     "mysticalcrops:ultra_essence_block",
-    "mysticalcrops:ultimate_essence_block"
+    "mysticalcrops:ultimate_essence_block",
+    "mysticalcrops:excellent_block",
+    "mysticalcrops:perfect_block"
   ]
 }

@@ -11,6 +11,18 @@
     "mysticalcrops:advance_coal_block",
     "mysticalcrops:ultra_coal_block",
     "mysticalcrops:ultimate_coal_block",
+
+    "mysticalcrops:ritual_table",
+    "mysticalcrops:common_block",
+    "mysticalcrops:uncommon_block",
+    "mysticalcrops:wonderful_block",
+    "mysticalcrops:excellent_block",
+    "mysticalcrops:perfect_block",
+    "mysticalcrops:common_coal_block",
+    "mysticalcrops:wonderful_coal_block",
+    "mysticalcrops:excellent_coal_block",
+    "mysticalcrops:perfect_coal_block",
+
     "mysticalcrops:essence_ore",
     "mysticalcrops:end_essence_ore",
     "mysticalcrops:nether_essence_ore",

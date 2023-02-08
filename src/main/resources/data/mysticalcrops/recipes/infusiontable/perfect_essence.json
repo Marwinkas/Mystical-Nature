@@ -1,0 +1,33 @@
+{
+  "type": "mysticalcrops:infuse",
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "c:crystals"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:excellent_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:excellent_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:excellent_essence"
+      }
+    },
+    {
+      "ingredient": {
+        "item": "mysticalcrops:excellent_essence"
+      }
+    }
+  ],
+  "output": {
+    "item": "mysticalcrops:perfect_essence"
+  }
+}

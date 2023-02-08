@@ -1,8 +1,11 @@
 {
   "values": [
     "mysticalcrops:botanical_ritual_table",
+    "mysticalcrops:ritual_table",
     "mysticalcrops:uncommon_essence_block",
     "mysticalcrops:advance_essence_block",
+    "mysticalcrops:uncommon_block",
+    "mysticalcrops:wonderful_block",
     "mysticalcrops:essence_ore",
     "mysticalcrops:end_essence_ore",
     "mysticalcrops:nether_essence_ore",

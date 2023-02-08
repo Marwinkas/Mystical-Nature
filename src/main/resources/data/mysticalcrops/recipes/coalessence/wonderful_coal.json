@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mysticalcrops:wonderful_essence"
+    },
+    "@": {
+      "item": "minecraft:coal"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#@#",
+    " # "
+  ],
+  "result": {
+
+    "item": "mysticalcrops:wonderful_coal"
+  }
+}

@@ -6,6 +6,28 @@
     "mysticalcrops:uncommon_coal_block",
     "mysticalcrops:advance_coal_block",
     "mysticalcrops:ultra_coal_block",
-    "mysticalcrops:ultimate_coal_block"
+    "mysticalcrops:ultimate_coal_block",
+
+    "mysticalcrops:common_block",
+    "mysticalcrops:common_coal_block",
+    "mysticalcrops:wonderful_coal_block",
+    "mysticalcrops:excellent_coal_block",
+    "mysticalcrops:perfect_coal_block",
+
+    "mysticalcrops:uncommon_essence_stone",
+    "mysticalcrops:wonderful_essence_stone",
+    "mysticalcrops:excellent_essence_stone",
+    "mysticalcrops:perfect_essence_stone",
+    "mysticalcrops:essence_cobblestone",
+    "mysticalcrops:uncommon_essence_cobblestone",
+    "mysticalcrops:wonderful_essence_cobblestone",
+    "mysticalcrops:excellent_essence_cobblestone",
+    "mysticalcrops:perfect_essence_cobblestone",
+
+    "mysticalcrops:essence_planks",
+    "mysticalcrops:uncommon_essence_planks",
+    "mysticalcrops:wonderful_essence_planks",
+    "mysticalcrops:excellent_essence_planks",
+    "mysticalcrops:perfect_essence_planks"
   ]
 }

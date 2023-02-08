@@ -5,7 +5,7 @@
       "item": "minecraft:iron_block"
     },
     "$": {
-      "item": "mysticalcrops:basic_essence_block"
+      "item": "mysticalcrops:common_block"
     },
     "@": {
       "tag": "c:crystals"

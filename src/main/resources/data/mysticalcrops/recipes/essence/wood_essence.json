@@ -1,9 +1,10 @@
 {
-  "type": "mysticalcrops:botanical_table_cut",
+  "type": "mysticalcrops:cut",
   "ingredients": [
     {
-            "ingredient": {
-      "tag": "c:knives" }
+      "ingredient": {
+        "tag": "c:knives"
+      }
     },
     {
       "ingredient": {
@@ -12,7 +13,7 @@
     }
   ],
   "output": {
-    "item": "mysticalcrops:wood_essence",
-    "count": 1
+    "count": 1,
+    "item": "mysticalcrops:wood_essence"
   }
 }

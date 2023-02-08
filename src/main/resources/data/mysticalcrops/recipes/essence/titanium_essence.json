@@ -1,5 +1,5 @@
 {
-  "type": "mysticalcrops:botanical_table_cut",
+  "type": "mysticalcrops:cut",
   "fabric:load_conditions": [
     {
       "condition": "fabric:item_tags_populated",
@@ -20,7 +20,7 @@
     }
   ],
   "output": {
-    "item": "mysticalcrops:titanium_essence",
-    "count": 1
+    "count": 1,
+    "item": "mysticalcrops:titanium_essence"
   }
 }
