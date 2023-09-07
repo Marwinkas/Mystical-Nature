@@ -3,6 +3,7 @@ package net.marwinka.mysticalcrops.screenhandler;
 import net.marwinka.mysticalcrops.block.entity.BotanicalEntity;
 import net.marwinka.mysticalcrops.registry.ModScreenHandler;
 import net.marwinka.mysticalcrops.util.inventory.KnifeSlot;
+import net.marwinka.mysticalcrops.util.inventory.FruitSlot;
 import net.marwinka.mysticalcrops.util.inventory.OutputSlot;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -33,7 +34,7 @@ public class BotanicalHandler extends ScreenHandler {
         this.blockEntity = (BotanicalEntity) entity;
 
         this.addSlot(new KnifeSlot(inventory, 0, 45, 60));
-        this.addSlot(new Slot(inventory, 1, 45, 24));
+        this.addSlot(new FruitSlot(inventory, 1, 45, 24));
         this.addSlot(new OutputSlot(inventory, 2, 116, 42));
         this.addSlot(new OutputSlot(inventory, 3, -10, -10));
         this.addSlot(new OutputSlot(inventory, 4, -10, -10));
